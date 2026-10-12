@@ -5,18 +5,12 @@ import {
   MessageSquare,
   Sparkles,
   CheckCircle2,
-  XCircle,
   RefreshCw,
-  Edit3,
-  Check,
   AlertTriangle,
   Info,
-  Clock,
   ShieldAlert,
   ThumbsUp,
-  ThumbsDown,
-  Layers,
-  ExternalLink
+  ThumbsDown
 } from 'lucide-react';
 import { CreatorRecord, GeneratedMessageResponse } from '../types';
 import { api } from '../services/api';

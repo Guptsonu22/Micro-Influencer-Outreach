@@ -9,8 +9,6 @@ import {
   ShieldCheck,
   RefreshCw,
   ExternalLink,
-  ShieldAlert,
-  UserCheck,
   Zap,
   Mail,
   MessageSquare

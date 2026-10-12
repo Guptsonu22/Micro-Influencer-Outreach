@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Settings,
-  ShieldCheck,
   CheckCircle2,
-  XCircle,
   AlertTriangle,
   Key,
   Database,
-  Bot,
   ExternalLink,
   Save,
-  Check,
-  Layers,
-  Sparkles,
-  Info
+  Sparkles
 } from 'lucide-react';
 import { SystemHealth, CampaignProfile } from '../types';
 import { api } from '../services/api';
@@ -346,20 +339,29 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
           </div>
         </div>
 
-        <button
-          onClick={handleSaveCampaignPreferences}
-          disabled={isSavingCampaign}
-          className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white text-xs font-bold shadow-md transition"
-        >
-          {isSavingCampaign ? (
-            <>Saving...</>
-          ) : (
-            <>
-              <Save className="h-4 w-4" />
-              Save Campaign Preferences
-            </>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <button
+            onClick={handleSaveCampaignPreferences}
+            disabled={isSavingCampaign}
+            className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white text-xs font-bold shadow-md transition"
+          >
+            {isSavingCampaign ? (
+              <>Saving...</>
+            ) : (
+              <>
+                <Save className="h-4 w-4" />
+                Save Campaign Preferences
+              </>
+            )}
+          </button>
+
+          {savedCampaigns.length > 0 && (
+            <div className="text-xs text-slate-400">
+              <span className="text-slate-500">Active Profile:</span>{' '}
+              <span className="font-semibold text-slate-200">{savedCampaigns[0].name}</span>
+            </div>
           )}
-        </button>
+        </div>
       </div>
     </div>
   );

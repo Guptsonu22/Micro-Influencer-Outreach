@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import {
   Search,
-  Filter,
   ArrowUpDown,
   Download,
   ExternalLink,
@@ -9,12 +8,10 @@ import {
   CheckCircle2,
   XCircle,
   HelpCircle,
-  Clock,
   Sparkles,
   ChevronLeft,
   ChevronRight,
   Eye,
-  Edit2,
   Check,
   RefreshCw,
   X,
@@ -23,7 +20,6 @@ import {
 } from 'lucide-react';
 import { CreatorRecord } from '../types';
 import { api } from '../services/api';
-import { MetricsBadge } from '../components/MetricsBadge';
 
 interface InfluencerExplorerPageProps {
   creators: CreatorRecord[];

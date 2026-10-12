@@ -8,7 +8,7 @@ import { DiscoveryPage } from './pages/DiscoveryPage';
 import { MessageStudioPage } from './pages/MessageStudioPage';
 import { OutreachTrackerPage } from './pages/OutreachTrackerPage';
 import { SettingsPage } from './pages/SettingsPage';
-import { AlertCircle, RefreshCw, ShieldAlert } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<NavTab>('overview');

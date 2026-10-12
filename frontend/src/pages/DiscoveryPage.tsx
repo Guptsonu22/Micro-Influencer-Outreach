@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import {
-  Search,
   Play,
-  CheckCircle2,
   AlertTriangle,
   RefreshCw,
   Sliders,
   Database,
   Layers,
-  Clock,
   Zap,
   Info,
   Check,
-  XCircle,
   ShieldAlert
 } from 'lucide-react';
 import { DiscoveryRunResponse, DiscoverySummary } from '../types';
