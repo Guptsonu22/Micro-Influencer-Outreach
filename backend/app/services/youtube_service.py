@@ -12,6 +12,13 @@ from backend.app.utils.metrics import calculate_engagement_rate
 
 logger = logging.getLogger("edxso.service.youtube")
 
+
+def _mask_api_key(key: str) -> str:
+    """Returns a masked representation of an API key for safe logging. Never logs the real value."""
+    if not key or len(key) < 8:
+        return "<not configured>"
+    return f"{key[:4]}...{key[-4:]} (len={len(key)})"
+
 YOUTUBE_API_BASE = "https://www.googleapis.com/youtube/v3"
 
 
@@ -21,6 +28,11 @@ class YouTubeDiscoveryService:
     def __init__(self, api_key: Optional[str] = None):
         self.api_key = api_key or settings.YOUTUBE_API_KEY
         self.timeout = httpx.Timeout(connect=10.0, read=25.0, write=10.0, pool=30.0)
+        # Log key presence at init time without exposing the actual value
+        logger.info(
+            "YouTubeDiscoveryService initialized. API key status: %s",
+            _mask_api_key(self.api_key)
+        )
 
     async def execute_discovery_run(
         self,
@@ -125,7 +137,13 @@ class YouTubeDiscoveryService:
                     summary["total_search_results"] += len(items)
 
                     for item in items:
-                        channel_id = item.get("snippet", {}).get("channelId")
+                        # For type=channel searches: channel ID is at item.id.channelId
+                        # For type=video searches: channel ID is at item.snippet.channelId
+                        kind = item.get("id", {}).get("kind", "")
+                        if kind == "youtube#channel":
+                            channel_id = item.get("id", {}).get("channelId")
+                        else:
+                            channel_id = item.get("snippet", {}).get("channelId")
                         if channel_id and channel_id not in discovered_channel_ids:
                             discovered_channel_ids.add(channel_id)
                             channel_candidates.append(channel_id)
@@ -310,28 +328,50 @@ class YouTubeDiscoveryService:
         region_code: str = "US",
         page_token: Optional[str] = None
     ) -> Tuple[Dict[str, Any], int, Optional[str]]:
-        """Calls search.list endpoint. Consumes 100 quota units."""
+        """Calls search.list with type=channel. Consumes 100 quota units per page.
+
+        Using type=channel returns channel-specific results directly, yielding better
+        micro-influencer hit rates than video search for the same query.
+        Channel IDs are returned at item.id.channelId.
+        """
         params = {
             "key": self.api_key,
             "part": "snippet",
             "q": query,
-            "type": "video",  # Video search finds active creators publishing tutorials
+            "type": "channel",  # Direct channel search — item.id.channelId gives the channel ID
             "maxResults": 50,
-            "regionCode": region_code
         }
+        # regionCode is not supported for type=channel searches — omit to avoid API error
         if page_token:
             params["pageToken"] = page_token
+
+        logger.debug("YouTube search.list query=%r key=%s", query, _mask_api_key(self.api_key))
 
         try:
             res = await client.get(f"{YOUTUBE_API_BASE}/search", params=params)
             if res.status_code == 200:
-                return res.json(), 100, None
+                data = res.json()
+                logger.debug(
+                    "YouTube search returned %d items for query=%r",
+                    len(data.get("items", [])), query
+                )
+                return data, 100, None
             elif res.status_code == 403:
-                err_body = res.json().get("error", {}).get("message", "Quota Exceeded")
-                return {}, 0, f"YouTube Quota Exceeded (403): {err_body}"
+                err_body = res.json().get("error", {}).get("message", "Quota or permission error")
+                logger.warning("YouTube 403 for query=%r: %s", query, err_body)
+                return {}, 0, f"YouTube API Error (403 Forbidden): {err_body}"
+            elif res.status_code == 400:
+                err_body = res.json().get("error", {}).get("message", "Bad Request")
+                logger.warning("YouTube 400 for query=%r: %s", query, err_body)
+                return {}, 100, f"YouTube API Error (400 Bad Request): {err_body}"
             else:
-                return {}, 100, f"HTTP {res.status_code}: {res.text}"
+                logger.warning("YouTube unexpected HTTP %d for query=%r", res.status_code, query)
+                return {}, 100, f"YouTube HTTP {res.status_code}: {res.text[:200]}"
+        except httpx.TimeoutException as exc:
+            logger.error("YouTube request timed out for query=%r: %s", query, str(exc))
+            return {}, 0, f"Request timeout for query '{query}': {str(exc)}"
         except Exception as exc:
+            logger.error("YouTube connection error for query=%r: %s", query, str(exc))
             return {}, 0, f"Connection error: {str(exc)}"
 
     async def _fetch_channels_batch(

@@ -25,12 +25,13 @@ async def test_subscriber_filtering_and_classification():
     """Verify 5k-100k subscriber bounds correctly qualify or reject channels."""
     service = YouTubeDiscoveryService(api_key="mock_key")
 
+    # type=channel search format: channel ID is at item.id.channelId with kind=youtube#channel
     mock_search_res = {
         "items": [
-            {"snippet": {"channelId": "UC_TOO_FEW"}},
-            {"snippet": {"channelId": "UC_QUALIFIED"}},
-            {"snippet": {"channelId": "UC_TOO_MANY"}},
-            {"snippet": {"channelId": "UC_HIDDEN"}},
+            {"id": {"kind": "youtube#channel", "channelId": "UC_TOO_FEW"}, "snippet": {"title": "Tiny Dev"}},
+            {"id": {"kind": "youtube#channel", "channelId": "UC_QUALIFIED"}, "snippet": {"title": "Micro AI Pro"}},
+            {"id": {"kind": "youtube#channel", "channelId": "UC_TOO_MANY"}, "snippet": {"title": "Mega Tech"}},
+            {"id": {"kind": "youtube#channel", "channelId": "UC_HIDDEN"}, "snippet": {"title": "Secret Subs"}},
         ]
     }
 
