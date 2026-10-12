@@ -46,6 +46,7 @@ export const api = {
   getCreators: (params?: {
     page?: number;
     page_size?: number;
+    decision?: string;
     is_synthetic?: boolean;
     is_qualified?: boolean;
     search_query?: string;
@@ -54,12 +55,40 @@ export const api = {
     const searchParams = new URLSearchParams();
     if (params?.page) searchParams.set('page', String(params.page));
     if (params?.page_size) searchParams.set('page_size', String(params.page_size));
+    if (params?.decision) searchParams.set('decision', params.decision);
     if (params?.is_synthetic !== undefined) searchParams.set('is_synthetic', String(params.is_synthetic));
     if (params?.is_qualified !== undefined) searchParams.set('is_qualified', String(params.is_qualified));
     if (params?.search_query) searchParams.set('search_query', params.search_query);
     if (params?.niche) searchParams.set('niche', params.niche);
     const qs = searchParams.toString();
     return request<any>(`/influencers${qs ? `?${qs}` : ''}`);
+  },
+
+  getInfluencer: (channelId: string) => {
+    return request<any>(`/influencers/${channelId}`);
+  },
+
+  classifyAll: (criteria: any) => {
+    return request<any>('/influencers/classify', {
+      method: 'POST',
+      body: JSON.stringify(criteria),
+    });
+  },
+
+  enrichSingle: (channelId: string) => {
+    return request<any>(`/influencers/${channelId}/enrich`, {
+      method: 'POST',
+    });
+  },
+
+  updateContactEmail: (channelId: string, email: string, sourceUrl?: string) => {
+    return request<any>(`/influencers/${channelId}/contact`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        contact_email: email,
+        source_url: sourceUrl,
+      }),
+    });
   },
 
   triggerDiscovery: (payload: {
@@ -85,8 +114,9 @@ export const api = {
     return request<any[]>(`/discovery/runs?limit=${limit}`);
   },
 
-  getExportUrl: (format: 'csv' | 'json', onlyQualified?: boolean) => {
+  getExportUrl: (format: 'csv' | 'json', decision?: string, onlyQualified?: boolean) => {
     const q = new URLSearchParams({ format });
+    if (decision) q.set('decision', decision);
     if (onlyQualified !== undefined) q.set('is_qualified', String(onlyQualified));
     return `${API_BASE}/influencers/export?${q.toString()}`;
   },

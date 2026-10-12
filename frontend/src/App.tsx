@@ -19,7 +19,14 @@ import {
   Check,
   X,
   FileSpreadsheet,
-  FileCode
+  FileCode,
+  Eye,
+  Edit3,
+  Clock,
+  HelpCircle,
+  CheckCircle,
+  XCircle,
+  AlertTriangle
 } from 'lucide-react';
 import { SystemHealth } from './types';
 import { api } from './services/api';
@@ -47,6 +54,22 @@ export function App() {
   const [creators, setCreators] = useState<any[]>([]);
   const [loadingCreators, setLoadingCreators] = useState<boolean>(false);
 
+  // Pipeline & Filter State
+  const [minSubs, setMinSubs] = useState<number>(5000);
+  const [maxSubs, setMaxSubs] = useState<number>(100000);
+  const [minEng, setMinEng] = useState<number>(2.0);
+  const [requireEmail, setRequireEmail] = useState<boolean>(false);
+  const [requireEng, setRequireEng] = useState<boolean>(false);
+  const [runningClassification, setRunningClassification] = useState<boolean>(false);
+  const [classificationSummary, setClassificationSummary] = useState<any | null>(null);
+  const [decisionFilter, setDecisionFilter] = useState<string>('all');
+
+  // Inspector Modal State
+  const [selectedCreator, setSelectedCreator] = useState<any | null>(null);
+  const [manualEmailInput, setManualEmailInput] = useState<string>('');
+  const [savingEmail, setSavingEmail] = useState<boolean>(false);
+  const [enrichingCreator, setEnrichingCreator] = useState<boolean>(false);
+
   const availableQueries = [
     "AI tools tutorials",
     "Machine learning tutorials",
@@ -69,10 +92,11 @@ export function App() {
     }
   };
 
-  const fetchCreators = async () => {
+  const fetchCreators = async (filterDec?: string) => {
     setLoadingCreators(true);
     try {
-      const data = await api.getCreators({ page: 1, page_size: 50 });
+      const dec = filterDec === 'all' ? undefined : filterDec;
+      const data = await api.getCreators({ page: 1, page_size: 100, decision: dec });
       setCreators(data.items || []);
     } catch (err: any) {
       console.error("Failed to load creators:", err);
@@ -104,19 +128,90 @@ export function App() {
         queries: selectedQueries,
         target_count: targetCount,
         max_quota_budget: quotaBudget,
-        min_subscribers: 5000,
-        max_subscribers: 100000,
+        min_subscribers: minSubs,
+        max_subscribers: maxSubs,
         region_code: 'US',
         use_demo_mode: useDemoMode,
       });
       setDiscoverySummary(res.summary);
-      await fetchCreators();
+      await fetchCreators(decisionFilter);
       await fetchHealth();
     } catch (err: any) {
       setError(err.message || 'Discovery run failed.');
     } finally {
       setRunningDiscovery(false);
     }
+  };
+
+  const handleRunClassification = async () => {
+    setRunningClassification(true);
+    setError(null);
+    try {
+      const res = await api.classifyAll({
+        min_subscribers: minSubs,
+        max_subscribers: maxSubs,
+        min_engagement_rate: minEng,
+        target_niches: ["Technology & Artificial Intelligence"],
+        require_contact_email: requireEmail,
+        require_engagement_rate: requireEng
+      });
+      setClassificationSummary(res);
+      await fetchCreators(decisionFilter);
+    } catch (err: any) {
+      setError(err.message || 'Classification failed.');
+    } finally {
+      setRunningClassification(false);
+    }
+  };
+
+  const handleManualEmailSave = async () => {
+    if (!selectedCreator || !manualEmailInput) return;
+    setSavingEmail(true);
+    try {
+      const updated = await api.updateContactEmail(selectedCreator.channel_id, manualEmailInput);
+      setSelectedCreator(updated);
+      await fetchCreators(decisionFilter);
+    } catch (err: any) {
+      alert(err.message || 'Failed to update email');
+    } finally {
+      setSavingEmail(false);
+    }
+  };
+
+  const handleTriggerEnrich = async () => {
+    if (!selectedCreator) return;
+    setEnrichingCreator(true);
+    try {
+      const updated = await api.enrichSingle(selectedCreator.channel_id);
+      setSelectedCreator(updated);
+      await fetchCreators(decisionFilter);
+    } catch (err: any) {
+      alert(err.message || 'Enrichment failed');
+    } finally {
+      setEnrichingCreator(false);
+    }
+  };
+
+  const getDecisionBadge = (decision: string) => {
+    if (decision === 'pass') {
+      return (
+        <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold text-[11px] flex items-center gap-1">
+          <CheckCircle className="h-3 w-3" /> PASS
+        </span>
+      );
+    }
+    if (decision === 'needs_review') {
+      return (
+        <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20 font-semibold text-[11px] flex items-center gap-1">
+          <AlertTriangle className="h-3 w-3" /> NEEDS REVIEW
+        </span>
+      );
+    }
+    return (
+      <span className="px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-semibold text-[11px] flex items-center gap-1">
+        <XCircle className="h-3 w-3" /> FAIL
+      </span>
+    );
   };
 
   return (
@@ -151,7 +246,7 @@ export function App() {
         onTabChange={setActiveTab}
         onRefresh={() => {
           fetchHealth();
-          fetchCreators();
+          fetchCreators(decisionFilter);
         }}
       />
 
@@ -170,7 +265,7 @@ export function App() {
 
         {/* TAB 1: OVERVIEW */}
         {activeTab === 'overview' && (
-          <>
+          <div className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
               {/* System Status Card */}
               <div className="glass-panel p-6 rounded-2xl flex flex-col justify-between">
@@ -179,12 +274,12 @@ export function App() {
                     <span className="text-xs font-semibold uppercase tracking-wider text-indigo-400">Core Engine</span>
                     <span className="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
                       <CheckCircle2 className="h-3 w-3" />
-                      Phase 3 Active
+                      Phase 4 Active
                     </span>
                   </div>
                   <h2 className="text-xl font-bold text-white mb-1">Architecture Foundation</h2>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    FastAPI backend with Motor data-access layer, YouTube Data API v3 discovery engine, and Vite/React dashboard.
+                    Brand-fit filtering engine, separate criterion classification, theme extraction, and public contact verification.
                   </p>
                 </div>
 
@@ -198,8 +293,8 @@ export function App() {
                     <span className="font-medium text-indigo-300">{health?.database.total_records ?? creators.length}</span>
                   </div>
                   <div className="flex justify-between text-slate-300">
-                    <span className="text-slate-400">Target Discovered Pool:</span>
-                    <span className="font-medium text-emerald-400">50+ Real Creators</span>
+                    <span className="text-slate-400">Niche Pipeline:</span>
+                    <span className="font-medium text-emerald-400">Technology & AI Complete</span>
                   </div>
                 </div>
               </div>
@@ -248,16 +343,16 @@ export function App() {
 
                 <div className="mt-4 space-y-2 text-xs">
                   <div className="flex items-center justify-between p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-200">
-                    <span>Phase 1: Architecture & Schemas</span>
-                    <Check className="h-3.5 w-3.5 text-emerald-400" />
-                  </div>
-                  <div className="flex items-center justify-between p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-200">
-                    <span>Phase 2: FastAPI & Motor Backend</span>
+                    <span>Phase 1-3: Scaffolding, Backend, Discovery</span>
                     <Check className="h-3.5 w-3.5 text-emerald-400" />
                   </div>
                   <div className="flex items-center justify-between p-2 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-200">
-                    <span>Phase 3: Real YouTube Discovery</span>
+                    <span>Phase 4: Filtering & Enrichment</span>
                     <span className="text-[10px] font-bold uppercase tracking-wider bg-indigo-500/20 px-2 py-0.5 rounded text-indigo-300">Current</span>
+                  </div>
+                  <div className="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800 text-slate-400">
+                    <span>Phase 5: LLM Copy & Simulation Queue</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider bg-slate-800 px-2 py-0.5 rounded text-slate-400">Next</span>
                   </div>
                 </div>
               </div>
@@ -266,26 +361,25 @@ export function App() {
             {/* Quick Actions Hero */}
             <div className="glass-panel p-6 rounded-2xl border border-indigo-500/20 flex flex-col md:flex-row md:items-center justify-between gap-4">
               <div>
-                <h3 className="text-base font-bold text-white">Ready to Discover Micro-Influencers?</h3>
+                <h3 className="text-base font-bold text-white">Review Creator Pipeline & Fit Criteria</h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Run YouTube discovery to find creators in Technology and AI with 5,000–100,000 subscribers.
+                  Evaluate discovered profiles across Niche, Followers, Engagement, and Contact Availability with granular reasons.
                 </p>
               </div>
               <button
-                onClick={() => setActiveTab('discovery')}
+                onClick={() => setActiveTab('pipeline')}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition shrink-0 shadow-lg shadow-indigo-600/30"
               >
-                Go to Discovery Engine
+                Go to Pipeline Engine
                 <ArrowRight className="h-3.5 w-3.5" />
               </button>
             </div>
-          </>
+          </div>
         )}
 
         {/* TAB 2: DISCOVERY */}
         {activeTab === 'discovery' && (
           <div className="space-y-6">
-            {/* Discovery Control Panel */}
             <div className="glass-panel p-6 rounded-2xl">
               <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">
                 <div>
@@ -322,7 +416,6 @@ export function App() {
 
               {/* Form Controls */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-                {/* Search Queries Multi-select */}
                 <div className="md:col-span-2">
                   <label className="text-xs font-semibold text-slate-300 block mb-2">
                     Search Queries (Tech & AI Niche):
@@ -349,7 +442,6 @@ export function App() {
                   </div>
                 </div>
 
-                {/* Target Count & Quota Budget */}
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between text-xs mb-1">
@@ -367,7 +459,6 @@ export function App() {
                     />
                   </div>
 
-                  {/* Demo Mode Toggle */}
                   <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
                     <div>
                       <p className="text-xs font-semibold text-slate-200">Offline Demo Mode</p>
@@ -441,115 +532,286 @@ export function App() {
                 )}
               </div>
             )}
+          </div>
+        )}
 
-            {/* Discovered Creators Table */}
+        {/* TAB 3: PIPELINE & BRAND-FIT CLASSIFICATION */}
+        {activeTab === 'pipeline' && (
+          <div className="space-y-6">
+            {/* Filter Configuration Bar */}
             <div className="glass-panel p-6 rounded-2xl">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-bold text-white">Discovered Influencer Profiles ({creators.length})</h3>
-                <span className="text-xs text-slate-400">5k–100k Subscribers Micro-Tier</span>
+              <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">
+                <div>
+                  <h2 className="text-lg font-bold text-white flex items-center gap-2">
+                    <Sliders className="h-5 w-5 text-indigo-400" />
+                    Brand-Fit Classification Engine (Tech & AI)
+                  </h2>
+                  <p className="text-xs text-slate-400 mt-1">
+                    Evaluates creators across Niche Relevance, Followers, Engagement, and Contact Availability. Stores reasons for every decision.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={handleRunClassification}
+                    disabled={runningClassification}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white text-xs font-semibold transition shadow-lg shadow-indigo-600/20"
+                  >
+                    <RefreshCw className={`h-3.5 w-3.5 ${runningClassification ? 'animate-spin' : ''}`} />
+                    Run Classification Rules
+                  </button>
+                  <a
+                    href={api.getExportUrl('csv', decisionFilter === 'all' ? undefined : decisionFilter)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 transition"
+                  >
+                    <Download className="h-3.5 w-3.5 text-emerald-400" />
+                    Export
+                  </a>
+                </div>
+              </div>
+
+              {/* Dynamic Controls Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pt-6">
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">
+                    Min Followers: <strong className="text-indigo-300">{minSubs.toLocaleString()}</strong>
+                  </label>
+                  <input
+                    type="range"
+                    min="1000"
+                    max="20000"
+                    step="1000"
+                    value={minSubs}
+                    onChange={(e) => setMinSubs(Number(e.target.value))}
+                    className="w-full accent-indigo-500 bg-slate-800 rounded-lg cursor-pointer h-2"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">
+                    Max Followers: <strong className="text-indigo-300">{maxSubs.toLocaleString()}</strong>
+                  </label>
+                  <input
+                    type="range"
+                    min="50000"
+                    max="250000"
+                    step="5000"
+                    value={maxSubs}
+                    onChange={(e) => setMaxSubs(Number(e.target.value))}
+                    className="w-full accent-indigo-500 bg-slate-800 rounded-lg cursor-pointer h-2"
+                  />
+                </div>
+
+                <div>
+                  <label className="text-xs font-semibold text-slate-300 block mb-1">
+                    Min Engagement Rate: <strong className="text-indigo-300">{minEng}%</strong>
+                  </label>
+                  <input
+                    type="range"
+                    min="0.5"
+                    max="8.0"
+                    step="0.5"
+                    value={minEng}
+                    onChange={(e) => setMinEng(Number(e.target.value))}
+                    className="w-full accent-indigo-500 bg-slate-800 rounded-lg cursor-pointer h-2"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={requireEmail}
+                      onChange={(e) => setRequireEmail(e.target.checked)}
+                      className="rounded border-slate-700 bg-slate-800 text-indigo-600 focus:ring-indigo-500"
+                    />
+                    Require Verified Email (Mandatory)
+                  </label>
+                  <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={requireEng}
+                      onChange={(e) => setRequireEng(e.target.checked)}
+                      className="rounded border-slate-700 bg-slate-800 text-indigo-600 focus:ring-indigo-500"
+                    />
+                    Require Engagement (Fail if missing)
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            {/* Criteria Counters & Breakdown Card */}
+            {classificationSummary && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="glass-panel p-4 rounded-xl border-emerald-500/20 bg-emerald-500/5">
+                  <div className="flex items-center justify-between text-xs text-emerald-400 font-semibold uppercase">
+                    <span>Passed</span>
+                    <CheckCircle className="h-4 w-4" />
+                  </div>
+                  <p className="text-2xl font-bold text-emerald-300 mt-2">{classificationSummary.passed_count}</p>
+                </div>
+
+                <div className="glass-panel p-4 rounded-xl border-amber-500/20 bg-amber-500/5">
+                  <div className="flex items-center justify-between text-xs text-amber-400 font-semibold uppercase">
+                    <span>Needs Review</span>
+                    <AlertTriangle className="h-4 w-4" />
+                  </div>
+                  <p className="text-2xl font-bold text-amber-300 mt-2">{classificationSummary.needs_review_count}</p>
+                </div>
+
+                <div className="glass-panel p-4 rounded-xl border-rose-500/20 bg-rose-500/5">
+                  <div className="flex items-center justify-between text-xs text-rose-400 font-semibold uppercase">
+                    <span>Failed</span>
+                    <XCircle className="h-4 w-4" />
+                  </div>
+                  <p className="text-2xl font-bold text-rose-300 mt-2">{classificationSummary.failed_count}</p>
+                </div>
+
+                <div className="glass-panel p-4 rounded-xl border-indigo-500/20 bg-indigo-500/5">
+                  <div className="flex items-center justify-between text-xs text-indigo-400 font-semibold uppercase">
+                    <span>Niche Matches</span>
+                    <Sparkles className="h-4 w-4" />
+                  </div>
+                  <p className="text-2xl font-bold text-indigo-300 mt-2">
+                    {classificationSummary.criterion_pass_counts?.niche_relevance ?? 0}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Pipeline Table with Filter Tabs */}
+            <div className="glass-panel p-6 rounded-2xl">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-800 gap-4">
+                <div className="flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800">
+                  {['all', 'pass', 'needs_review', 'fail'].map((tab) => (
+                    <button
+                      key={tab}
+                      onClick={() => {
+                        setDecisionFilter(tab);
+                        fetchCreators(tab);
+                      }}
+                      className={`px-3 py-1 rounded-lg text-xs font-semibold capitalize transition ${
+                        decisionFilter === tab
+                          ? 'bg-indigo-600 text-white shadow'
+                          : 'text-slate-400 hover:text-slate-200'
+                      }`}
+                    >
+                      {tab.replace('_', ' ')}
+                    </button>
+                  ))}
+                </div>
+
+                <span className="text-xs text-slate-400">
+                  Showing <strong className="text-slate-200">{creators.length}</strong> evaluated profiles
+                </span>
               </div>
 
               {loadingCreators ? (
                 <div className="py-12 text-center text-slate-400 text-xs flex items-center justify-center gap-2">
                   <RefreshCw className="h-4 w-4 animate-spin text-indigo-400" />
-                  Loading creators dataset...
+                  Loading pipeline profiles...
                 </div>
               ) : creators.length === 0 ? (
                 <div className="py-12 text-center text-slate-400 text-xs">
-                  No creators discovered yet. Run the discovery pipeline above to discover creators!
+                  No creators found for this status. Run discovery or change the filter tab!
                 </div>
               ) : (
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto mt-4">
                   <table className="w-full text-left text-xs">
                     <thead>
                       <tr className="border-b border-slate-800 text-slate-400 font-semibold uppercase text-[10px]">
-                        <th className="pb-3">Creator / Channel</th>
-                        <th className="pb-3">Subscribers</th>
-                        <th className="pb-3">Est. Engagement</th>
-                        <th className="pb-3">Contact Email</th>
-                        <th className="pb-3">Qualification</th>
-                        <th className="pb-3">Provenance</th>
+                        <th className="pb-3">Creator</th>
+                        <th className="pb-3">Followers</th>
+                        <th className="pb-3">Niche Fit</th>
+                        <th className="pb-3">Engagement</th>
+                        <th className="pb-3">Contact</th>
+                        <th className="pb-3">Decision</th>
+                        <th className="pb-3 text-right">Actions</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-800/60">
-                      {creators.map((c: any) => (
-                        <tr key={c.channel_id} className="hover:bg-slate-900/40 transition">
-                          <td className="py-3 pr-4">
-                            <div className="flex items-center gap-3">
-                              {c.thumbnail_url ? (
-                                <img
-                                  src={c.thumbnail_url}
-                                  alt={c.title}
-                                  className="h-8 w-8 rounded-full object-cover shrink-0 border border-slate-700"
-                                />
-                              ) : (
-                                <div className="h-8 w-8 rounded-full bg-indigo-600/20 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0">
-                                  {c.title.charAt(0)}
+                      {creators.map((c: any) => {
+                        const classif = c.classification || {};
+                        const dec = classif.decision || (classif.is_qualified ? 'pass' : 'fail');
+                        return (
+                          <tr key={c.channel_id} className="hover:bg-slate-900/40 transition">
+                            <td className="py-3 pr-4">
+                              <div className="flex items-center gap-2.5">
+                                {c.thumbnail_url ? (
+                                  <img
+                                    src={c.thumbnail_url}
+                                    alt={c.title}
+                                    className="h-8 w-8 rounded-full object-cover shrink-0 border border-slate-700"
+                                  />
+                                ) : (
+                                  <div className="h-8 w-8 rounded-full bg-indigo-600/20 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0">
+                                    {c.title.charAt(0)}
+                                  </div>
+                                )}
+                                <div>
+                                  <p className="font-medium text-slate-200">{c.title}</p>
+                                  <span className="text-[10px] text-slate-400">{c.custom_url}</span>
                                 </div>
-                              )}
-                              <div>
-                                <a
-                                  href={c.channel_url}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="font-medium text-slate-200 hover:text-indigo-400 transition flex items-center gap-1"
-                                >
-                                  {c.title}
-                                  <ExternalLink className="h-2.5 w-2.5 text-slate-500" />
-                                </a>
-                                <span className="text-[10px] text-slate-400">{c.custom_url}</span>
                               </div>
-                            </div>
-                          </td>
-                          <td className="py-3 pr-4">
-                            {c.metrics?.is_subscriber_count_hidden ? (
-                              <span className="text-slate-500 italic">Hidden</span>
-                            ) : c.metrics?.subscriber_count ? (
-                              <strong className="text-slate-200">{c.metrics.subscriber_count.toLocaleString()}</strong>
-                            ) : (
-                              <span className="text-slate-500">N/A</span>
-                            )}
-                          </td>
-                          <td className="py-3 pr-4">
-                            {c.metrics?.estimated_engagement_rate ? (
-                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
-                                {c.metrics.estimated_engagement_rate}%
+                            </td>
+
+                            <td className="py-3 pr-4">
+                              {c.metrics?.is_subscriber_count_hidden ? (
+                                <span className="text-slate-500 italic">Hidden</span>
+                              ) : c.metrics?.subscriber_count ? (
+                                <strong className="text-slate-200">{c.metrics.subscriber_count.toLocaleString()}</strong>
+                              ) : (
+                                <span className="text-slate-500">N/A</span>
+                              )}
+                            </td>
+
+                            <td className="py-3 pr-4">
+                              <span className="text-indigo-300 font-medium">
+                                {classif.fit_score ?? 50}/100
                               </span>
-                            ) : (
-                              <span className="text-slate-500">N/A</span>
-                            )}
-                          </td>
-                          <td className="py-3 pr-4">
-                            {c.enrichment?.contact_email === 'Not Found' ? (
-                              <span className="text-slate-500 italic">Not Found</span>
-                            ) : (
-                              <span className="text-indigo-300 font-mono text-[11px]">{c.enrichment?.contact_email}</span>
-                            )}
-                          </td>
-                          <td className="py-3 pr-4">
-                            {c.classification?.is_qualified ? (
-                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
-                                Qualified
-                              </span>
-                            ) : (
-                              <span className="px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 font-medium">
-                                Rejected
-                              </span>
-                            )}
-                          </td>
-                          <td className="py-3">
-                            {c.is_synthetic ? (
-                              <span className="px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 font-mono text-[10px]">
-                                Demo Record
-                              </span>
-                            ) : (
-                              <span className="px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20 font-mono text-[10px]">
-                                Real API
-                              </span>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
+                            </td>
+
+                            <td className="py-3 pr-4">
+                              {c.metrics?.estimated_engagement_rate ? (
+                                <span className="text-emerald-400 font-medium">
+                                  {c.metrics.estimated_engagement_rate}%
+                                </span>
+                              ) : (
+                                <span className="text-slate-500 italic">Unavailable</span>
+                              )}
+                            </td>
+
+                            <td className="py-3 pr-4">
+                              {c.enrichment?.contact_email === 'Not Found' ? (
+                                <span className="text-slate-500 italic">Not Found</span>
+                              ) : (
+                                <span className="text-slate-300 font-mono text-[11px] truncate block max-w-[140px]">
+                                  {c.enrichment?.contact_email}
+                                </span>
+                              )}
+                            </td>
+
+                            <td className="py-3 pr-4">
+                              {getDecisionBadge(dec)}
+                            </td>
+
+                            <td className="py-3 text-right">
+                              <button
+                                onClick={() => {
+                                  setSelectedCreator(c);
+                                  setManualEmailInput(c.enrichment?.contact_email !== 'Not Found' ? c.enrichment?.contact_email : '');
+                                }}
+                                className="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium border border-slate-700 transition inline-flex items-center gap-1.5"
+                              >
+                                <Eye className="h-3 w-3 text-indigo-400" />
+                                Inspect
+                              </button>
+                            </td>
+                          </tr>
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>
@@ -558,17 +820,7 @@ export function App() {
           </div>
         )}
 
-        {/* TAB 3 & 4 Placeholders */}
-        {activeTab === 'pipeline' && (
-          <div className="glass-panel p-8 rounded-2xl text-center">
-            <Sliders className="h-8 w-8 text-indigo-400 mx-auto mb-3" />
-            <h3 className="text-lg font-bold text-white">Filtering & Brand-Fit Classification Engine</h3>
-            <p className="text-xs text-slate-400 max-w-md mx-auto mt-1 mb-4">
-              Configurable scoring rules, keyword relevance analysis, and qualification reasoning. (Scheduled for Phase 4).
-            </p>
-          </div>
-        )}
-
+        {/* TAB 4: OUTREACH (Scheduled for Phase 5) */}
         {activeTab === 'outreach' && (
           <div className="glass-panel p-8 rounded-2xl text-center">
             <Mail className="h-8 w-8 text-indigo-400 mx-auto mb-3" />
@@ -579,6 +831,148 @@ export function App() {
           </div>
         )}
       </main>
+
+      {/* INSPECTOR & ENRICHMENT MODAL */}
+      {selectedCreator && (
+        <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="glass-panel bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
+            {/* Header */}
+            <div className="flex items-start justify-between pb-4 border-b border-slate-800">
+              <div className="flex items-center gap-3">
+                {selectedCreator.thumbnail_url ? (
+                  <img
+                    src={selectedCreator.thumbnail_url}
+                    alt={selectedCreator.title}
+                    className="h-12 w-12 rounded-full object-cover border border-slate-700"
+                  />
+                ) : null}
+                <div>
+                  <h3 className="text-base font-bold text-white flex items-center gap-2">
+                    {selectedCreator.title}
+                    <a
+                      href={selectedCreator.channel_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-400 hover:text-indigo-400 transition"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  </h3>
+                  <p className="text-xs text-slate-400">{selectedCreator.custom_url} • {selectedCreator.channel_id}</p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => setSelectedCreator(null)}
+                className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* Classification Decision & Reasons */}
+            <div className="my-5 p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-semibold text-slate-300">Brand-Fit Decision:</span>
+                {getDecisionBadge(selectedCreator.classification?.decision || 'needs_review')}
+              </div>
+              <ul className="text-xs text-slate-400 space-y-1.5 mt-3">
+                {selectedCreator.classification?.reasons?.map((reason: string, idx: number) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-indigo-400 shrink-0">•</span>
+                    <span>{reason}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Metrics Provenance Card */}
+            <div className="grid grid-cols-3 gap-3 mb-5">
+              <MetricsBadge
+                label="Subscribers"
+                value={selectedCreator.metrics?.subscriber_count?.toLocaleString()}
+                isUnavailable={selectedCreator.metrics?.is_subscriber_count_hidden}
+              />
+              <MetricsBadge
+                label="Est. Engagement"
+                value={selectedCreator.metrics?.estimated_engagement_rate}
+                unit="%"
+                isUnavailable={!selectedCreator.metrics?.estimated_engagement_rate}
+              />
+              <MetricsBadge
+                label="Observation Window"
+                value="Last 10 Uploads"
+              />
+            </div>
+
+            {/* Content Themes & Titles */}
+            <div className="mb-5 space-y-3">
+              <div className="flex items-center justify-between">
+                <h4 className="text-xs font-semibold uppercase text-slate-400">Content Themes</h4>
+                <button
+                  onClick={handleTriggerEnrich}
+                  disabled={enrichingCreator}
+                  className="text-xs text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1 transition"
+                >
+                  <RefreshCw className={`h-3 w-3 ${enrichingCreator ? 'animate-spin' : ''}`} />
+                  Re-extract Themes
+                </button>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5">
+                {selectedCreator.enrichment?.content_themes?.map((th: string, idx: number) => (
+                  <span key={idx} className="px-2.5 py-0.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">
+                    {th}
+                  </span>
+                ))}
+              </div>
+
+              {selectedCreator.enrichment?.recent_video_titles?.length > 0 && (
+                <div className="mt-3">
+                  <h4 className="text-[11px] font-semibold text-slate-400 mb-1">Recent Sampled Titles:</h4>
+                  <ul className="text-xs text-slate-300 space-y-1">
+                    {selectedCreator.enrichment.recent_video_titles.map((vt: string, idx: number) => (
+                      <li key={idx} className="truncate text-slate-400 text-[11px]">
+                        🎬 {vt}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            {/* Contact Email & Manual Verification */}
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-semibold text-slate-300">Public Contact Email</span>
+                <span className="text-[10px] text-slate-400">
+                  Status: <strong className="text-indigo-300">{selectedCreator.enrichment?.email_verification_status || 'none'}</strong>
+                </span>
+              </div>
+
+              <div className="flex gap-2 mt-2">
+                <input
+                  type="email"
+                  placeholder="Enter verified email from public page..."
+                  value={manualEmailInput}
+                  onChange={(e) => setManualEmailInput(e.target.value)}
+                  className="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                />
+                <button
+                  onClick={handleManualEmailSave}
+                  disabled={savingEmail || !manualEmailInput}
+                  className="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white text-xs font-semibold transition"
+                >
+                  {savingEmail ? 'Saving...' : 'Save & Verify'}
+                </button>
+              </div>
+              <p className="text-[10px] text-slate-500 mt-2">
+                * Zero guessing rule: Only add emails verified from the creator's official public business links.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="border-t border-slate-900 px-6 py-4 text-center text-xs text-slate-600">
