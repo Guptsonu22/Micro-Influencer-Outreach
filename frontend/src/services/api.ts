@@ -1,4 +1,14 @@
-import { SystemHealth, CreatorRecord } from '../types';
+import {
+  SystemHealth,
+  CreatorRecord,
+  PaginatedResponse,
+  DiscoveryRunResponse,
+  GeneratedMessageResponse,
+  OutreachLogResponse,
+  OutreachLogCreate,
+  CampaignProfile,
+  BatchClassificationResponse
+} from '../types';
 
 const API_BASE = '/api/v1';
 
@@ -41,48 +51,54 @@ async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
 }
 
 export const api = {
+  // System Health
   getHealth: () => request<SystemHealth>('/health'),
 
+  // Influencers & Pipeline
   getCreators: (params?: {
     page?: number;
     page_size?: number;
     decision?: string;
     is_synthetic?: boolean;
     is_qualified?: boolean;
+    min_subscribers?: number;
+    max_subscribers?: number;
     search_query?: string;
     niche?: string;
   }) => {
     const searchParams = new URLSearchParams();
     if (params?.page) searchParams.set('page', String(params.page));
     if (params?.page_size) searchParams.set('page_size', String(params.page_size));
-    if (params?.decision) searchParams.set('decision', params.decision);
+    if (params?.decision && params.decision !== 'all') searchParams.set('decision', params.decision);
     if (params?.is_synthetic !== undefined) searchParams.set('is_synthetic', String(params.is_synthetic));
     if (params?.is_qualified !== undefined) searchParams.set('is_qualified', String(params.is_qualified));
+    if (params?.min_subscribers !== undefined) searchParams.set('min_subscribers', String(params.min_subscribers));
+    if (params?.max_subscribers !== undefined) searchParams.set('max_subscribers', String(params.max_subscribers));
     if (params?.search_query) searchParams.set('search_query', params.search_query);
     if (params?.niche) searchParams.set('niche', params.niche);
     const qs = searchParams.toString();
-    return request<any>(`/influencers${qs ? `?${qs}` : ''}`);
+    return request<PaginatedResponse<CreatorRecord>>(`/influencers${qs ? `?${qs}` : ''}`);
   },
 
   getInfluencer: (channelId: string) => {
-    return request<any>(`/influencers/${channelId}`);
+    return request<CreatorRecord>(`/influencers/${channelId}`);
   },
 
   classifyAll: (criteria: any) => {
-    return request<any>('/influencers/classify', {
+    return request<BatchClassificationResponse>('/influencers/classify', {
       method: 'POST',
       body: JSON.stringify(criteria),
     });
   },
 
   enrichSingle: (channelId: string) => {
-    return request<any>(`/influencers/${channelId}/enrich`, {
+    return request<CreatorRecord>(`/influencers/${channelId}/enrich`, {
       method: 'POST',
     });
   },
 
   updateContactEmail: (channelId: string, email: string, sourceUrl?: string) => {
-    return request<any>(`/influencers/${channelId}/contact`, {
+    return request<CreatorRecord>(`/influencers/${channelId}/contact`, {
       method: 'PUT',
       body: JSON.stringify({
         contact_email: email,
@@ -91,6 +107,7 @@ export const api = {
     });
   },
 
+  // Discovery Engine
   triggerDiscovery: (payload: {
     queries?: string[];
     target_count?: number;
@@ -100,35 +117,36 @@ export const api = {
     region_code?: string;
     use_demo_mode?: boolean;
   }) => {
-    return request<any>('/discovery/runs', {
+    return request<DiscoveryRunResponse>('/discovery/runs', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
   },
 
   getDiscoveryRun: (runId: string) => {
-    return request<any>(`/discovery/runs/${runId}`);
+    return request<DiscoveryRunResponse>(`/discovery/runs/${runId}`);
   },
 
   listDiscoveryRuns: (limit: number = 20) => {
-    return request<any[]>(`/discovery/runs?limit=${limit}`);
+    return request<DiscoveryRunResponse[]>(`/discovery/runs?limit=${limit}`);
   },
 
   getExportUrl: (format: 'csv' | 'json', decision?: string, onlyQualified?: boolean) => {
     const q = new URLSearchParams({ format });
-    if (decision) q.set('decision', decision);
+    if (decision && decision !== 'all') q.set('decision', decision);
     if (onlyQualified !== undefined) q.set('is_qualified', String(onlyQualified));
     return `${API_BASE}/influencers/export?${q.toString()}`;
   },
 
-  // Phase 5 Messages API
+  // AI Message Studio
   generateMessage: (payload: {
     channel_id: string;
+    creator_id?: string;
     campaign_id?: string;
     allow_ineligible_override?: boolean;
     force_mock?: boolean;
   }) => {
-    return request<any>('/messages/generate', {
+    return request<GeneratedMessageResponse>('/messages/generate', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
@@ -140,7 +158,11 @@ export const api = {
     if (params?.status) q.set('status', params.status);
     if (params?.limit) q.set('limit', String(params.limit));
     const qs = q.toString();
-    return request<any[]>(`/messages${qs ? `?${qs}` : ''}`);
+    return request<GeneratedMessageResponse[]>(`/messages${qs ? `?${qs}` : ''}`);
+  },
+
+  getMessage: (messageId: string) => {
+    return request<GeneratedMessageResponse>(`/messages/${messageId}`);
   },
 
   editMessage: (messageId: string, payload: {
@@ -149,15 +171,43 @@ export const api = {
     instagram_dm?: string;
     status?: string;
   }) => {
-    return request<any>(`/messages/${messageId}`, {
+    return request<GeneratedMessageResponse>(`/messages/${messageId}`, {
       method: 'PUT',
       body: JSON.stringify(payload),
     });
   },
 
   updateMessageStatus: (messageId: string, newStatus: string) => {
-    return request<any>(`/messages/${messageId}/status?new_status=${newStatus}`, {
+    return request<GeneratedMessageResponse>(`/messages/${messageId}/status?new_status=${newStatus}`, {
       method: 'PUT',
     });
+  },
+
+  // Outreach Tracker
+  recordOutreach: (payload: OutreachLogCreate) => {
+    return request<OutreachLogResponse>('/outreach/logs', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  listOutreachLogs: (limit: number = 50) => {
+    return request<OutreachLogResponse[]>(`/outreach/logs?limit=${limit}`);
+  },
+
+  // Campaigns & Settings
+  createCampaign: (payload: Partial<CampaignProfile>) => {
+    return request<CampaignProfile>('/campaigns', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  listCampaigns: (limit: number = 20) => {
+    return request<CampaignProfile[]>(`/campaigns?limit=${limit}`);
+  },
+
+  getCampaign: (campaignId: string) => {
+    return request<CampaignProfile>(`/campaigns/${campaignId}`);
   },
 };
