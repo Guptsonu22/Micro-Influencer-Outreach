@@ -247,7 +247,7 @@ class YouTubeDiscoveryService:
                             "avg_recent_likes": metrics_sample["avg_likes"],
                             "avg_recent_comments": metrics_sample["avg_comments"],
                             "estimated_engagement_rate": metrics_sample["engagement_rate"],
-                            "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+                            "engagement_formula_used": "Formula: ((avg_likes + avg_comments) / avg_views) * 100",
                             "metric_timestamp": now
                         },
                         "enrichment": {
@@ -496,7 +496,7 @@ class YouTubeDiscoveryService:
                     "avg_recent_likes": float(subs // 120),
                     "avg_recent_comments": float(subs // 600),
                     "estimated_engagement_rate": base_eng,
-                    "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+                    "engagement_formula_used": "Formula: ((avg_likes + avg_comments) / avg_views) * 100",
                     "metric_timestamp": now
                 },
                 "enrichment": {

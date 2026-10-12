@@ -12,7 +12,7 @@ from backend.app.schemas.outreach import OutreachSendRequest, OutreachChannelTyp
 
 
 @pytest.fixture(autouse=True)
-async def setup_test_db():
+def setup_test_db():
     """Resets database state before each test."""
     db_manager.use_in_memory = True
     db_manager._in_memory_creators.clear()

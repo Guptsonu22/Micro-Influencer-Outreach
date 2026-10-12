@@ -1,6 +1,8 @@
 """Outreach dispatch, simulation, gatekeeper enforcement, and CSV audit export endpoints."""
 
 import io
+import uuid
+from datetime import datetime
 from typing import List, Optional
 import pandas as pd
 from fastapi import APIRouter, Query, Response, status
@@ -44,36 +46,34 @@ async def get_instagram_dm_copy(channel_id: str):
 
 @router.post("/logs", response_model=OutreachLogResponse, status_code=status.HTTP_201_CREATED)
 async def record_outreach(payload: OutreachLogCreate):
-    """Records an outreach log directly (supporting simulation recorder)."""
-    send_req = OutreachSendRequest(
+    """Records an outreach log directly (supporting simulation recorder and duplicate lock)."""
+    log_id = f"log_{uuid.uuid4().hex[:12]}"
+    now = datetime.utcnow()
+    initial_log = {
+        "id": log_id,
+        "creator_id": payload.creator_id,
+        "channel_id": payload.channel_id,
+        "campaign_id": payload.campaign_id or "camp_default",
+        "message_id": payload.message_id,
+        "channel_type": payload.channel_type,
+        "recipient_contact": payload.recipient_contact,
+        "is_simulation": payload.is_simulation,
+        "source_url": payload.source_url,
+        "status": "simulated" if payload.is_simulation else "sent",
+        "provider_name": "simulation" if payload.is_simulation else "direct",
+        "provider_message_id": f"sim_{uuid.uuid4().hex[:8]}",
+        "timestamp": now,
+        "completed_at": now,
+        "error_details": None,
+        "audit_metadata": {"manual_entry": True}
+    }
+    await db_manager.reserve_outreach_attempt(
+        campaign_id=payload.campaign_id or "camp_default",
         channel_id=payload.channel_id,
-        creator_id=payload.creator_id,
-        campaign_id=payload.campaign_id,
-        message_id=payload.message_id,
-        channel_type=payload.channel_type,  # type: ignore
-        is_live_requested=not payload.is_simulation,
-        confirmed_live_approval=not payload.is_simulation,
-        allow_ineligible_override=True
+        channel_type=payload.channel_type,
+        initial_log=initial_log
     )
-    res = await outreach_service.dispatch_outreach(send_req)
-    return OutreachLogResponse(
-        id=res.id,
-        creator_id=res.creator_id,
-        channel_id=res.channel_id,
-        campaign_id=res.campaign_id,
-        message_id=payload.message_id,
-        channel_type=res.channel_type,
-        recipient_contact=res.recipient_contact,
-        is_simulation=res.is_simulation,
-        source_url=payload.source_url,
-        status=res.status,
-        provider_name=res.provider_name,
-        provider_message_id=res.provider_message_id,
-        timestamp=res.dispatched_at,
-        completed_at=res.completed_at,
-        error_details=res.error_message,
-        audit_metadata=res.audit_trail
-    )
+    return OutreachLogResponse(**initial_log)
 
 
 @router.get("/logs", response_model=List[OutreachLogResponse])
