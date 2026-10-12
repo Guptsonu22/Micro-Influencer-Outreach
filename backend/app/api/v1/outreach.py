@@ -93,7 +93,7 @@ async def list_outreach_logs(
 
 @router.get("/export")
 async def export_outreach_history(
-    format: str = Query(default="csv", regex="^(csv|json)$")
+    format: str = Query(default="csv", pattern="^(csv|json)$")
 ):
     """Streams complete historical audit log of outreach attempts as CSV or JSON."""
     logs = await db_manager.list_all_outreach_logs_for_export()

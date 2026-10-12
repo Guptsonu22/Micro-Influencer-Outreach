@@ -31,4 +31,9 @@ def setup_logging() -> logging.Logger:
     return app_logger
 
 
+def get_logger(name: str = "edxso") -> logging.Logger:
+    """Retrieves a named logger configured with application formatting."""
+    return logging.getLogger(name)
+
+
 logger = setup_logging()

@@ -82,7 +82,7 @@ async def list_influencers(
 
 @router.get("/export")
 async def export_influencers(
-    format: str = Query(default="csv", regex="^(csv|json)$", description="Export format: 'csv' or 'json'"),
+    format: str = Query(default="csv", pattern="^(csv|json)$", description="Export format: 'csv' or 'json'"),
     decision: Optional[str] = Query(default=None, description="Filter by decision: 'pass', 'fail', 'needs_review'"),
     is_qualified: Optional[bool] = Query(default=None, description="Optionally export only qualified creators"),
     is_synthetic: Optional[bool] = Query(default=None, description="Filter by real or synthetic data"),

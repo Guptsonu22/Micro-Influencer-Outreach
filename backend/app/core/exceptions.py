@@ -36,6 +36,16 @@ class AppException(Exception):
         super().__init__(message)
 
 
+class ValidationError(AppException):
+    def __init__(self, message: str, details: Optional[Any] = None):
+        super().__init__(
+            code="VALIDATION_ERROR",
+            message=message,
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            details=details
+        )
+
+
 class ResourceNotFoundError(AppException):
     def __init__(self, resource: str, identifier: str):
         super().__init__(

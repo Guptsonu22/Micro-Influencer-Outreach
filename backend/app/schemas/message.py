@@ -26,8 +26,7 @@ class EditMessageRequest(BaseModel):
     status: Optional[str] = Field(default=None, description="'draft', 'approved', or 'rejected'")
 
 
-class GeneratedMessageResponse(BaseModel):
-    id: str
+class GeneratedMessageCreate(BaseModel):
     creator_id: str
     channel_id: str
     campaign_id: Optional[str] = None
@@ -43,6 +42,10 @@ class GeneratedMessageResponse(BaseModel):
     is_mock: bool = False
     prompt_version: str = "v1.2.0-strict-safety"
     status: str = Field(default="draft", description="'draft', 'approved', 'rejected'")
+
+
+class GeneratedMessageResponse(GeneratedMessageCreate):
+    id: str
     generated_at: datetime = Field(default_factory=datetime.utcnow)
     approved_at: Optional[datetime] = None
     updated_at: Optional[datetime] = None
