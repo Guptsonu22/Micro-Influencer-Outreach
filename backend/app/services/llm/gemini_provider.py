@@ -9,6 +9,13 @@ from backend.app.services.llm.base import BaseLLMProvider
 
 logger = logging.getLogger("edxso.service.llm.gemini")
 
+
+def _mask_key(key: str) -> str:
+    """Returns a safe masked representation for logging — never logs the real key value."""
+    if not key or len(key) < 8:
+        return "<not configured>"
+    return f"{key[:4]}...{key[-4:]} (len={len(key)})"
+
 GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 
@@ -22,6 +29,12 @@ class GeminiProvider(BaseLLMProvider):
         self.api_key = api_key or settings.GEMINI_API_KEY
         self.model_name = model_name or settings.GEMINI_MODEL
         self.timeout = httpx.Timeout(connect=8.0, read=30.0, write=10.0, pool=35.0)
+        # Confirm key presence at init time without logging the actual value
+        logger.info(
+            "GeminiProvider initialized. model=%s key=%s",
+            self.model_name,
+            _mask_key(self.api_key)
+        )
 
     async def generate_text(
         self,
@@ -40,6 +53,10 @@ class GeminiProvider(BaseLLMProvider):
         url = f"{GEMINI_API_BASE}/{self.model_name}:generateContent"
         params = {"key": self.api_key}
 
+        logger.info(
+            "Gemini generateContent request: model=%s temperature=%.1f",
+            self.model_name, temperature
+        )
         payload: Dict[str, Any] = {
             "contents": [
                 {
@@ -76,9 +93,13 @@ class GeminiProvider(BaseLLMProvider):
                         return parts[0]["text"]
                     return ""
                 elif res.status_code == 429:
+                    retry_after = res.headers.get("Retry-After", "unknown")
                     raise AppException(
                         code="LLM_RATE_LIMIT",
-                        message="Gemini API rate limit reached. Please wait a moment before retrying.",
+                        message=(
+                            f"Gemini API rate limit reached. "
+                            f"Retry-After: {retry_after}s. Please wait before retrying."
+                        ),
                         status_code=429
                     )
                 elif res.status_code in [400, 401, 403]:

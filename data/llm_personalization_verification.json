@@ -1,0 +1,85 @@
+{
+  "timestamp": "2026-10-12T09:51:34.822299",
+  "verifications_count": 3,
+  "records": [
+    {
+      "creator_id": null,
+      "creator_title": "DevBytes AI",
+      "is_synthetic": true,
+      "channel_id": "UC_SYNTHETIC_0001",
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for DevBytes AI",
+      "email_body": "Hi DevBytes AI! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "email_word_count": 73,
+      "email_words_valid": true,
+      "instagram_dm": "Hey DevBytes AI! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "dm_word_count": 22,
+      "dm_words_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "DevBytes AI",
+        "recent_video_referenced": "Building Full-Stack AI with Python",
+        "content_themes_used": [
+          "Python",
+          "FastAPI",
+          "OpenAI"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      },
+      "generated_at": "2026-10-12T09:51:30.688659"
+    },
+    {
+      "creator_id": null,
+      "creator_title": "Code With Sarah",
+      "is_synthetic": true,
+      "channel_id": "UC_SYNTHETIC_0002",
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Sarah",
+      "email_body": "Hi Code With Sarah! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "email_word_count": 74,
+      "email_words_valid": true,
+      "instagram_dm": "Hey Code With Sarah! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "dm_word_count": 23,
+      "dm_words_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Code With Sarah",
+        "recent_video_referenced": "Building Full-Stack AI with Machine Learning",
+        "content_themes_used": [
+          "Machine Learning",
+          "PyTorch"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      },
+      "generated_at": "2026-10-12T09:51:32.755071"
+    },
+    {
+      "creator_id": null,
+      "creator_title": "ML Foundations",
+      "is_synthetic": true,
+      "channel_id": "UC_SYNTHETIC_0003",
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for ML Foundations",
+      "email_body": "Hi ML Foundations! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "email_word_count": 73,
+      "email_words_valid": true,
+      "instagram_dm": "Hey ML Foundations! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "dm_word_count": 22,
+      "dm_words_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "ML Foundations",
+        "recent_video_referenced": "Building Full-Stack AI with Data Science",
+        "content_themes_used": [
+          "Data Science",
+          "Scikit-Learn"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      },
+      "generated_at": "2026-10-12T09:51:34.810863"
+    }
+  ]
+}

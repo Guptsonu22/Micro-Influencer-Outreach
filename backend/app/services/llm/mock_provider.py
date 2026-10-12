@@ -19,10 +19,21 @@ class MockLLMProvider(BaseLLMProvider):
         temperature: float = 0.2
     ) -> str:
         """Returns compliant structured JSON conforming to exact word-count constraints."""
-        # Extract themes and video if passed in prompt
+        # Extract creator name, niche, themes, and video if passed in prompt
+        creator_name = "Creator"
+        niche = "Technology & Artificial Intelligence"
         themes = ["AI Development", "Software Engineering"]
         video = None
+
         for line in prompt.splitlines():
+            if "Channel Title:" in line or "Channel/Creator Name:" in line:
+                val = line.split(":")[-1].strip()
+                if val:
+                    creator_name = val
+            if "Niche Vertical:" in line or "Verified Primary Niche:" in line:
+                val = line.split(":")[-1].strip()
+                if val:
+                    niche = val
             if "Verified Content Themes:" in line:
                 raw_themes = line.split("Verified Content Themes:")[-1].strip()
                 if raw_themes:
@@ -34,22 +45,22 @@ class MockLLMProvider(BaseLLMProvider):
                     pass
 
         sample_response = {
-            "email_subject": "EDXSO Collaboration: Next-Gen Developer & AI Tooling",
+            "email_subject": f"EDXSO Partnership: Collaboration Proposal for {creator_name}",
             "email_body": (
-                "Hi there! I have been following your insightful content and tutorials on modern software engineering "
+                f"Hi {creator_name}! I have been following your insightful content and tutorials on modern software engineering "
                 "and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate "
                 "coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, "
                 "providing full premium platform access for your community alongside a competitive creator sponsorship fee. "
                 "Let us know if you would be open to exploring this collaboration."
             ),
             "instagram_dm": (
-                "Hey! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?"
+                f"Hey {creator_name}! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?"
             ),
             "personalization_evidence": {
-                "creator_name_used": "Creator",
+                "creator_name_used": creator_name,
                 "recent_video_referenced": video,
                 "content_themes_used": themes,
-                "niche_used": "Technology & Artificial Intelligence"
+                "niche_used": niche
             },
             "warnings": [
                 "Mock generation: produced by local deterministic provider for testing/demo."

@@ -150,9 +150,10 @@ class DatabaseManager:
             raise ValueError("channel_id is required for upserting a creator.")
 
         if not self.use_in_memory and self.db is not None:
+            update_data = {k: v for k, v in creator_data.items() if k != "_id"}
             await self.db.creators.update_one(
                 {"channel_id": channel_id},
-                {"$set": creator_data},
+                {"$set": update_data},
                 upsert=True
             )
             return channel_id
@@ -356,9 +357,10 @@ class DatabaseManager:
     async def save_campaign(self, campaign_data: Dict[str, Any]) -> str:
         campaign_id = campaign_data.get("id")
         if not self.use_in_memory and self.db is not None:
+            update_data = {k: v for k, v in campaign_data.items() if k != "_id"}
             await self.db.campaigns.update_one(
                 {"id": campaign_id},
-                {"$set": campaign_data},
+                {"$set": update_data},
                 upsert=True
             )
             return campaign_id
@@ -393,9 +395,10 @@ class DatabaseManager:
     async def save_generated_message(self, message_data: Dict[str, Any]) -> str:
         message_id = message_data.get("id")
         if not self.use_in_memory and self.db is not None:
+            update_data = {k: v for k, v in message_data.items() if k != "_id"}
             await self.db.generated_messages.update_one(
                 {"id": message_id},
-                {"$set": message_data},
+                {"$set": update_data},
                 upsert=True
             )
             return message_id
