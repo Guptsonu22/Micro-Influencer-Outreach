@@ -60,7 +60,7 @@ class Settings(BaseSettings):
         description="Google AI Studio API key"
     )
     GEMINI_MODEL: str = Field(
-        default="gemini-1.5-flash",
+        default="gemini-2.5-flash",
         description="Default Gemini model identifier"
     )
 

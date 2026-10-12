@@ -1,4 +1,4 @@
-"""FastAPI application entrypoint for EDXSO AI Influencer Outreach System."""
+"""FastAPI application entrypoint for EDXSO AI Influencer Outreach System. Model updated."""
 
 from contextlib import asynccontextmanager
 from typing import Any, Dict

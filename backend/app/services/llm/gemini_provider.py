@@ -26,7 +26,7 @@ class GeminiProvider(BaseLLMProvider):
     is_mock: bool = False
 
     def __init__(self, api_key: Optional[str] = None, model_name: Optional[str] = None):
-        self.api_key = api_key or settings.GEMINI_API_KEY
+        self.api_key = api_key if api_key is not None else settings.GEMINI_API_KEY
         self.model_name = model_name or settings.GEMINI_MODEL
         self.timeout = httpx.Timeout(connect=8.0, read=30.0, write=10.0, pool=35.0)
         # Confirm key presence at init time without logging the actual value

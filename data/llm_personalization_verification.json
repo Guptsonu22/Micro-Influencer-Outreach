@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-12T10:05:42.239436",
+  "timestamp": "2026-10-12T10:22:06.198556",
   "verifications_count": 3,
   "records": [
     {
@@ -8,20 +8,20 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0001",
-      "email_subject": "EDXSO Partnership: Collaboration Proposal for DevBytes AI",
-      "email_body": "Hi DevBytes AI! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
-      "email_word_count": 73,
+      "email_subject": "Collaboration Opportunity: DevBytes AI & EDXSO",
+      "email_body": "Hi DevBytes AI Team,\n\nYour 'Building Full-Stack AI with Python' video was excellent! Your content on Python, FastAPI, and OpenAI aligns perfectly with EDXSO.\n\nWe offer next-gen AI career training and developer tools. We believe your audience would greatly benefit. We're offering a paid sponsorship ($250-$800) and free Pro access for your community.\n\nReady to partner? Reply or book a 10-min call: cal.com/edxso/partnerships.\n\nBest,\nThe EDXSO Partnerships Team",
+      "email_word_count": 68,
       "email_words_valid": true,
-      "instagram_dm": "Hey DevBytes AI! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
-      "dm_word_count": 22,
+      "instagram_dm": "Hey DevBytes AI! Your 'Building Full-Stack AI with Python' video was awesome. EDXSO offers AI training. Interested in a paid sponsorship + free Pro access? DM us!",
+      "dm_word_count": 27,
       "dm_words_valid": true,
-      "provider_name": "mock",
-      "model_name": "mock-personalizer-v1",
-      "is_mock": true,
-      "is_real_gemini": false,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "is_real_gemini": true,
       "personalization_evidence": {
         "creator_name_used": "DevBytes AI",
-        "recent_video_referenced": "Building Full-Stack AI with Python",
+        "recent_video_referenced": "'Building Full-Stack AI with Python'",
         "content_themes_used": [
           "Python",
           "FastAPI",
@@ -29,7 +29,7 @@
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:05:38.091717"
+      "generated_at": "2026-10-12T10:21:45.710821"
     },
     {
       "creator_id": null,
@@ -37,27 +37,28 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0002",
-      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Sarah",
-      "email_body": "Hi Code With Sarah! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
-      "email_word_count": 74,
+      "email_subject": "Collaboration Opportunity: EDXSO x Code With Sarah",
+      "email_body": "Hi Sarah,\n\nWe're huge fans of your work on Code With Sarah, especially your recent 'Building Full-Stack AI with Machine Learning' video. Your expertise in Machine Learning and PyTorch perfectly aligns with EDXSO's mission. We develop next-generation AI-powered career training and interactive developer tools. We'd love to discuss a paid sponsorship ($250-$800) and offer your community free Pro access. Would you be open to a quick 10-minute chat? Reply here or book a call: cal.com/edxso/partnerships.",
+      "email_word_count": 75,
       "email_words_valid": true,
-      "instagram_dm": "Hey Code With Sarah! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
-      "dm_word_count": 23,
+      "instagram_dm": "Hi Sarah, love your 'Building Full-Stack AI' video! EDXSO offers AI training tools and wants to partner. Paid sponsorship + free community access. DM us!",
+      "dm_word_count": 25,
       "dm_words_valid": true,
-      "provider_name": "mock",
-      "model_name": "mock-personalizer-v1",
-      "is_mock": true,
-      "is_real_gemini": false,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "is_real_gemini": true,
       "personalization_evidence": {
-        "creator_name_used": "Code With Sarah",
+        "creator_name_used": "Sarah",
         "recent_video_referenced": "Building Full-Stack AI with Machine Learning",
         "content_themes_used": [
           "Machine Learning",
-          "PyTorch"
+          "PyTorch",
+          "AI pipelines"
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:05:40.160401"
+      "generated_at": "2026-10-12T10:21:57.278710"
     },
     {
       "creator_id": null,
@@ -65,27 +66,28 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0003",
-      "email_subject": "EDXSO Partnership: Collaboration Proposal for ML Foundations",
-      "email_body": "Hi ML Foundations! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
-      "email_word_count": 73,
+      "email_subject": "Collaboration Opportunity: ML Foundations x EDXSO - AI & Data Science",
+      "email_body": "Hi ML Foundations,\n\nWe're incredibly impressed by your work, especially your recent video 'Building Full-Stack AI with Data Science'. Your tutorials on Data Science and Scikit-Learn perfectly align with EDXSO's mission.\n\nEDXSO offers next-generation AI-powered career training and interactive developer tools. We see a fantastic synergy with your audience. We'd love to discuss a paid sponsorship ($250-$800) where you could also offer free Pro access to your community.\n\nInterested? Reply here or book a quick 10-minute call: cal.com/edxso/partnerships.\n\nBest,\nThe EDXSO Team",
+      "email_word_count": 82,
       "email_words_valid": true,
-      "instagram_dm": "Hey ML Foundations! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
-      "dm_word_count": 22,
+      "instagram_dm": "Hey ML Foundations! Loved your 'Building Full-Stack AI' video. We're EDXSO, offering AI training, and think your audience would love our tools. DM us for a paid collab!",
+      "dm_word_count": 28,
       "dm_words_valid": true,
-      "provider_name": "mock",
-      "model_name": "mock-personalizer-v1",
-      "is_mock": true,
-      "is_real_gemini": false,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "is_real_gemini": true,
       "personalization_evidence": {
         "creator_name_used": "ML Foundations",
-        "recent_video_referenced": "Building Full-Stack AI with Data Science",
+        "recent_video_referenced": "'Building Full-Stack AI with Data Science'",
         "content_themes_used": [
           "Data Science",
-          "Scikit-Learn"
+          "Scikit-Learn",
+          "AI pipelines"
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:05:42.226142"
+      "generated_at": "2026-10-12T10:22:06.187272"
     }
   ]
 }

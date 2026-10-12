@@ -37,7 +37,7 @@ class GeneratedMessageCreate(BaseModel):
     warnings: List[str] = Field(default_factory=list)
     email_word_count: int = Field(default=0, description="Word count for email body (Target: 60-90 words)")
     dm_word_count: int = Field(default=0, description="Word count for Instagram DM (Target: 15-30 words)")
-    model_name: str = "gemini-1.5-flash"
+    model_name: str = "gemini-2.5-flash"
     provider_name: str = "gemini"
     is_mock: bool = False
     prompt_version: str = "v1.2.0-strict-safety"
