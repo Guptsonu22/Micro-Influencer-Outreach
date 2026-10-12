@@ -178,28 +178,84 @@ export interface GeneratedMessageResponse {
   updated_at?: string | null;
 }
 
+export type OutreachStatusType =
+  | 'draft'
+  | 'approved'
+  | 'simulated'
+  | 'sending'
+  | 'sent'
+  | 'failed'
+  | 'duplicate_skipped'
+  | 'ambiguous';
+
 export interface OutreachLogResponse {
   id: string;
   creator_id: string;
   channel_id: string;
+  campaign_id: string;
   message_id?: string | null;
   channel_type: 'email' | 'instagram_dm';
   recipient_contact: string;
   is_simulation: boolean;
   source_url?: string | null;
-  status: 'simulated' | 'sent' | 'failed' | 'duplicate_prevented';
+  status: OutreachStatusType;
+  provider_name?: string | null;
+  provider_message_id?: string | null;
   timestamp: string;
+  completed_at?: string | null;
   error_details?: string | null;
   audit_metadata: {
     simulation_mode?: boolean;
     ip_origin?: string;
+    is_ambiguous?: boolean;
     [key: string]: any;
   };
+}
+
+export interface OutreachSendRequest {
+  channel_id: string;
+  creator_id?: string;
+  campaign_id?: string;
+  message_id?: string | null;
+  channel_type: 'email' | 'instagram_dm';
+  is_live_requested: boolean;
+  confirmed_live_approval: boolean;
+  allow_ineligible_override: boolean;
+}
+
+export interface OutreachDispatchResponse {
+  id: string;
+  channel_id: string;
+  creator_id: string;
+  campaign_id: string;
+  channel_type: string;
+  recipient_contact: string;
+  status: OutreachStatusType;
+  is_simulation: boolean;
+  provider_name: string;
+  provider_message_id?: string | null;
+  dispatched_at: string;
+  completed_at?: string | null;
+  error_message?: string | null;
+  audit_trail: Record<string, any>;
+  instagram_dm_copy?: string | null;
+  policy_notice?: string | null;
+}
+
+export interface InstagramDMCopyResponse {
+  channel_id: string;
+  creator_name: string;
+  instagram_dm: string;
+  word_count: number;
+  character_count: number;
+  meta_policy_notice: string;
+  created_at: string;
 }
 
 export interface OutreachLogCreate {
   creator_id: string;
   channel_id: string;
+  campaign_id?: string;
   message_id?: string;
   channel_type: 'email' | 'instagram_dm';
   recipient_contact: string;

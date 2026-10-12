@@ -6,6 +6,9 @@ import {
   GeneratedMessageResponse,
   OutreachLogResponse,
   OutreachLogCreate,
+  OutreachSendRequest,
+  OutreachDispatchResponse,
+  InstagramDMCopyResponse,
   CampaignProfile,
   BatchClassificationResponse
 } from '../types';

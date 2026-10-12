@@ -1,10 +1,11 @@
-"""Database connection lifecycle, indexing, and repository layer for MongoDB."""
-
+import asyncio
 import logging
 from typing import Any, Dict, List, Optional
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 import pymongo
+from pymongo.errors import DuplicateKeyError
 from backend.app.core.config import settings
+from backend.app.core.exceptions import DuplicateResourceError
 
 logger = logging.getLogger("edxso.database")
 
@@ -21,6 +22,7 @@ class DatabaseManager:
     _in_memory_campaigns: Dict[str, Dict[str, Any]] = {}
     _in_memory_messages: Dict[str, Dict[str, Any]] = {}
     _in_memory_outreach_logs: List[Dict[str, Any]] = []
+    _outreach_lock: Optional[asyncio.Lock] = None
 
     use_in_memory: bool = False
 
@@ -81,10 +83,19 @@ class DatabaseManager:
                 name="idx_creators_retrieved_at"
             )
 
-            # 2. Outreach duplicate prevention compound index
+            # 2. Outreach duplicate prevention unique compound index
+            await self.db.outreach_logs.create_index(
+                [
+                    ("campaign_id", pymongo.ASCENDING),
+                    ("channel_id", pymongo.ASCENDING),
+                    ("channel_type", pymongo.ASCENDING)
+                ],
+                unique=True,
+                name="idx_outreach_unique_campaign_channel_type"
+            )
             await self.db.outreach_logs.create_index(
                 [("channel_id", pymongo.ASCENDING), ("channel_type", pymongo.ASCENDING)],
-                name="idx_outreach_duplicate_guard"
+                name="idx_outreach_channel_lookup"
             )
             await self.db.outreach_logs.create_index(
                 [("timestamp", pymongo.DESCENDING)],
@@ -429,20 +440,84 @@ class DatabaseManager:
             self._in_memory_outreach_logs.append(log_entry)
             return log_id
 
-    async def has_existing_outreach(self, channel_id: str, channel_type: str = "email") -> bool:
-        """Checks if a creator has already received or simulated outreach to prevent duplicates."""
+    async def reserve_outreach_attempt(
+        self,
+        campaign_id: str,
+        channel_id: str,
+        channel_type: str,
+        initial_log: Dict[str, Any]
+    ) -> str:
+        """Atomically reserves an outreach attempt with status 'sending' to lock out duplicate dispatches."""
+        log_id = initial_log.get("id")
+
         if not self.use_in_memory and self.db is not None:
-            count = await self.db.outreach_logs.count_documents({
-                "channel_id": channel_id,
-                "channel_type": channel_type,
-                "status": {"$in": ["sent", "simulated"]}
-            })
+            try:
+                await self.db.outreach_logs.insert_one(initial_log)
+                return log_id
+            except DuplicateKeyError:
+                raise DuplicateResourceError(
+                    resource=f"Outreach ({channel_type} for campaign {campaign_id})",
+                    identifier=channel_id
+                )
+        else:
+            if self._outreach_lock is None:
+                self._outreach_lock = asyncio.Lock()
+
+            async with self._outreach_lock:
+                for log in self._in_memory_outreach_logs:
+                    if (
+                        log.get("channel_id") == channel_id
+                        and log.get("channel_type") == channel_type
+                        and log.get("campaign_id", "camp_default") == campaign_id
+                        and log.get("status") in ["sent", "simulated", "sending"]
+                    ):
+                        raise DuplicateResourceError(
+                            resource=f"Outreach ({channel_type} for campaign {campaign_id})",
+                            identifier=channel_id
+                        )
+
+                self._in_memory_outreach_logs.append(initial_log)
+                return log_id
+
+    async def update_outreach_status(self, log_id: str, update_fields: Dict[str, Any]) -> bool:
+        """Updates the status and provider metadata of a reserved outreach attempt."""
+        if not self.use_in_memory and self.db is not None:
+            result = await self.db.outreach_logs.update_one(
+                {"id": log_id},
+                {"$set": update_fields}
+            )
+            return result.modified_count > 0
+        else:
+            for log in self._in_memory_outreach_logs:
+                if log.get("id") == log_id:
+                    log.update(update_fields)
+                    return True
+            return False
+
+    async def has_existing_outreach(
+        self,
+        channel_id: str,
+        channel_type: str = "email",
+        campaign_id: Optional[str] = None
+    ) -> bool:
+        """Checks if a creator has already received or simulated outreach to prevent duplicates."""
+        query_filter: Dict[str, Any] = {
+            "channel_id": channel_id,
+            "channel_type": channel_type,
+            "status": {"$in": ["sent", "simulated", "sending"]}
+        }
+        if campaign_id:
+            query_filter["campaign_id"] = campaign_id
+
+        if not self.use_in_memory and self.db is not None:
+            count = await self.db.outreach_logs.count_documents(query_filter)
             return count > 0
         else:
             return any(
                 log.get("channel_id") == channel_id
                 and log.get("channel_type") == channel_type
-                and log.get("status") in ["sent", "simulated"]
+                and (not campaign_id or log.get("campaign_id") == campaign_id)
+                and log.get("status") in ["sent", "simulated", "sending"]
                 for log in self._in_memory_outreach_logs
             )
 
@@ -461,6 +536,23 @@ class DatabaseManager:
                 key=lambda x: str(x.get("timestamp", "")),
                 reverse=True
             )[:limit]
+
+    async def list_all_outreach_logs_for_export(self) -> List[Dict[str, Any]]:
+        """Retrieves all outreach logs for complete CSV export."""
+        if not self.use_in_memory and self.db is not None:
+            cursor = self.db.outreach_logs.find().sort("timestamp", pymongo.DESCENDING)
+            results = []
+            async for doc in cursor:
+                if "_id" in doc:
+                    doc["_id"] = str(doc["_id"])
+                results.append(doc)
+            return results
+        else:
+            return sorted(
+                self._in_memory_outreach_logs,
+                key=lambda x: str(x.get("timestamp", "")),
+                reverse=True
+            )
 
 
 db_manager = DatabaseManager()
