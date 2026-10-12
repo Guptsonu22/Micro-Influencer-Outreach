@@ -1,25 +1,21 @@
 """FastAPI application entrypoint for EDXSO AI Influencer Outreach System."""
 
-import logging
 from contextlib import asynccontextmanager
+from typing import Any, Dict
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.app.core.config import settings
 from backend.app.core.database import db_manager
+from backend.app.core.logging import logger
+from backend.app.core.exceptions import AppException, app_exception_handler
 from backend.app.api.v1.router import api_v1_router
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO if not settings.DEBUG else logging.DEBUG,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
-)
-logger = logging.getLogger("edxso.main")
+from backend.app.api.v1.health import health_check
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Handles startup and shutdown events for the application."""
-    logger.info("Initializing %s...", settings.PROJECT_NAME)
+    logger.info("Initializing %s in %s mode...", settings.PROJECT_NAME, settings.ENVIRONMENT)
     connected = await db_manager.connect_to_database()
     if connected:
         logger.info("Database initialized successfully with MongoDB.")
@@ -43,6 +39,9 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Exception handlers for consistent error response format
+app.add_exception_handler(AppException, app_exception_handler)
+
 # CORS Middleware setup
 app.add_middleware(
     CORSMiddleware,
@@ -56,15 +55,22 @@ app.add_middleware(
 app.include_router(api_v1_router, prefix=settings.API_V1_STR)
 
 
-@app.get("/")
+@app.get("/", tags=["Root"])
 async def root():
     """Root redirect / information endpoint."""
     return {
         "service": settings.PROJECT_NAME,
         "version": "1.0.0",
         "docs_url": "/docs",
-        "health_check": f"{settings.API_V1_STR}/health"
+        "health_check": "/health",
+        "api_v1_health": f"{settings.API_V1_STR}/health"
     }
+
+
+@app.get("/health", tags=["Health & System"])
+async def root_health_check() -> Dict[str, Any]:
+    """Root-level health check endpoint mirroring /api/v1/health."""
+    return await health_check()
 
 
 if __name__ == "__main__":

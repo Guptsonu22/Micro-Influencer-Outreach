@@ -36,24 +36,33 @@ This system automates the discovery of 50+ real YouTube micro-influencers, verif
 ```
 ├── .env.example              # Environment variables template
 ├── .gitignore                # Git exclusions
-├── README.md                 # Project documentation
+├── data/                     # Data exports and seed storage
+├── docs/
+│   ├── ARCHITECTURE.md       # Complete architectural blueprint
+│   └── WINDOWS_SETUP.md      # Exact PowerShell commands for Windows
+├── screenshots/              # Evaluation screenshots & demo recordings
 ├── backend/
 │   ├── requirements.txt      # Python dependencies
 │   ├── app/
-│   │   ├── main.py           # FastAPI entrypoint & CORS middleware
+│   │   ├── main.py           # FastAPI entrypoint, CORS & error handlers
 │   │   ├── core/
-│   │   │   ├── config.py     # Pydantic Settings & environment config
-│   │   │   └── database.py   # Motor MongoDB client & repository layer
-│   │   ├── models/
-│   │   │   ├── creator.py    # Strict Pydantic domain models
-│   │   │   └── campaign.py   # Filter criteria and campaign settings
+│   │   │   ├── config.py     # Pydantic Settings & environment validation
+│   │   │   ├── database.py   # Motor MongoDB client, indexes & fallback DAL
+│   │   │   ├── exceptions.py # Standard error response & custom exceptions
+│   │   │   └── logging.py    # Structured logging configuration
+│   │   ├── models/           # Domain persistence models
+│   │   ├── schemas/          # Validated request/response DTOs
+│   │   ├── repositories/     # Data access layer
+│   │   ├── services/         # Business logic services
+│   │   ├── utils/            # Email regex extractor & metrics formula
 │   │   └── api/
-│   │       └── v1/
-│   │           ├── router.py # API v1 router hub
-│   │           └── health.py # Health check & telemetry endpoint
+│   │       └── v1/           # API v1 routers (creators, discovery, outreach)
 │   └── tests/
-│       ├── test_health.py    # Health check & safety flags tests
-│       └── test_models.py    # Data integrity & validation tests
+│       ├── test_config.py    # Configuration validation tests
+│       ├── test_schemas.py   # Data integrity & missing values tests
+│       ├── test_health.py    # Health endpoints tests
+│       ├── test_endpoints.py # CRUD, pagination, duplicate prevention tests
+│       └── test_utils.py     # Email extraction & metrics tests
 └── frontend/
     ├── package.json          # Node dependencies
     ├── vite.config.ts        # Vite build & proxy config

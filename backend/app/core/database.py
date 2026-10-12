@@ -1,27 +1,38 @@
-"""Database connection and repository layer for MongoDB."""
+"""Database connection lifecycle, indexing, and repository layer for MongoDB."""
 
 import logging
 from typing import Any, Dict, List, Optional
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
+import pymongo
 from backend.app.core.config import settings
 
 logger = logging.getLogger("edxso.database")
 
 
 class DatabaseManager:
-    """Manages MongoDB connection lifecycle and collection access."""
+    """Manages MongoDB connection lifecycle, indexing, and collection operations."""
 
     client: Optional[AsyncIOMotorClient] = None
     db: Optional[AsyncIOMotorDatabase] = None
-    _in_memory_fallback: Dict[str, Dict[str, Any]] = {}
+
+    # In-memory stores for offline testing and graceful database degradation
+    _in_memory_creators: Dict[str, Dict[str, Any]] = {}
+    _in_memory_discovery_runs: Dict[str, Dict[str, Any]] = {}
+    _in_memory_campaigns: Dict[str, Dict[str, Any]] = {}
+    _in_memory_messages: Dict[str, Dict[str, Any]] = {}
+    _in_memory_outreach_logs: List[Dict[str, Any]] = []
+
     use_in_memory: bool = False
 
     async def connect_to_database(self) -> bool:
-        """Attempts to connect to MongoDB. Falls back to in-memory store if unreachable in dev mode."""
+        """Attempts to connect to MongoDB and build required indexes.
+
+        Falls back gracefully to in-memory store if MongoDB is offline.
+        """
         try:
             self.client = AsyncIOMotorClient(
                 settings.MONGODB_URI,
-                serverSelectionTimeoutMS=2000
+                serverSelectionTimeoutMS=settings.MONGODB_TIMEOUT_MS
             )
             # Verify server connectivity
             await self.client.admin.command("ping")
@@ -29,28 +40,87 @@ class DatabaseManager:
             self.use_in_memory = False
             logger.info("Successfully connected to MongoDB database: %s", settings.MONGODB_DB_NAME)
 
-            # Ensure indexes for uniqueness and search performance
-            await self.db.creators.create_index("channel_id", unique=True)
-            await self.db.creators.create_index("is_synthetic")
-            await self.db.creators.create_index("classification.is_qualified")
+            # Ensure indexes across collections
+            await self._create_indexes()
             return True
         except Exception as exc:
             logger.warning(
-                "Could not connect to MongoDB at %s (%s). Using in-memory repository for local runtime.",
+                "MongoDB connection failed at %s (%s). Falling back gracefully to in-memory persistence adapter.",
                 settings.MONGODB_URI,
                 str(exc)
             )
             self.use_in_memory = True
             return False
 
+    async def _create_indexes(self) -> None:
+        """Creates unique and search indexes for influencer profiles and outreach guards."""
+        if self.db is None:
+            return
+
+        try:
+            # 1. Creators indexes
+            await self.db.creators.create_index(
+                [("channel_id", pymongo.ASCENDING)],
+                unique=True,
+                name="idx_creators_channel_id_unique"
+            )
+            await self.db.creators.create_index(
+                [("is_synthetic", pymongo.ASCENDING)],
+                name="idx_creators_is_synthetic"
+            )
+            await self.db.creators.create_index(
+                [("classification.is_qualified", pymongo.ASCENDING)],
+                name="idx_creators_is_qualified"
+            )
+            await self.db.creators.create_index(
+                [("metrics.subscriber_count", pymongo.ASCENDING)],
+                name="idx_creators_subscriber_count"
+            )
+            await self.db.creators.create_index(
+                [("retrieved_at", pymongo.DESCENDING)],
+                name="idx_creators_retrieved_at"
+            )
+
+            # 2. Outreach duplicate prevention compound index
+            await self.db.outreach_logs.create_index(
+                [("channel_id", pymongo.ASCENDING), ("channel_type", pymongo.ASCENDING)],
+                name="idx_outreach_duplicate_guard"
+            )
+            await self.db.outreach_logs.create_index(
+                [("timestamp", pymongo.DESCENDING)],
+                name="idx_outreach_timestamp"
+            )
+
+            # 3. Discovery runs index
+            await self.db.discovery_runs.create_index(
+                [("started_at", pymongo.DESCENDING)],
+                name="idx_discovery_started_at"
+            )
+
+            # 4. Campaigns index
+            await self.db.campaigns.create_index(
+                [("name", pymongo.ASCENDING)],
+                name="idx_campaign_name"
+            )
+
+            # 5. Generated messages compound index
+            await self.db.generated_messages.create_index(
+                [("creator_id", pymongo.ASCENDING), ("channel_id", pymongo.ASCENDING)],
+                name="idx_message_creator_channel"
+            )
+
+            logger.info("Successfully ensured all database indexes.")
+        except Exception as exc:
+            logger.warning("Error creating MongoDB indexes: %s", str(exc))
+
     async def close_database_connection(self) -> None:
-        """Closes the MongoDB connection."""
+        """Closes the MongoDB connection on shutdown."""
         if self.client:
             self.client.close()
-            logger.info("MongoDB connection closed.")
+            logger.info("MongoDB client connection closed.")
 
     async def is_healthy(self) -> bool:
-        """Verifies if MongoDB is reachable."""
+        """Pings MongoDB to determine live connectivity."""
         if self.use_in_memory or not self.client:
             return False
         try:
@@ -59,10 +129,11 @@ class DatabaseManager:
         except Exception:
             return False
 
-    # Data Access Layer Methods
+    # -------------------------------------------------------------
+    # Creators Operations
+    # -------------------------------------------------------------
 
     async def upsert_creator(self, creator_data: Dict[str, Any]) -> str:
-        """Inserts or updates a creator document based on channel_id to prevent duplicates."""
         channel_id = creator_data.get("channel_id")
         if not channel_id:
             raise ValueError("channel_id is required for upserting a creator.")
@@ -75,11 +146,10 @@ class DatabaseManager:
             )
             return channel_id
         else:
-            self._in_memory_fallback[channel_id] = creator_data
+            self._in_memory_creators[channel_id] = creator_data
             return channel_id
 
     async def bulk_upsert_creators(self, creators: List[Dict[str, Any]]) -> int:
-        """Bulk upserts multiple creator records."""
         count = 0
         for creator in creators:
             await self.upsert_creator(creator)
@@ -87,33 +157,43 @@ class DatabaseManager:
         return count
 
     async def get_creator_by_channel_id(self, channel_id: str) -> Optional[Dict[str, Any]]:
-        """Retrieves a single creator by YouTube channel ID."""
         if not self.use_in_memory and self.db is not None:
             doc = await self.db.creators.find_one({"channel_id": channel_id})
             if doc and "_id" in doc:
                 doc["_id"] = str(doc["_id"])
             return doc
-        return self._in_memory_fallback.get(channel_id)
+        return self._in_memory_creators.get(channel_id)
 
     async def list_creators(
         self,
         is_synthetic: Optional[bool] = None,
         is_qualified: Optional[bool] = None,
+        min_subscribers: Optional[int] = None,
+        max_subscribers: Optional[int] = None,
         search_query: Optional[str] = None,
+        niche: Optional[str] = None,
         skip: int = 0,
-        limit: int = 100
+        limit: int = 50
     ) -> List[Dict[str, Any]]:
-        """Lists creators with optional filters."""
         if not self.use_in_memory and self.db is not None:
             query: Dict[str, Any] = {}
             if is_synthetic is not None:
                 query["is_synthetic"] = is_synthetic
             if is_qualified is not None:
                 query["classification.is_qualified"] = is_qualified
+            if min_subscribers is not None or max_subscribers is not None:
+                query["metrics.subscriber_count"] = {}
+                if min_subscribers is not None:
+                    query["metrics.subscriber_count"]["$gte"] = min_subscribers
+                if max_subscribers is not None:
+                    query["metrics.subscriber_count"]["$lte"] = max_subscribers
+            if niche:
+                query["classification.niche"] = {"$regex": niche, "$options": "i"}
             if search_query:
                 query["$or"] = [
                     {"title": {"$regex": search_query, "$options": "i"}},
                     {"custom_url": {"$regex": search_query, "$options": "i"}},
+                    {"description": {"$regex": search_query, "$options": "i"}},
                     {"classification.niche": {"$regex": search_query, "$options": "i"}},
                 ]
 
@@ -125,39 +205,7 @@ class DatabaseManager:
                 results.append(doc)
             return results
         else:
-            filtered = list(self._in_memory_fallback.values())
-            if is_synthetic is not None:
-                filtered = [c for c in filtered if c.get("is_synthetic") == is_synthetic]
-            if is_qualified is not None:
-                filtered = [
-                    c for c in filtered
-                    if c.get("classification", {}).get("is_qualified") == is_qualified
-                ]
-            if search_query:
-                sq = search_query.lower()
-                filtered = [
-                    c for c in filtered
-                    if sq in c.get("title", "").lower()
-                    or sq in c.get("custom_url", "").lower()
-                    or sq in c.get("classification", {}).get("niche", "").lower()
-                ]
-            return filtered[skip: skip + limit]
-
-    async def count_creators(
-        self,
-        is_synthetic: Optional[bool] = None,
-        is_qualified: Optional[bool] = None
-    ) -> int:
-        """Counts creators matching the filter criteria."""
-        if not self.use_in_memory and self.db is not None:
-            query: Dict[str, Any] = {}
-            if is_synthetic is not None:
-                query["is_synthetic"] = is_synthetic
-            if is_qualified is not None:
-                query["classification.is_qualified"] = is_qualified
-            return await self.db.creators.count_documents(query)
-        else:
-            items = list(self._in_memory_fallback.values())
+            items = list(self._in_memory_creators.values())
             if is_synthetic is not None:
                 items = [c for c in items if c.get("is_synthetic") == is_synthetic]
             if is_qualified is not None:
@@ -165,28 +213,254 @@ class DatabaseManager:
                     c for c in items
                     if c.get("classification", {}).get("is_qualified") == is_qualified
                 ]
+            if min_subscribers is not None:
+                items = [
+                    c for c in items
+                    if (c.get("metrics", {}).get("subscriber_count") or 0) >= min_subscribers
+                ]
+            if max_subscribers is not None:
+                items = [
+                    c for c in items
+                    if (c.get("metrics", {}).get("subscriber_count") or 0) <= max_subscribers
+                ]
+            if niche:
+                items = [
+                    c for c in items
+                    if niche.lower() in c.get("classification", {}).get("niche", "").lower()
+                ]
+            if search_query:
+                sq = search_query.lower()
+                items = [
+                    c for c in items
+                    if sq in c.get("title", "").lower()
+                    or sq in c.get("custom_url", "").lower()
+                    or sq in c.get("description", "").lower()
+                    or sq in c.get("classification", {}).get("niche", "").lower()
+                ]
+            return items[skip: skip + limit]
+
+    async def count_creators(
+        self,
+        is_synthetic: Optional[bool] = None,
+        is_qualified: Optional[bool] = None,
+        min_subscribers: Optional[int] = None,
+        max_subscribers: Optional[int] = None,
+        search_query: Optional[str] = None,
+        niche: Optional[str] = None
+    ) -> int:
+        if not self.use_in_memory and self.db is not None:
+            query: Dict[str, Any] = {}
+            if is_synthetic is not None:
+                query["is_synthetic"] = is_synthetic
+            if is_qualified is not None:
+                query["classification.is_qualified"] = is_qualified
+            if min_subscribers is not None or max_subscribers is not None:
+                query["metrics.subscriber_count"] = {}
+                if min_subscribers is not None:
+                    query["metrics.subscriber_count"]["$gte"] = min_subscribers
+                if max_subscribers is not None:
+                    query["metrics.subscriber_count"]["$lte"] = max_subscribers
+            if niche:
+                query["classification.niche"] = {"$regex": niche, "$options": "i"}
+            if search_query:
+                query["$or"] = [
+                    {"title": {"$regex": search_query, "$options": "i"}},
+                    {"custom_url": {"$regex": search_query, "$options": "i"}},
+                    {"description": {"$regex": search_query, "$options": "i"}},
+                    {"classification.niche": {"$regex": search_query, "$options": "i"}},
+                ]
+            return await self.db.creators.count_documents(query)
+        else:
+            items = list(self._in_memory_creators.values())
+            if is_synthetic is not None:
+                items = [c for c in items if c.get("is_synthetic") == is_synthetic]
+            if is_qualified is not None:
+                items = [
+                    c for c in items
+                    if c.get("classification", {}).get("is_qualified") == is_qualified
+                ]
+            if min_subscribers is not None:
+                items = [
+                    c for c in items
+                    if (c.get("metrics", {}).get("subscriber_count") or 0) >= min_subscribers
+                ]
+            if max_subscribers is not None:
+                items = [
+                    c for c in items
+                    if (c.get("metrics", {}).get("subscriber_count") or 0) <= max_subscribers
+                ]
+            if niche:
+                items = [
+                    c for c in items
+                    if niche.lower() in c.get("classification", {}).get("niche", "").lower()
+                ]
+            if search_query:
+                sq = search_query.lower()
+                items = [
+                    c for c in items
+                    if sq in c.get("title", "").lower()
+                    or sq in c.get("custom_url", "").lower()
+                    or sq in c.get("description", "").lower()
+                    or sq in c.get("classification", {}).get("niche", "").lower()
+                ]
             return len(items)
 
-    async def clear_all_creators(self, only_synthetic: bool = True) -> int:
-        """Clears creators. Defaults to only clearing synthetic records to protect real data."""
+    # -------------------------------------------------------------
+    # Discovery Runs Operations
+    # -------------------------------------------------------------
+
+    async def save_discovery_run(self, run_data: Dict[str, Any]) -> str:
+        run_id = run_data.get("id")
         if not self.use_in_memory and self.db is not None:
-            query = {"is_synthetic": True} if only_survival_guard(only_synthetic) else {}
-            res = await self.db.creators.delete_many(query)
-            return res.deleted_count
+            await self.db.discovery_runs.update_one(
+                {"id": run_id},
+                {"$set": run_data},
+                upsert=True
+            )
+            return run_id
         else:
-            initial = len(self._in_memory_fallback)
-            if only_synthetic:
-                self._in_memory_fallback = {
-                    k: v for k, v in self._in_memory_fallback.items()
-                    if not v.get("is_synthetic", False)
-                }
-            else:
-                self._in_memory_fallback.clear()
-            return initial - len(self._in_memory_fallback)
+            self._in_memory_discovery_runs[run_id] = run_data
+            return run_id
 
+    async def list_discovery_runs(self, limit: int = 50) -> List[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            cursor = self.db.discovery_runs.find().sort("started_at", pymongo.DESCENDING).limit(limit)
+            results = []
+            async for doc in cursor:
+                if "_id" in doc:
+                    doc["_id"] = str(doc["_id"])
+                results.append(doc)
+            return results
+        else:
+            return sorted(
+                list(self._in_memory_discovery_runs.values()),
+                key=lambda x: str(x.get("started_at", "")),
+                reverse=True
+            )[:limit]
 
-def only_survival_guard(only_synthetic: bool) -> bool:
-    return only_synthetic
+    # -------------------------------------------------------------
+    # Campaigns Operations
+    # -------------------------------------------------------------
+
+    async def save_campaign(self, campaign_data: Dict[str, Any]) -> str:
+        campaign_id = campaign_data.get("id")
+        if not self.use_in_memory and self.db is not None:
+            await self.db.campaigns.update_one(
+                {"id": campaign_id},
+                {"$set": campaign_data},
+                upsert=True
+            )
+            return campaign_id
+        else:
+            self._in_memory_campaigns[campaign_id] = campaign_data
+            return campaign_id
+
+    async def get_campaign(self, campaign_id: str) -> Optional[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            doc = await self.db.campaigns.find_one({"id": campaign_id})
+            if doc and "_id" in doc:
+                doc["_id"] = str(doc["_id"])
+            return doc
+        return self._in_memory_campaigns.get(campaign_id)
+
+    async def list_campaigns(self, limit: int = 50) -> List[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            cursor = self.db.campaigns.find().sort("created_at", pymongo.DESCENDING).limit(limit)
+            results = []
+            async for doc in cursor:
+                if "_id" in doc:
+                    doc["_id"] = str(doc["_id"])
+                results.append(doc)
+            return results
+        else:
+            return list(self._in_memory_campaigns.values())[:limit]
+
+    # -------------------------------------------------------------
+    # Generated Messages Operations
+    # -------------------------------------------------------------
+
+    async def save_generated_message(self, message_data: Dict[str, Any]) -> str:
+        message_id = message_data.get("id")
+        if not self.use_in_memory and self.db is not None:
+            await self.db.generated_messages.update_one(
+                {"id": message_id},
+                {"$set": message_data},
+                upsert=True
+            )
+            return message_id
+        else:
+            self._in_memory_messages[message_id] = message_data
+            return message_id
+
+    async def get_generated_message(self, message_id: str) -> Optional[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            doc = await self.db.generated_messages.find_one({"id": message_id})
+            if doc and "_id" in doc:
+                doc["_id"] = str(doc["_id"])
+            return doc
+        return self._in_memory_messages.get(message_id)
+
+    async def list_generated_messages(self, channel_id: Optional[str] = None, limit: int = 50) -> List[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            query = {"channel_id": channel_id} if channel_id else {}
+            cursor = self.db.generated_messages.find(query).limit(limit)
+            results = []
+            async for doc in cursor:
+                if "_id" in doc:
+                    doc["_id"] = str(doc["_id"])
+                results.append(doc)
+            return results
+        else:
+            items = list(self._in_memory_messages.values())
+            if channel_id:
+                items = [m for m in items if m.get("channel_id") == channel_id]
+            return items[:limit]
+
+    # -------------------------------------------------------------
+    # Outreach Logs & Duplicate Prevention Operations
+    # -------------------------------------------------------------
+
+    async def log_outreach(self, log_entry: Dict[str, Any]) -> str:
+        log_id = log_entry.get("id")
+        if not self.use_in_memory and self.db is not None:
+            await self.db.outreach_logs.insert_one(log_entry)
+            return log_id
+        else:
+            self._in_memory_outreach_logs.append(log_entry)
+            return log_id
+
+    async def has_existing_outreach(self, channel_id: str, channel_type: str = "email") -> bool:
+        """Checks if a creator has already received or simulated outreach to prevent duplicates."""
+        if not self.use_in_memory and self.db is not None:
+            count = await self.db.outreach_logs.count_documents({
+                "channel_id": channel_id,
+                "channel_type": channel_type,
+                "status": {"$in": ["sent", "simulated"]}
+            })
+            return count > 0
+        else:
+            return any(
+                log.get("channel_id") == channel_id
+                and log.get("channel_type") == channel_type
+                and log.get("status") in ["sent", "simulated"]
+                for log in self._in_memory_outreach_logs
+            )
+
+    async def list_outreach_logs(self, limit: int = 50) -> List[Dict[str, Any]]:
+        if not self.use_in_memory and self.db is not None:
+            cursor = self.db.outreach_logs.find().sort("timestamp", pymongo.DESCENDING).limit(limit)
+            results = []
+            async for doc in cursor:
+                if "_id" in doc:
+                    doc["_id"] = str(doc["_id"])
+                results.append(doc)
+            return results
+        else:
+            return sorted(
+                self._in_memory_outreach_logs,
+                key=lambda x: str(x.get("timestamp", "")),
+                reverse=True
+            )[:limit]
 
 
 db_manager = DatabaseManager()
