@@ -3,6 +3,8 @@
  * Compatible with Node.js built-in test runner or Vitest / Jest.
  */
 
+declare const process: any;
+
 import {
   isValidEmail,
   countWords,
@@ -10,7 +12,7 @@ import {
   isDmWordCountValid,
   isMicroInfluencerTier,
   formatMetric,
-} from './validation';
+} from './validation.ts';
 
 export function runValidationTests(): { passed: number; failed: number; results: string[] } {
   let passed = 0;

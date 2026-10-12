@@ -39,7 +39,6 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
 
   // Message draft state
   const [currentMessage, setCurrentMessage] = useState<GeneratedMessageResponse | null>(null);
-  const [loadingMessage, setLoadingMessage] = useState<boolean>(false);
   const [generating, setGenerating] = useState<boolean>(false);
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
@@ -67,7 +66,6 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
     if (!selectedChannelId) return;
 
     const fetchDraft = async () => {
-      setLoadingMessage(true);
       setNotification(null);
       setIsEditing(false);
       try {
@@ -92,8 +90,6 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
         }
       } catch (err: any) {
         setNotification({ type: 'error', text: err.message || 'Failed to fetch existing drafts.' });
-      } finally {
-        setLoadingMessage(false);
       }
     };
 

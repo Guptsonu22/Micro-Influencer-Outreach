@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { SystemHealth, CreatorRecord, DiscoveryRunResponse, OutreachLogResponse } from './types';
 import { api } from './services/api';
 import { Navbar, NavTab } from './components/Navbar';
