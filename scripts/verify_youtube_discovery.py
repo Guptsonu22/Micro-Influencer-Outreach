@@ -99,7 +99,12 @@ def main():
         "Python AI developer",
         "Machine Learning tutorial",
         "Generative AI engineering",
-        "LangChain AI tutorial"
+        "LangChain AI tutorial",
+        "AI agents tutorial",
+        "FastAPI python tutorial",
+        "PyTorch deep learning tutorial",
+        "Data science python project",
+        "Computer Vision python tutorial"
     ]
     discovery_payload = {
         "queries": search_queries,
@@ -159,7 +164,9 @@ def main():
         creators_resp = api_get("/creators?is_synthetic=false&page=1&page_size=100")
         real_creators = creators_resp.get("items", [])
         total_real = creators_resp.get("total", len(real_creators))
-        print(f"  Real API Records Retrieved: {total_real}")
+        qualifying_real = [c for c in real_creators if c.get("classification", {}).get("is_qualified", False)]
+        print(f"  Total Real API Records in DB:      {total_real}")
+        print(f"  Qualifying Real Micro-Influencers: {len(qualifying_real)}")
     except Exception as e:
         print(f"  [ERROR] Failed to query real creators: {e}")
         return
@@ -179,13 +186,15 @@ def main():
         metrics = c.get("metrics", {})
         enrichment = c.get("enrichment", {})
         sub_count = metrics.get("subscriber_count")
+        sub_str = f"{sub_count:,}" if isinstance(sub_count, int) else str(sub_count)
         eng_rate = metrics.get("estimated_engagement_rate")
         email = enrichment.get("contact_email") or "Not Found"
+        is_qual = c.get("classification", {}).get("is_qualified", False)
 
-        print(f"    {idx}. '{c.get('title')}'")
+        print(f"    {idx}. '{c.get('title')}' - [{'QUALIFIED' if is_qual else 'REJECTED'}]")
         print(f"       Channel ID:    {ch_id} ({'VALID YouTube ID' if is_real_yt_id else 'INVALID'})")
         print(f"       Channel URL:   {c.get('channel_url')}")
-        print(f"       Subscribers:   {sub_count:, if isinstance(sub_count, int) else sub_count}")
+        print(f"       Subscribers:   {sub_str}")
         print(f"       Engagement:    {eng_rate}% (Formula: {metrics.get('engagement_formula_used', 'N/A')})")
         print(f"       Contact Email: {email}")
         print(f"       is_synthetic:  {c.get('is_synthetic')} (Source: {c.get('source_name', 'N/A')})")

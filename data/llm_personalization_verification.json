@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-12T10:22:06.198556",
+  "timestamp": "2026-10-12T10:48:40.520365",
   "verifications_count": 3,
   "records": [
     {
@@ -8,11 +8,11 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0001",
-      "email_subject": "Collaboration Opportunity: DevBytes AI & EDXSO",
-      "email_body": "Hi DevBytes AI Team,\n\nYour 'Building Full-Stack AI with Python' video was excellent! Your content on Python, FastAPI, and OpenAI aligns perfectly with EDXSO.\n\nWe offer next-gen AI career training and developer tools. We believe your audience would greatly benefit. We're offering a paid sponsorship ($250-$800) and free Pro access for your community.\n\nReady to partner? Reply or book a 10-min call: cal.com/edxso/partnerships.\n\nBest,\nThe EDXSO Partnerships Team",
-      "email_word_count": 68,
+      "email_subject": "Collaboration with EDXSO: AI & Python Content for DevBytes AI",
+      "email_body": "Hi DevBytes AI,\n\nWe're genuinely impressed by your 'Building Full-Stack AI with Python' video and your insightful tutorials on Python, FastAPI, and OpenAI. Your focus on building modern software and AI pipelines perfectly aligns with EDXSO's mission to empower developers with next-generation AI-powered career training and interactive tools. We'd love to explore a paid sponsorship ($250-$800) and offer free Pro access to your community. Let's discuss how we can create valuable content together. Reply here or book a quick chat: cal.com/edxso/partnerships.",
+      "email_word_count": 81,
       "email_words_valid": true,
-      "instagram_dm": "Hey DevBytes AI! Your 'Building Full-Stack AI with Python' video was awesome. EDXSO offers AI training. Interested in a paid sponsorship + free Pro access? DM us!",
+      "instagram_dm": "Hey DevBytes AI! Love your AI/Python content, especially 'Building Full-Stack AI with Python'. EDXSO wants to partner for a paid sponsorship. DM us or check your email!",
       "dm_word_count": 27,
       "dm_words_valid": true,
       "provider_name": "gemini",
@@ -29,7 +29,7 @@
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:21:45.710821"
+      "generated_at": "2026-10-12T10:47:59.415578"
     },
     {
       "creator_id": null,
@@ -37,12 +37,12 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0002",
-      "email_subject": "Collaboration Opportunity: EDXSO x Code With Sarah",
-      "email_body": "Hi Sarah,\n\nWe're huge fans of your work on Code With Sarah, especially your recent 'Building Full-Stack AI with Machine Learning' video. Your expertise in Machine Learning and PyTorch perfectly aligns with EDXSO's mission. We develop next-generation AI-powered career training and interactive developer tools. We'd love to discuss a paid sponsorship ($250-$800) and offer your community free Pro access. Would you be open to a quick 10-minute chat? Reply here or book a call: cal.com/edxso/partnerships.",
-      "email_word_count": 75,
+      "email_subject": "Collaboration Opportunity: Code With Sarah x EDXSO",
+      "email_body": "Hi Sarah,\n\nI'm a big fan of your work on Code With Sarah, especially your recent video 'Building Full-Stack AI with Machine Learning'. Your expertise in Machine Learning and PyTorch perfectly aligns with EDXSO's mission. We develop next-generation AI-powered career training and interactive developer tools. We'd love to discuss a paid sponsorship ($250-$800) where you could showcase EDXSO to your audience, offering them free Pro access. Interested in a 10-minute chat? Reply or book here: cal.com/edxso/partnerships",
+      "email_word_count": 76,
       "email_words_valid": true,
-      "instagram_dm": "Hi Sarah, love your 'Building Full-Stack AI' video! EDXSO offers AI training tools and wants to partner. Paid sponsorship + free community access. DM us!",
-      "dm_word_count": 25,
+      "instagram_dm": "Hi Sarah! Love your AI content. EDXSO, an AI training platform, wants to partner for a paid sponsorship ($250-$800) + free Pro access for your community. DM to chat!",
+      "dm_word_count": 29,
       "dm_words_valid": true,
       "provider_name": "gemini",
       "model_name": "gemini-2.5-flash",
@@ -53,12 +53,11 @@
         "recent_video_referenced": "Building Full-Stack AI with Machine Learning",
         "content_themes_used": [
           "Machine Learning",
-          "PyTorch",
-          "AI pipelines"
+          "PyTorch"
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:21:57.278710"
+      "generated_at": "2026-10-12T10:48:08.173173"
     },
     {
       "creator_id": null,
@@ -66,12 +65,12 @@
       "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0003",
-      "email_subject": "Collaboration Opportunity: ML Foundations x EDXSO - AI & Data Science",
-      "email_body": "Hi ML Foundations,\n\nWe're incredibly impressed by your work, especially your recent video 'Building Full-Stack AI with Data Science'. Your tutorials on Data Science and Scikit-Learn perfectly align with EDXSO's mission.\n\nEDXSO offers next-generation AI-powered career training and interactive developer tools. We see a fantastic synergy with your audience. We'd love to discuss a paid sponsorship ($250-$800) where you could also offer free Pro access to your community.\n\nInterested? Reply here or book a quick 10-minute call: cal.com/edxso/partnerships.\n\nBest,\nThe EDXSO Team",
-      "email_word_count": 82,
+      "email_subject": "Collaboration Opportunity: EDXSO x ML Foundations",
+      "email_body": "Hi ML Foundations,\n\nWe're truly impressed by your channel, especially 'Building Full-Stack AI with Data Science.' Your expertise in Data Science and Scikit-Learn aligns perfectly with EDXSO's mission.\n\nEDXSO offers next-gen AI-powered career training and developer tools. We believe your audience would greatly benefit. We're proposing a paid sponsorship ($250-$800) and free Pro access for your community.\n\nInterested in partnering? Reply or book a 10-minute briefing call: cal.com/edxso/partnerships.\n\nBest,",
+      "email_word_count": 69,
       "email_words_valid": true,
-      "instagram_dm": "Hey ML Foundations! Loved your 'Building Full-Stack AI' video. We're EDXSO, offering AI training, and think your audience would love our tools. DM us for a paid collab!",
-      "dm_word_count": 28,
+      "instagram_dm": "Hi ML Foundations! Love your AI/Data Science content. EDXSO offers AI training. Paid partnership + free Pro access for your community? DM us!",
+      "dm_word_count": 23,
       "dm_words_valid": true,
       "provider_name": "gemini",
       "model_name": "gemini-2.5-flash",
@@ -82,12 +81,11 @@
         "recent_video_referenced": "'Building Full-Stack AI with Data Science'",
         "content_themes_used": [
           "Data Science",
-          "Scikit-Learn",
-          "AI pipelines"
+          "Scikit-Learn"
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T10:22:06.187272"
+      "generated_at": "2026-10-12T10:48:40.489884"
     }
   ]
 }

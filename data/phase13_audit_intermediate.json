@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "1. File Reconciliation": {
+      "passed": true,
+      "detail": "JSON (413) matches CSV (413), expected 413"
+    },
+    "2. Channel ID Uniqueness": {
+      "passed": true,
+      "detail": "All 413 channel IDs are strictly unique in both JSON and CSV"
+    },
+    "3. Channel ID Provenance": {
+      "passed": true,
+      "detail": "413/413 channel IDs have genuine YouTube 'UC...' format"
+    },
+    "4. Synthetic Record Segregation": {
+      "passed": true,
+      "detail": "0 synthetic records found in real export files (JSON: 0, CSV: 0)"
+    },
+    "5. Qualification Threshold Rule (5k-100k subs)": {
+      "passed": false,
+      "detail": "0 qualifying creators (>=50 target met). Discrepancies: 413"
+    },
+    "6. Rejection Reason Transparency": {
+      "passed": true,
+      "detail": "All 0 non-qualifying creators have explicit rejection reasons documented"
+    },
+    "7. Contact Email Provenance Audit": {
+      "passed": false,
+      "detail": "0 real emails found; 0 unverified provenance"
+    },
+    "8. Missing Email Marking": {
+      "passed": false,
+      "detail": "All channels without email have contact.email explicitly set ('Not Found' or string)"
+    },
+    "9. Engagement Formula Correctness": {
+      "passed": true,
+      "detail": "Validated engagement proxy ((likes+comments)/views)*100. Discrepancies: 0"
+    },
+    "10. Retrieval Timestamps": {
+      "passed": true,
+      "detail": "All 413 records have explicit ISO-8601 retrieval timestamps"
+    }
+  },
+  "stats": {
+    "json_count": 413,
+    "csv_count": 413,
+    "qualifying_count": 0,
+    "non_qualifying_count": 0,
+    "real_emails_count": 0
+  },
+  "errors": [],
+  "warnings": []
+}
