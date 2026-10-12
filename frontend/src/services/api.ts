@@ -24,7 +24,7 @@ async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
       let detail = res.statusText;
       try {
         const body = await res.json();
-        detail = body.detail || body.message || detail;
+        detail = body.detail || body.message || body.error?.message || detail;
       } catch {
         // use default statusText
       }
@@ -42,13 +42,52 @@ async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
 
 export const api = {
   getHealth: () => request<SystemHealth>('/health'),
-  getCreators: (params?: { is_synthetic?: boolean; is_qualified?: boolean; search?: string; limit?: number }) => {
+
+  getCreators: (params?: {
+    page?: number;
+    page_size?: number;
+    is_synthetic?: boolean;
+    is_qualified?: boolean;
+    search_query?: string;
+    niche?: string;
+  }) => {
     const searchParams = new URLSearchParams();
+    if (params?.page) searchParams.set('page', String(params.page));
+    if (params?.page_size) searchParams.set('page_size', String(params.page_size));
     if (params?.is_synthetic !== undefined) searchParams.set('is_synthetic', String(params.is_synthetic));
     if (params?.is_qualified !== undefined) searchParams.set('is_qualified', String(params.is_qualified));
-    if (params?.search) searchParams.set('search_query', params.search);
-    if (params?.limit) searchParams.set('limit', String(params.limit));
+    if (params?.search_query) searchParams.set('search_query', params.search_query);
+    if (params?.niche) searchParams.set('niche', params.niche);
     const qs = searchParams.toString();
-    return request<CreatorRecord[]>(`/creators${qs ? `?${qs}` : ''}`);
+    return request<any>(`/influencers${qs ? `?${qs}` : ''}`);
+  },
+
+  triggerDiscovery: (payload: {
+    queries?: string[];
+    target_count?: number;
+    max_quota_budget?: number;
+    min_subscribers?: number;
+    max_subscribers?: number;
+    region_code?: string;
+    use_demo_mode?: boolean;
+  }) => {
+    return request<any>('/discovery/runs', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  getDiscoveryRun: (runId: string) => {
+    return request<any>(`/discovery/runs/${runId}`);
+  },
+
+  listDiscoveryRuns: (limit: number = 20) => {
+    return request<any[]>(`/discovery/runs?limit=${limit}`);
+  },
+
+  getExportUrl: (format: 'csv' | 'json', onlyQualified?: boolean) => {
+    const q = new URLSearchParams({ format });
+    if (onlyQualified !== undefined) q.set('is_qualified', String(onlyQualified));
+    return `${API_BASE}/influencers/export?${q.toString()}`;
   },
 };
