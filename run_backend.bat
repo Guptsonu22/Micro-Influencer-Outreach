@@ -1,16 +1,43 @@
 @echo off
+setlocal enabledelayedexpansion
 echo =======================================================
 echo Starting EDXSO AI Influencer Outreach - Backend Server
 echo =======================================================
-cd /d "%~dp0backend"
-if not exist "venv\Scripts\activate.bat" (
-    echo [INFO] Creating Python virtual environment in backend\venv...
-    python -m venv venv
+cd /d "%~dp0"
+
+:: Set PYTHONPATH so backend imports work seamlessly
+set "PYTHONPATH=%~dp0;%PYTHONPATH%"
+
+:: Detect Python executable (preferring the Windows Python 3.14 installation where packages are installed)
+set "PYTHON_EXE="
+
+if exist "%LOCALAPPDATA%\Programs\Python\Python314\python.exe" (
+    set "PYTHON_EXE=%LOCALAPPDATA%\Programs\Python\Python314\python.exe"
+) else (
+    where py >nul 2>nul
+    if not errorlevel 1 (
+        set "PYTHON_EXE=py -3.14"
+    ) else (
+        where python >nul 2>nul
+        if not errorlevel 1 (
+            set "PYTHON_EXE=python"
+        )
+    )
 )
-echo [INFO] Activating virtual environment...
-call venv\Scripts\activate.bat
-echo [INFO] Installing / verifying dependencies...
-pip install -r requirements.txt
+
+if "%PYTHON_EXE%"=="" (
+    echo [ERROR] Python not found. Please install Python 3.10+ from python.org.
+    pause
+    exit /b 1
+)
+
+echo [INFO] Selected Python interpreter: %PYTHON_EXE%
 echo [INFO] Starting FastAPI server on http://127.0.0.1:8000...
-uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
-pause
+echo [INFO] Interactive Swagger docs available at http://127.0.0.1:8000/docs
+echo.
+
+%PYTHON_EXE% -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+if errorlevel 1 (
+    echo [ERROR] Server failed to start.
+    pause
+)

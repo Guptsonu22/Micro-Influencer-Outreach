@@ -10,7 +10,10 @@ import {
   Info,
   ShieldAlert,
   ThumbsUp,
-  ThumbsDown
+  ThumbsDown,
+  Send,
+  Copy,
+  Check
 } from 'lucide-react';
 import { CreatorRecord, GeneratedMessageResponse } from '../types';
 import { api } from '../services/api';
@@ -154,6 +157,43 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
     } catch (err: any) {
       setNotification({ type: 'error', text: err.message || 'Failed to update approval status.' });
     }
+  };
+
+  const [isSendingOutreach, setIsSendingOutreach] = useState<boolean>(false);
+  const [dmCopied, setDmCopied] = useState<boolean>(false);
+
+  const handleSimulateSendEmail = async () => {
+    if (!currentCreator) return;
+    setIsSendingOutreach(true);
+    setNotification(null);
+    try {
+      const res = await api.sendOutreach({
+        channel_id: currentCreator.channel_id,
+        creator_id: currentCreator.id,
+        campaign_id: 'camp_default',
+        message_id: currentMessage?.id,
+        channel_type: 'email',
+        is_live_requested: false,
+        confirmed_live_approval: false,
+        allow_ineligible_override: allowOverride,
+      });
+      setNotification({
+        type: 'success',
+        text: `Simulated outreach logged successfully! Status: ${res.status}. Provider ID: ${res.provider_message_id}`,
+      });
+      onRefresh();
+    } catch (err: any) {
+      setNotification({ type: 'error', text: err.message || 'Outreach send failed gatekeeper validation.' });
+    } finally {
+      setIsSendingOutreach(false);
+    }
+  };
+
+  const handleCopyInstagramDm = () => {
+    if (!instagramDm) return;
+    navigator.clipboard.writeText(instagramDm);
+    setDmCopied(true);
+    setTimeout(() => setDmCopied(false), 2500);
   };
 
   const isQualified = currentCreator?.classification?.decision === 'pass' || currentCreator?.classification?.is_qualified;
@@ -474,6 +514,35 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
                     Reject
                   </button>
                 </>
+              )}
+
+              {/* Instagram DM Manual Copy */}
+              {instagramDm && (
+                <button
+                  onClick={handleCopyInstagramDm}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-pink-600/20 hover:bg-pink-600/30 text-pink-300 border border-pink-500/30 text-xs font-semibold transition"
+                  title="Copy Instagram DM for manual sending (Meta Policy Safe)"
+                >
+                  {dmCopied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                  {dmCopied ? 'DM Copied!' : 'Copy IG DM'}
+                </button>
+              )}
+
+              {/* Simulate Email Dispatch */}
+              {emailBody && (
+                <button
+                  onClick={handleSimulateSendEmail}
+                  disabled={isSendingOutreach}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white text-xs font-semibold shadow transition"
+                  title="Dispatch simulated email through the 7-stage gatekeeper"
+                >
+                  {isSendingOutreach ? (
+                    <RefreshCw className="h-3.5 w-3.5 animate-spin" />
+                  ) : (
+                    <Send className="h-3.5 w-3.5" />
+                  )}
+                  Simulate Send
+                </button>
               )}
             </div>
           </div>

@@ -5,15 +5,27 @@ Write-Host "==============================================================" -For
 
 $root = $PSScriptRoot
 
-Write-Host "`n[1/2] Starting FastAPI Backend on http://127.0.0.1:8000..." -ForegroundColor Green
-Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root\backend'; if (!(Test-Path 'venv\Scripts\Activate.ps1')) { python -m venv venv }; .\venv\Scripts\Activate.ps1; pip install -r requirements.txt; uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000"
+# Determine Python 3.14 path to avoid MSYS2 conflict
+$pyPath = "$env:LOCALAPPDATA\Programs\Python\Python314\python.exe"
+if (!(Test-Path $pyPath)) {
+    if (Get-Command py -ErrorAction SilentlyContinue) {
+        $pyCmd = "py -3.14"
+    } else {
+        $pyCmd = "python"
+    }
+} else {
+    $pyCmd = "& `"$pyPath`""
+}
 
-Start-Sleep -Seconds 3
+Write-Host "`n[1/2] Starting FastAPI Backend on http://127.0.0.1:8000..." -ForegroundColor Green
+Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root'; `$env:PYTHONPATH='$root'; Write-Host 'Starting FastAPI server...'; $pyCmd -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000"
+
+Start-Sleep -Seconds 2
 
 Write-Host "[2/2] Starting React Frontend Dashboard on http://localhost:5173..." -ForegroundColor Green
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root\frontend'; if (!(Test-Path 'node_modules')) { npm install }; npm run dev"
 
-Write-Host "`nBoth services are running in dedicated PowerShell terminal windows!" -ForegroundColor Yellow
+Write-Host "`nBoth services launched in separate windows!" -ForegroundColor Yellow
 Write-Host "Backend API:  http://127.0.0.1:8000" -ForegroundColor White
 Write-Host "Swagger Docs: http://127.0.0.1:8000/docs" -ForegroundColor White
 Write-Host "Frontend UI:  http://localhost:5173`n" -ForegroundColor White

@@ -209,11 +209,21 @@ export const api = {
     });
   },
 
-  listOutreachLogs: (params?: { limit?: number; status?: string; channel_type?: string }) => {
+  listOutreachLogs: (paramsOrLimit?: number | { limit?: number; status?: string; channel_type?: string }) => {
+    let limit = 50;
+    let status: string | undefined;
+    let channel_type: string | undefined;
+    if (typeof paramsOrLimit === 'number') {
+      limit = paramsOrLimit;
+    } else if (paramsOrLimit) {
+      limit = paramsOrLimit.limit || 50;
+      status = paramsOrLimit.status;
+      channel_type = paramsOrLimit.channel_type;
+    }
     const q = new URLSearchParams();
-    if (params?.limit) q.set('limit', String(params.limit));
-    if (params?.status && params.status !== 'all') q.set('status', params.status);
-    if (params?.channel_type && params.channel_type !== 'all') q.set('channel_type', params.channel_type);
+    if (limit) q.set('limit', String(limit));
+    if (status && status !== 'all') q.set('status', status);
+    if (channel_type && channel_type !== 'all') q.set('channel_type', channel_type);
     const qs = q.toString();
     return request<OutreachLogResponse[]>(`/outreach/logs${qs ? `?${qs}` : ''}`);
   },

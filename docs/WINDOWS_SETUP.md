@@ -148,3 +148,45 @@ The frontend dashboard provides 6 dedicated pages:
 | Start backend server | `uvicorn backend.app.main:app --reload --port 8000` |
 | Start frontend dev server | `cd frontend; npm run dev` |
 | Quick health check | `Invoke-RestMethod http://127.0.0.1:8000/health` |
+
+---
+
+## 10. Secure Live Sending Configuration & 7-Stage Gatekeeper Guide
+
+### ⚠️ Safe Default: Simulation Mode
+By default, `SIMULATION_MODE=true` and `ALLOW_LIVE_EMAIL_SENDING=false`.
+In this mode, all dispatches execute through the `SimulationEmailProvider`, generating realistic simulated message IDs (`sim_...`), recording persistent logs, and verifying duplicate constraints **without sending real emails or consuming mail server quotas**.
+
+### 🛡️ The 7 Mandatory Pre-Send Gates
+Before any email dispatch can succeed, the candidate must pass all 7 gates:
+1. **Qualification Gate**: Creator must have `pass` classification status, or the operator must check `allow_ineligible_override`.
+2. **Contact Email Gate**: A verified, RFC-compliant email address must exist (never `"Not Found"` or placeholder).
+3. **Personalized Draft Gate**: A generated email draft must exist for the creator in the database.
+4. **Word Count & Content Gate**: The body must contain strictly **60–90 words** and pass content injection checks.
+5. **Operator Approval Gate**: Live sending requires explicit operator confirmation via the two-step confirmation modal.
+6. **Campaign + Creator Duplicate Gate**: The database atomically verifies that no outreach exists for `(campaign_id, channel_id, channel_type)`.
+7. **History Audit Gate**: Prior contact history is verified prior to provider invocation.
+
+### ⚙️ How to Configure Live Sending Securely (When Approved)
+To configure live sending for production deployment:
+1. Open `.env` (never commit `.env` to version control; it is included in `.gitignore`):
+   ```env
+   SIMULATION_MODE=false
+   ALLOW_LIVE_EMAIL_SENDING=true
+
+   # Configure dedicated SMTP relay (e.g. Amazon SES, SendGrid, Postmark, Mailgun)
+   SMTP_HOST="smtp.sendgrid.net"
+   SMTP_PORT=587
+   SMTP_USERNAME="apikey"
+   SMTP_PASSWORD="YOUR_ACTUAL_SENDGRID_API_KEY"
+   SMTP_FROM_EMAIL="partnerships@yourverifieddomain.com"
+   SMTP_FROM_NAME="EDXSO Partnerships"
+   ```
+2. For **Gmail SMTP**:
+   - Enable 2-Factor Authentication on your Google Account.
+   - Generate an **App Password** at `myaccount.google.com/apppasswords`.
+   - Set `SMTP_HOST="smtp.gmail.com"`, `SMTP_PORT=587`, `SMTP_USERNAME="your-email@gmail.com"`, and `SMTP_PASSWORD="your-16-char-app-password"`.
+   - Never use your personal Google account password.
+3. **Instagram Direct Messages**:
+   - Direct message automation is forbidden by Meta Platform Terms of Service.
+   - Instagram DMs in this system use the **Manual Copy Workflow**: the system drafts personalized 15–30 word copy that operators review and copy to clipboard to send manually via official Instagram apps. Automated bot sending is blocked.
