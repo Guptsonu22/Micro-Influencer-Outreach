@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 
 class DiscoveryRunCreate(BaseModel):
     """Payload to trigger a discovery execution."""
+    query: Optional[str] = Field(default=None, description="Optional single search query")
     queries: Optional[List[str]] = Field(
         default_factory=lambda: [
             "AI tools tutorials",

@@ -19,9 +19,20 @@ class MockLLMProvider(BaseLLMProvider):
         temperature: float = 0.2
     ) -> str:
         """Returns compliant structured JSON conforming to exact word-count constraints."""
-        # Carefully crafted response:
-        # Email: 75 words (within 60-90 words requirement)
-        # DM: 22 words (within 15-30 words requirement)
+        # Extract themes and video if passed in prompt
+        themes = ["AI Development", "Software Engineering"]
+        video = None
+        for line in prompt.splitlines():
+            if "Verified Content Themes:" in line:
+                raw_themes = line.split("Verified Content Themes:")[-1].strip()
+                if raw_themes:
+                    themes = [t.strip() for t in raw_themes.split(",") if t.strip()]
+            if "Sampled Recent Video Upload: '" in line:
+                try:
+                    video = line.split("Sampled Recent Video Upload: '")[1].split("'")[0]
+                except Exception:
+                    pass
+
         sample_response = {
             "email_subject": "EDXSO Collaboration: Next-Gen Developer & AI Tooling",
             "email_body": (
@@ -36,8 +47,8 @@ class MockLLMProvider(BaseLLMProvider):
             ),
             "personalization_evidence": {
                 "creator_name_used": "Creator",
-                "recent_video_referenced": None,
-                "content_themes_used": ["AI Development", "Software Engineering"],
+                "recent_video_referenced": video,
+                "content_themes_used": themes,
                 "niche_used": "Technology & Artificial Intelligence"
             },
             "warnings": [

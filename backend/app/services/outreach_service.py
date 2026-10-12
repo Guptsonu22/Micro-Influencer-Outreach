@@ -31,9 +31,9 @@ class OutreachGatekeeperError(AppException):
     """Raised when an outreach candidate fails one of the 7 mandatory pre-send gates."""
     def __init__(self, gate_number: int, reason: str):
         super().__init__(
-            status_code=400,
+            code=f"GATE_{gate_number}_VIOLATION",
             message=f"Outreach Gate #{gate_number} Blocked: {reason}",
-            error_code=f"GATE_{gate_number}_VIOLATION"
+            status_code=400
         )
 
 
