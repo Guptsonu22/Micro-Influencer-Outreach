@@ -216,12 +216,19 @@ Alternatively, use the Windows launcher:
 ```powershell
 python -m pytest backend/tests -v
 ```
-**Expected Outcome**: `58 passed` across unit, integration, and security test modules:
-* `test_health.py`: System health and configuration integrity.
-* `test_youtube_mock.py`: Channel discovery, metric parsing, and subscriber classification.
-* `test_classification_rules.py`: 4-axis decision engine (`pass`, `fail`, `needs_review`).
-* `test_personalization.py`: Word count bounds, prompt injection defense, and structured output.
-* `test_outreach_sending.py`: 7-stage gatekeeper, duplicate lock, and simulation safety.
+**Expected Outcome**: `58 passed, 0 failed` across 12 comprehensive test modules:
+* `test_health.py` (3 tests): System and database health endpoints.
+* `test_config.py` (3 tests): Application configuration and safety guardrails.
+* `test_models.py` (3 tests): Creator and campaign persistence models.
+* `test_schemas.py` (5 tests): Strict domain schemas and missing value preservation.
+* `test_utils.py` (6 tests): Public email extraction and engagement rate formulas.
+* `test_youtube_mock.py` (3 tests): Quota handling and synthetic record isolation.
+* `test_filter_enrichment.py` (6 tests): Boundary subscriber filtering (5k–100k) and transparent decision reasons.
+* `test_gemini_provider.py` (9 tests): Key security, factory fallback, generation, and HTTP 429 rate limits.
+* `test_personalization.py` (5 tests): Word-count enforcement, prompt injection defense, and ineligible creator gate.
+* `test_outreach_sending.py` (9 tests): All 7 pre-send gates, atomic locks, simulation safety, and Meta TOS compliance.
+* `test_endpoints.py` (4 tests): Pagination, filtering, and standard error handling.
+* `test_export.py` (2 tests): CSV and JSON streaming exports.
 
 ### Frontend Validation Suite (22 Tests)
 ```powershell

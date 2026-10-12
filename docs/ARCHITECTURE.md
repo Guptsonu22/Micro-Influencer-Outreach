@@ -50,7 +50,7 @@ flowchart TD
 
     subgraph External_APIs [Third-Party Integrations]
         YT_API[YouTube Data API v3]
-        Gemini_API[Google Gemini 1.5 Flash]
+        Gemini_API[Google Gemini 2.5 Flash]
         SMTP_Svc[Optional Approved SMTP Relay]
     end
 

@@ -201,7 +201,7 @@ export const MessageStudioPage: React.FC<MessageStudioPageProps> = ({
         <h1 className="text-2xl font-bold text-white tracking-tight flex items-center gap-2">
           AI Message Studio
           <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 font-medium">
-            Gemini 1.5 Flash Personalization
+            Gemini 2.5 Flash Personalization
           </span>
         </h1>
         <p className="text-xs text-slate-400 mt-1">

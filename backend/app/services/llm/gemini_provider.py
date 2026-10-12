@@ -20,7 +20,7 @@ GEMINI_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 
 class GeminiProvider(BaseLLMProvider):
-    """Integrates Google Gemini 1.5 Flash via REST API with credential security."""
+    """Integrates Google Gemini 2.5 Flash via REST API with credential security."""
 
     provider_name: str = "gemini"
     is_mock: bool = False

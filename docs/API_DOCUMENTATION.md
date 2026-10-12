@@ -40,7 +40,7 @@ Interactive Swagger documentation is served live at:
 
 ### 4. AI Message Studio
 - `POST /api/v1/messages/generate`
-  - Generates email pitch (strictly 60–90 words) and Instagram DM (strictly 15–30 words) via Gemini 1.5 Flash.
+  - Generates email pitch (strictly 60–90 words) and Instagram DM (strictly 15–30 words) via Gemini 2.5 Flash (`gemini-2.5-flash`).
   - Body: `{"channel_id": "UC...", "allow_ineligible_override": false, "force_mock": false}`.
 - `GET /api/v1/messages`
   - Retrieves generated copy drafts.

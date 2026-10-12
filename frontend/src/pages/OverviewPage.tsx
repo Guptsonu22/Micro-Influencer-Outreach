@@ -73,7 +73,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
               AI Talent Discovery & Outreach Command Center
             </h1>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Real-time ingestion of YouTube AI & Tech creators, rule-based qualification (5k-100k subs), strict data provenance, and Gemini 1.5 Flash personalized multi-channel outreach.
+              Real-time ingestion of YouTube AI & Tech creators, rule-based qualification (5k-100k subs), strict data provenance, and Gemini 2.5 Flash personalized multi-channel outreach.
             </p>
           </div>
 

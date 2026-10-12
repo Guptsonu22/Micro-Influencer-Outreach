@@ -156,7 +156,7 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
         <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between space-y-4">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-white uppercase tracking-wider">Gemini 1.5 Flash</span>
+              <span className="text-xs font-bold text-white uppercase tracking-wider">Gemini 2.5 Flash</span>
               {geminiConfigured ? (
                 <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
                   <CheckCircle2 className="h-3 w-3" /> Configured
@@ -259,7 +259,7 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
               <li>Visit Google AI Studio and click <strong>Get API key</strong>.</li>
               <li>Create a free key for your project.</li>
               <li>Paste the key into root <code className="text-purple-300">.env</code> as <code className="text-purple-300">GEMINI_API_KEY=your_key</code>.</li>
-              <li>The system will automatically switch from Mock Provider to Gemini 1.5 Flash.</li>
+              <li>The system will automatically switch from Mock Provider to Gemini 2.5 Flash.</li>
             </ol>
           </div>
         </div>
