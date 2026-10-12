@@ -1,10 +1,11 @@
 {
-  "timestamp": "2026-10-12T09:51:34.822299",
+  "timestamp": "2026-10-12T10:05:42.239436",
   "verifications_count": 3,
   "records": [
     {
       "creator_id": null,
       "creator_title": "DevBytes AI",
+      "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0001",
       "email_subject": "EDXSO Partnership: Collaboration Proposal for DevBytes AI",
@@ -17,6 +18,7 @@
       "provider_name": "mock",
       "model_name": "mock-personalizer-v1",
       "is_mock": true,
+      "is_real_gemini": false,
       "personalization_evidence": {
         "creator_name_used": "DevBytes AI",
         "recent_video_referenced": "Building Full-Stack AI with Python",
@@ -27,11 +29,12 @@
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T09:51:30.688659"
+      "generated_at": "2026-10-12T10:05:38.091717"
     },
     {
       "creator_id": null,
       "creator_title": "Code With Sarah",
+      "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0002",
       "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Sarah",
@@ -44,6 +47,7 @@
       "provider_name": "mock",
       "model_name": "mock-personalizer-v1",
       "is_mock": true,
+      "is_real_gemini": false,
       "personalization_evidence": {
         "creator_name_used": "Code With Sarah",
         "recent_video_referenced": "Building Full-Stack AI with Machine Learning",
@@ -53,11 +57,12 @@
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T09:51:32.755071"
+      "generated_at": "2026-10-12T10:05:40.160401"
     },
     {
       "creator_id": null,
       "creator_title": "ML Foundations",
+      "record_provenance": "synthetic",
       "is_synthetic": true,
       "channel_id": "UC_SYNTHETIC_0003",
       "email_subject": "EDXSO Partnership: Collaboration Proposal for ML Foundations",
@@ -70,6 +75,7 @@
       "provider_name": "mock",
       "model_name": "mock-personalizer-v1",
       "is_mock": true,
+      "is_real_gemini": false,
       "personalization_evidence": {
         "creator_name_used": "ML Foundations",
         "recent_video_referenced": "Building Full-Stack AI with Data Science",
@@ -79,7 +85,7 @@
         ],
         "niche_used": "Technology & Artificial Intelligence"
       },
-      "generated_at": "2026-10-12T09:51:34.810863"
+      "generated_at": "2026-10-12T10:05:42.226142"
     }
   ]
 }

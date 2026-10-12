@@ -48,10 +48,26 @@ def main():
     print("=" * 70)
 
     # 1. Health check & Provider configuration check
-    print("\n[Step 1] Checking Backend Health & LLM Configuration...")
+    print("\n[Step 1] Checking Backend Health & LLM Provider Status...")
     try:
         health = api_get("/health")
-        print(f"  Backend Status: {health.get('status')}")
+        integrations = health.get("integrations", {})
+        gemini_configured = integrations.get("gemini_api_configured", False)
+        active_provider = integrations.get("active_llm_provider", "unknown")
+        gemini_model = integrations.get("gemini_model", "unknown")
+        is_mock_llm = integrations.get("is_mock_llm", True)
+
+        print(f"  Backend Health Status:     {health.get('status')}")
+        print(f"  GEMINI_API_KEY Configured: {gemini_configured}")
+        print(f"  Active LLM Provider:       {active_provider.upper()} (is_mock={is_mock_llm})")
+        print(f"  Configured Model:          {gemini_model}")
+
+        if not gemini_configured:
+            print("  [NOTICE] GEMINI_API_KEY is not configured in .env.")
+            print("           Backend is running in safe development mode using MockLLMProvider.")
+            print("           To verify live Gemini API calls, configure GEMINI_API_KEY and restart backend.")
+        else:
+            print("  [OK] Live Gemini API credentials detected.")
     except Exception as e:
         print(f"  [ERROR] Cannot connect to backend at {BACKEND_BASE_URL}: {e}")
         print("  Please ensure the backend is running via .\\run_backend.bat")
@@ -78,19 +94,26 @@ def main():
     
     print(f"  Selected {len(selected_creators)} creators for verification:")
     for idx, c in enumerate(selected_creators, 1):
-        synth_flag = "[SYNTHETIC DEMO]" if c.get("is_synthetic") else "[REAL API]"
+        synth_flag = "[SYNTHETIC DEMO]" if c.get("is_synthetic") else "[REAL API RECORD]"
         print(f"    {idx}. {c.get('title')} ({c.get('channel_id')}) {synth_flag} - Niche: {c.get('classification', {}).get('niche')}")
 
     # 3. Generate messages for each creator
-    print("\n[Step 3] Generating Personalized Messages via Live LLM...")
+    print("\n[Step 3] Generating Personalized Messages & Validating Provider...")
     results = []
 
     for idx, creator in enumerate(selected_creators, 1):
         creator_id = creator.get("id") or creator.get("_id")
         creator_name = creator.get("title")
-        print(f"\n  --- Generating Copy for Creator #{idx}: {creator_name} (ID: {creator_id}) ---")
-
+        is_synth = creator.get("is_synthetic", False)
+        record_type = "SYNTHETIC DEMO" if is_synth else "REAL API RECORD"
         channel_id = creator.get("channel_id")
+        niche = creator.get("classification", {}).get("niche", "N/A")
+
+        print(f"\n  ------------------------------------------------------------------")
+        print(f"  Creator #{idx}: {creator_name} ({channel_id}) [{record_type}]")
+        print(f"  Niche: {niche}")
+        print(f"  ------------------------------------------------------------------")
+
         req_payload = {
             "channel_id": channel_id,
             "creator_id": creator_id or channel_id,
@@ -109,25 +132,33 @@ def main():
             provider_name = msg_data.get("provider_name", "unknown")
             model_name = msg_data.get("model_name", "unknown")
             is_mock = msg_data.get("is_mock", True)
+            evidence = msg_data.get("personalization_evidence", {})
 
             # Assertions
             email_ok = (60 <= email_words <= 90)
             dm_ok = (15 <= dm_words <= 30)
-            is_real_llm = (not is_mock and provider_name == "gemini")
+            is_real_gemini = (not is_mock and provider_name == "gemini")
 
-            print(f"    Provider: {provider_name} | Model: {model_name} | Mock: {is_mock}")
-            print(f"    Email Words: {email_words} ({'PASS 60-90' if email_ok else 'FAIL OUT_OF_BOUNDS'})")
-            print(f"    DM Words: {dm_words} ({'PASS 15-30' if dm_ok else 'FAIL OUT_OF_BOUNDS'})")
-            print(f"    Real LLM Provider Status: {'PASS (Real Gemini API)' if is_real_llm else 'INFO (Mock Fallback - set GEMINI_API_KEY in .env)'}")
+            print(f"    [Provider Check] Provider: '{provider_name}' | Model: '{model_name}' | is_mock: {is_mock}")
+            if is_real_gemini:
+                print(f"    [Provider Status] >>> VERIFIED REAL GEMINI API CALL (Model: {model_name}) <<<")
+            else:
+                print(f"    [Provider Status] >>> OFFLINE MOCK PROVIDER (Development/Fallback) <<<")
 
-            print(f"    [Sample Subject]: {msg_data.get('email_subject')}")
-            print(f"    [Sample DM]: \"{ig_dm}\"")
+            print(f"    [Email Word Count] {email_words} words -> {'PASS (60–90 words)' if email_ok else 'FAIL (Out of bounds)'}")
+            print(f"    [DM Word Count]    {dm_words} words -> {'PASS (15–30 words)' if dm_ok else 'FAIL (Out of bounds)'}")
+            print(f"    [Evidence Check]   Creator Name Used: '{evidence.get('creator_name_used')}'")
+            print(f"                       Niche Used:        '{evidence.get('niche_used')}'")
+            print(f"                       Recent Video:      '{evidence.get('recent_video_referenced')}'")
+            print(f"    [Sample Subject]   {msg_data.get('email_subject')}")
+            print(f"    [Sample DM]        \"{ig_dm}\"")
 
             results.append({
                 "creator_id": creator_id,
                 "creator_title": creator_name,
-                "is_synthetic": creator.get("is_synthetic", False),
-                "channel_id": creator.get("channel_id"),
+                "record_provenance": "synthetic" if is_synth else "real_api",
+                "is_synthetic": is_synth,
+                "channel_id": channel_id,
                 "email_subject": msg_data.get("email_subject"),
                 "email_body": email_body,
                 "email_word_count": email_words,
@@ -138,12 +169,18 @@ def main():
                 "provider_name": provider_name,
                 "model_name": model_name,
                 "is_mock": is_mock,
-                "personalization_evidence": msg_data.get("personalization_evidence"),
-                "generated_at": msg_data.get("generated_at", datetime.utcnow().isoformat())
+                "is_real_gemini": is_real_gemini,
+                "personalization_evidence": evidence,
+                "generated_at": msg_data.get("generated_at", datetime.now().isoformat())
             })
         except urllib.error.HTTPError as he:
             err_body = he.read().decode("utf-8")
             print(f"    [HTTP ERROR {he.code}]: {err_body}")
+            try:
+                parsed_err = json.loads(err_body)
+                print(f"    [API Error Detail]: {parsed_err.get('message') or parsed_err.get('detail')}")
+            except Exception:
+                pass
         except Exception as ex:
             print(f"    [GENERATION ERROR]: {ex}")
 
