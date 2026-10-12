@@ -14,6 +14,12 @@ import time
 from datetime import datetime
 from dotenv import load_dotenv
 
+# Reconfigure stdout/stderr for Windows UTF-8 safety
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 sys.path.insert(0, os.getcwd())
 load_dotenv()
 
@@ -52,10 +58,69 @@ async def run_batch_generation():
     for idx, orig_idx in enumerate(qualifying_indices):
         creator = all_creators[orig_idx]
         channel_id = creator.get("channel_id")
-        title = creator.get("title")
+        title = creator.get("title", "")
+        safe_title = str(title).encode("ascii", errors="replace").decode("ascii")
         subs = (creator.get("metrics") or {}).get("subscriber_count", 0)
 
-        print(f"\n[{idx+1}/{len(qualifying_indices)}] Processing: {title} ({channel_id}) | Subs: {subs:,}")
+        print(f"\n[{idx+1}/{len(qualifying_indices)}] Processing: {safe_title} ({channel_id}) | Subs: {subs:,}")
+
+        # Check if already generated in this creator
+        existing_outreach = creator.get("outreach") or {}
+        if existing_outreach.get("email_body") and existing_outreach.get("instagram_dm"):
+            e_words = existing_outreach.get("email_word_count") or personalization_service.count_words(existing_outreach.get("email_body", ""))
+            d_words = existing_outreach.get("dm_word_count") or personalization_service.count_words(existing_outreach.get("instagram_dm", ""))
+            if 60 <= e_words <= 90 and 15 <= d_words <= 30:
+                print(f"  [CACHE HIT] Valid draft already exists (Email={e_words}, DM={d_words})")
+                generated_results.append({
+                    "channel_id": channel_id,
+                    "title": title,
+                    "subscriber_count": subs,
+                    "email_subject": existing_outreach.get("email_subject"),
+                    "email_word_count": e_words,
+                    "dm_word_count": d_words,
+                    "is_email_valid": True,
+                    "is_dm_valid": True,
+                    "provider_name": existing_outreach.get("provider_name", "gemini"),
+                    "model_name": existing_outreach.get("model_name", "gemini-2.5-flash"),
+                    "is_mock": False
+                })
+                continue
+
+        # Check if already saved in generated_messages in DB
+        db_msg = await db_manager.list_generated_messages(channel_id=channel_id, limit=1)
+        if db_msg and db_msg[0].get("email_body") and db_msg[0].get("instagram_dm"):
+            m = db_msg[0]
+            e_words = m.get("email_word_count") or personalization_service.count_words(m.get("email_body", ""))
+            d_words = m.get("dm_word_count") or personalization_service.count_words(m.get("instagram_dm", ""))
+            if 60 <= e_words <= 90 and 15 <= d_words <= 30:
+                print(f"  [DB HIT] Valid draft found in database (Email={e_words}, DM={d_words})")
+                creator["outreach"] = {
+                    "email_subject": m["email_subject"],
+                    "email_body": m["email_body"],
+                    "instagram_dm": m["instagram_dm"],
+                    "generated_at": str(m.get("generated_at")),
+                    "status": "draft",
+                    "is_simulation": True,
+                    "error_message": None,
+                    "model_name": m.get("model_name", "gemini-2.5-flash"),
+                    "provider_name": m.get("provider_name", "gemini"),
+                    "email_word_count": e_words,
+                    "dm_word_count": d_words
+                }
+                generated_results.append({
+                    "channel_id": channel_id,
+                    "title": title,
+                    "subscriber_count": subs,
+                    "email_subject": m["email_subject"],
+                    "email_word_count": e_words,
+                    "dm_word_count": d_words,
+                    "is_email_valid": True,
+                    "is_dm_valid": True,
+                    "provider_name": m.get("provider_name", "gemini"),
+                    "model_name": m.get("model_name", "gemini-2.5-flash"),
+                    "is_mock": m.get("is_mock", False)
+                })
+                continue
 
         # Attempt generation with retry on 429
         max_attempts = 3
@@ -72,7 +137,6 @@ async def run_batch_generation():
                 else:
                     print(f"  Attempt {attempt+1} error: {err_str}")
                     if attempt == max_attempts - 1:
-                        # Fallback to safe prompt generation
                         try:
                             res = await personalization_service.generate_outreach_copy(creator, force_mock=True)
                         except Exception as fe:
@@ -156,7 +220,6 @@ async def run_batch_generation():
     print(f"\nUpdated {JSON_PATH} with generated outreach copy.")
 
     # Update real_influencers_export.csv
-    # Re-read existing CSV rows and update matching channel rows
     with open(CSV_PATH, "r", encoding="utf-8") as f:
         csv_rows = list(csv.DictReader(f))
         fieldnames = csv_rows[0].keys()

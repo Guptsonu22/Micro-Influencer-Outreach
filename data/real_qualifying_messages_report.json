@@ -1,0 +1,1637 @@
+{
+  "finalized_at": "2026-10-12T11:19:36.032317",
+  "summary": {
+    "total_qualifying_creators": 69,
+    "successfully_processed": 69,
+    "incomplete_or_failed": 0,
+    "gemini_api_live_count": 7,
+    "rate_limit_contextual_fallback_count": 62,
+    "all_emails_in_bounds_60_to_90": true,
+    "all_dms_in_bounds_15_to_30": true,
+    "real_messages_sent_to_world": 0,
+    "simulation_mode_enforced": true
+  },
+  "gates_audit": {
+    "Gate_1_Qualification": {
+      "passed": true,
+      "detail": "Outreach Gate #1 Blocked: Creator 'Imran ai tutorial' is classified as 'unqualified'. Dispatches require a qualified creator or an explicit allow_ineligible_override=True."
+    },
+    "Gate_2_Email_Presence": {
+      "passed": true,
+      "detail": "Outreach Gate #2 Blocked: Creator 'Ai tools tutorial' has no verified business email (found 'Not Found'). Dispatches require a verified RFC-compliant email address."
+    },
+    "Gate_3_Draft_Existence": {
+      "passed": true,
+      "detail": "Found draft and validated"
+    },
+    "Gate_4_Word_Count": {
+      "passed": true,
+      "detail": "Word count compliant"
+    },
+    "Simulation_Dispatch": {
+      "passed": true,
+      "status": "simulated",
+      "is_simulation": true
+    },
+    "Gate_5_Live_Sending_Guard": {
+      "passed": true,
+      "detail": "Outreach Gate #5 Blocked: Live email delivery is disabled in system safety settings (SIMULATION_MODE=true or ALLOW_LIVE_EMAIL_SENDING=false). Switch to simulation mode or configure approved server SMTP settings."
+    },
+    "Gate_6_7_Duplicate_Lock": {
+      "passed": true,
+      "detail": "Strictly blocked duplicate: Outreach (email for campaign audit_phase13_sim_valid) with identifier 'UClsHhopJHYiKDHsL7AZ5khw' already exists."
+    }
+  },
+  "creators_breakdown": [
+    {
+      "channel_id": "UCTtG3NWOtedCSd7dtaM99gA",
+      "title": "TUTORIAL CENTRAL",
+      "subscriber_count": 5760,
+      "email_subject": "Collaboration Opportunity: EDXSO x Tutorial Central (AI & Tech Tutorials)",
+      "email_word_count": 76,
+      "dm_word_count": 26,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "Tutorial Central Team",
+        "recent_video_referenced": "'How to Upload XLSX to NotebookLM (Full Tutorial)'",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "SaaS platforms",
+          "online tools"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCVXWlipW2qFPxVs6kFC4eNw",
+      "title": "ACCESS AI",
+      "subscriber_count": 56800,
+      "email_subject": "Collaboration Opportunity: EDXSO x ACCESS AI",
+      "email_word_count": 75,
+      "dm_word_count": 27,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "ACCESS AI",
+        "recent_video_referenced": "Google Flow \u101e\u102f\u1036\u1038\u1019\u101b\u1010\u1032\u1037\u1015\u103c\u103f\u1014\u102c \u1016\u103c\u1031\u101b\u103e\u1004\u103a\u1038\u1014\u100a\u103a\u1038\ud83d\udd25How to solve country limitation in Google Flow",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCjObxF-LQNSRmVAsDlp15vw",
+      "title": "\u963f\u9f90\u7684 AI Tutorial",
+      "subscriber_count": 15500,
+      "email_subject": "Collaboration Opportunity: EDXSO x \u963f\u9f90\u7684 AI Tutorial",
+      "email_word_count": 63,
+      "dm_word_count": 27,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "\u963f\u9f90\u7684 AI Tutorial",
+        "recent_video_referenced": "'Sora2\u6d6e\u6c34\u5370\u53bb\u9664\uff0c\u8d85\u6e05\u756b\u8cea\u4fee\u5fa9\u3001\u4eba\u50cf\u589e\u5f37\u3001\u6d41\u66a2\u64ad\u653e\u5168\u9762\u5347\u7d1a\uff01'",
+        "content_themes_used": [
+          "AI visuals",
+          "tutorials",
+          "AI tools",
+          "AI career training"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC6QoDeL1CbZ48vXeZv5V_Ng",
+      "title": "Drew Tutorial",
+      "subscriber_count": 21400,
+      "email_subject": "Collaboration Opportunity: EDXSO x Drew Tutorial - AI & Tech Training",
+      "email_word_count": 77,
+      "dm_word_count": 29,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "Drew Tutorial",
+        "recent_video_referenced": "How to Set Wallpaper on Android (Step-by-Step)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UClsHhopJHYiKDHsL7AZ5khw",
+      "title": "AI Mastery Tutorial",
+      "subscriber_count": 7340,
+      "email_subject": "Collaboration Opportunity: AI Mastery Tutorial x EDXSO",
+      "email_word_count": 63,
+      "dm_word_count": 26,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "AI Mastery Tutorial",
+        "recent_video_referenced": null,
+        "content_themes_used": [
+          "AI tools education",
+          "storytelling",
+          "digital creativity",
+          "Technology",
+          "Artificial Intelligence"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCokyR1INAOqX6nwYr9SFArw",
+      "title": "SMART COMPUTER TUTORIAL",
+      "subscriber_count": 7430,
+      "email_subject": "Collaboration Opportunity: EDXSO x SMART COMPUTER TUTORIAL",
+      "email_word_count": 90,
+      "dm_word_count": 25,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "SMART COMPUTER TUTORIAL",
+        "recent_video_referenced": "'AMD Ryzen 9 9950X3D2 Dual Edition | AMD's flagship Zen 5 desktop'",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Job-ready skills"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCJ8nb3Kd_m2-ISl7m8bBjqw",
+      "title": "High Techy",
+      "subscriber_count": 6010,
+      "email_subject": "Collaboration Opportunity: EDXSO x High Techy - AI Training & Developer Tools",
+      "email_word_count": 75,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "gemini",
+      "model_name": "gemini-2.5-flash",
+      "is_mock": false,
+      "personalization_evidence": {
+        "creator_name_used": "High Techy",
+        "recent_video_referenced": "'How to download firefox in win 11'",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCh4RxIyV4Nm-oI--2VabbYQ",
+      "title": "Indian Tutorial Hub AI & Tech",
+      "subscriber_count": 5350,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Indian Tutorial Hub AI & Tech",
+      "email_word_count": 77,
+      "dm_word_count": 26,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Indian Tutorial Hub AI & Tech",
+        "recent_video_referenced": "YouTube \u0c2e\u0c28 Life \u0c28\u0c3f \u0c2e\u0c3e\u0c30\u0c4d\u0c1a\u0c17\u0c32\u0c26\u0c3e? |YouTube Channel \u0c0e\u0c02\u0c26\u0c41\u0c15\u0c41 Start \u0c1a\u0c47\u0c2f\u0c3e\u0c32\u0c3f? \ud83e\udd14 Telugu Guide 2026",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCXtGbm7XIGViDsonju00aqg",
+      "title": "Tutorial Horizon",
+      "subscriber_count": 5090,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Tutorial Horizon",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Tutorial Horizon",
+        "recent_video_referenced": "Docker, Nginx & CI/CD Pipeline \ud83d\ude80 | GitHub Actions + AWS EC2 (Step-by-Step)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC1kkGXyCRwSPm6-kR6K_UGw",
+      "title": "Debby's Tutorial Academy",
+      "subscriber_count": 7580,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Debby's Tutorial Academy",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Debby's Tutorial Academy",
+        "recent_video_referenced": "Good News! Get 4000 Watch Hours Fast In 48 Hours - This New YouTube Growth Strategy Works Like Magic",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCdS2kSlRDkQLwcQ_x71VJBw",
+      "title": "Chakey Tutorial",
+      "subscriber_count": 14500,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Chakey Tutorial",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Chakey Tutorial",
+        "recent_video_referenced": "NYESEL BARU TAU! \ud83d\ude31 Tools AI Ini Bisa Bikin ANIMASI & FILM PANJANG Cuma 1 KLIK! #aimovie",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCZx0r6ClIND6cx_w1KEPa5g",
+      "title": "Aadi and Python",
+      "subscriber_count": 39800,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Aadi and Python",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Aadi and Python",
+        "recent_video_referenced": "\u0928\u093e\u0939\u0940\u0924\u0930 IT JOB \u092e\u093f\u0933\u0923\u093e\u0930 \u0928\u093e\u0939\u0940! \ud83d\ude22 2026 Freshers \u0928\u0940 \u0939\u0947 \u0928\u0915\u094d\u0915\u0940 \u0910\u0915\u093e \ud83d\udd25 | IT Job Preparation \u092e\u0930\u093e\u0920\u0940",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCQhtovd1XfnjRQUSVBR2kfQ",
+      "title": "Manipuri Tutorial",
+      "subscriber_count": 5710,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Manipuri Tutorial",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Manipuri Tutorial",
+        "recent_video_referenced": "How to Apply OBC certificate in 2026",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCxHBj6mfMn7AChmbpvDroKg",
+      "title": "Python Dev & AI",
+      "subscriber_count": 7650,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Dev & AI",
+      "email_word_count": 75,
+      "dm_word_count": 24,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Python Dev & AI",
+        "recent_video_referenced": "Build a Modern FruitShop E-Commerce UI Using ChatGPT \ud83c\udf4e | AI-Powered Web UI Development",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCj4b_YT4QnFy6nx3dRCuc1w",
+      "title": "Python Coding (CLCODING)",
+      "subscriber_count": 61100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Coding (CLCODING)",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Python Coding (CLCODING)",
+        "recent_video_referenced": "October Python Bootcamp | Day 4",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC0_XSYG_kmbDnP6eywpdJjA",
+      "title": "Python Expert",
+      "subscriber_count": 33800,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Expert",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Python Expert",
+        "recent_video_referenced": "Tower of Hanoi in Python \ud83e\udde0\ud83d\udd25 | Recursion Explained! #Shorts #developer #coding #tech #python #project",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCxVRDu9ujwOrmDxu72V3ujQ",
+      "title": "Kite",
+      "subscriber_count": 52000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Kite",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Kite",
+        "recent_video_referenced": "How to detect DeepFakes with MesoNet | 20 MIN. PYTHON TUTORIAL",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCHuchVhVR-0xs7WUHKuHqlA",
+      "title": "Python Guruji",
+      "subscriber_count": 5510,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Guruji",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Python Guruji",
+        "recent_video_referenced": "Quick Python MCQ Breakdown | Learn Python Rapidly #infytqmcq #infytq #shorts #python #infytqpython",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCUm6InQvGI9-6vo1teGWINA",
+      "title": "IBM Developer",
+      "subscriber_count": 93300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for IBM Developer",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "IBM Developer",
+        "recent_video_referenced": "AI Coding Agents + Static Code Analysis for Safer Code",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCKPSmMfDsXTKrCZApukcJ7A",
+      "title": "Talk Python",
+      "subscriber_count": 29400,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Talk Python",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Talk Python",
+        "recent_video_referenced": "Tachyon, Python 3.15",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC-hisIZlnsImYe7Y5M4qVFA",
+      "title": "Hope Artificial Intelligence",
+      "subscriber_count": 66200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Hope Artificial Intelligence",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Hope Artificial Intelligence",
+        "recent_video_referenced": "Employee Attrition Prediction Using AI | HR Domain Meet | Hope AI",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCLXlzAu0NhM5pnXLQdGnHJQ",
+      "title": "PyMike",
+      "subscriber_count": 40800,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for PyMike",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "PyMike",
+        "recent_video_referenced": "Observer Pattern",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCpbMQO3wyA-vfYiCiIGB8Iw",
+      "title": "DataMites",
+      "subscriber_count": 38500,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for DataMites",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "DataMites",
+        "recent_video_referenced": "Building a Future in Business Analytics: Samyuktha\u2019s Career Journey",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCS9sdEyduD9K83K3GkvQlOA",
+      "title": "PyCon AU",
+      "subscriber_count": 25500,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for PyCon AU",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "PyCon AU",
+        "recent_video_referenced": "\"Closing address\" - Jack Skinner, Nic Crouch, Sophie Quinn-Graham (PyCon AU 2026)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCiTCjKDqYd80aOreJGcTLTg",
+      "title": "HitraN the Programmer",
+      "subscriber_count": 5130,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for HitraN the Programmer",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "HitraN the Programmer",
+        "recent_video_referenced": "3 Java Coding Tasks that will test if you are ready for interview as senior developer",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCsda5E-IaXyUi8dzauyXypA",
+      "title": "Algorand Developers",
+      "subscriber_count": 93600,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Algorand Developers",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Algorand Developers",
+        "recent_video_referenced": "The Next API Economy: When AI Agents Become Your Customers | API World",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCej-wawhhPdjVKihCRk2Ang",
+      "title": "I know python",
+      "subscriber_count": 50300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for I know python",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "I know python",
+        "recent_video_referenced": "Queue waiting time counter using python and YOLOV8 part 2",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC58v9cLitc8VaCjrcKyAbrw",
+      "title": "Machine Learning with Phil",
+      "subscriber_count": 45100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Machine Learning with Phil",
+      "email_word_count": 75,
+      "dm_word_count": 24,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Machine Learning with Phil",
+        "recent_video_referenced": "AI Designs Quantum Circuits",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCNszHNG0PlhWJdtNqFvwMWw",
+      "title": "Rabbitmetrics",
+      "subscriber_count": 36000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Rabbitmetrics",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Rabbitmetrics",
+        "recent_video_referenced": "What Data Engineers Actually Do (With Production Template)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCgHDngFV50KmbqF_6-K8XhA",
+      "title": "Code With Aarohi",
+      "subscriber_count": 70600,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Aarohi",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Code With Aarohi",
+        "recent_video_referenced": "Logistic Regression Python Tutorial | Build Your First Classification Model",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCstCuI_7DvHw7-KSA3Yy9PQ",
+      "title": "Thomas Janssen",
+      "subscriber_count": 14000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Thomas Janssen",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Thomas Janssen",
+        "recent_video_referenced": "How to work with Dates in Microsoft Power Automate \ud83d\udcc5 | Dates Tutorial",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCQtHyVB4O4Nwy1ff5qQnyRw",
+      "title": "Pyplane",
+      "subscriber_count": 35800,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Pyplane",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Pyplane",
+        "recent_video_referenced": "Django + Celery = Run background tasks #django #djangoproject #pythonwebdevelopment",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCF7fVZmwNUgL7BFH56PnigQ",
+      "title": "theailanguage",
+      "subscriber_count": 10400,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for theailanguage",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "theailanguage",
+        "recent_video_referenced": "GEAP Course #6: Observability in Gemini Enterprise Agent Platform",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCzIxc8Vg53_ewaRIk3shBug",
+      "title": "Samuel Chan",
+      "subscriber_count": 10200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Samuel Chan",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Samuel Chan",
+        "recent_video_referenced": "Build Chat AI apps w/ Streamlit + LangChain",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCslo4N_UI5r319oHXeuD9rQ",
+      "title": "Harish Neel | AI",
+      "subscriber_count": 23300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Harish Neel | AI",
+      "email_word_count": 75,
+      "dm_word_count": 24,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Harish Neel | AI",
+        "recent_video_referenced": "Build an AI Invoice Processing System - Extract, Validate & Deploy (2026)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCLhx5RCmUl3cOti6vJq0DPA",
+      "title": "Data Science Garage",
+      "subscriber_count": 18300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data Science Garage",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Data Science Garage",
+        "recent_video_referenced": "ChatGPT 5: Create HTML Dashboard about Real Estate in US cities",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCv83tO5cePwHMt1952IVVHw",
+      "title": "James Briggs",
+      "subscriber_count": 82000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for James Briggs",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "James Briggs",
+        "recent_video_referenced": "I Tested Jev AI Against LLMs and Open Source",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC9M7dZqrA_inICuq3dSwoQg",
+      "title": "Abu Bakr Soliman",
+      "subscriber_count": 34600,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Abu Bakr Soliman",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Abu Bakr Soliman",
+        "recent_video_referenced": "3 Tokenizer 2/2 | Build an LLM from Scratch with Pytorch | Ep.3",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCKDLhtlLLiDBdbcAcEqh4-Q",
+      "title": "Jp NaN",
+      "subscriber_count": 14100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Jp NaN",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Jp NaN",
+        "recent_video_referenced": "3. Chatmodels in langchain telugu | langchains in telugu",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCgQBvSIfSI-VzeHBfWHE6XA",
+      "title": "Luis Fernando Solis",
+      "subscriber_count": 13200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Luis Fernando Solis",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Luis Fernando Solis",
+        "recent_video_referenced": "Los practicantes o interns de AI Engineer hoy en d\u00eda son como\u2026",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCcYKjf55fmOsJW_on8UIs9w",
+      "title": "Mayank Aggarwal",
+      "subscriber_count": 69200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Mayank Aggarwal",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Mayank Aggarwal",
+        "recent_video_referenced": "No Coding | 8 Secret Remote Jobs You Can Start Before 2027",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCMcJtgCJ8xk214g-GDaFRfw",
+      "title": "MLTut",
+      "subscriber_count": 9850,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for MLTut",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "MLTut",
+        "recent_video_referenced": "MCP Tutorial: Build Your First MCP Server with LangChain",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCmbUF1jKRoZ-NdOLJX3wBgw",
+      "title": "Data Thinkers",
+      "subscriber_count": 23100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data Thinkers",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Data Thinkers",
+        "recent_video_referenced": "17. Model Context Protocol (MCP) | Build MCP Server & Client",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCAMsdrVKldk2_d1BxegnBzg",
+      "title": "C\u00f3digo Espinoza - IA y Machine Learning",
+      "subscriber_count": 9300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for C\u00f3digo Espinoza - IA y Machine Learning",
+      "email_word_count": 78,
+      "dm_word_count": 27,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "C\u00f3digo Espinoza - IA y Machine Learning",
+        "recent_video_referenced": "Jev no escribe texto, solo decide: clasifiqu\u00e9 1.000 tickets por 4 centavos y esto se equivoc\u00f3",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC_aDkEvLjl4-ZUdqxauAHng",
+      "title": "Pythonology",
+      "subscriber_count": 17300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Pythonology",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Pythonology",
+        "recent_video_referenced": "Talk to Your SQL Database with AI! | LlamaIndex + Groq Tutorial",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCEO59E50mBL_KNb5PGiT4JQ",
+      "title": "codingwithrahi",
+      "subscriber_count": 20200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for codingwithrahi",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "codingwithrahi",
+        "recent_video_referenced": "30+ Python Interview Questions You MUST Know | Core Python Interview Q&A",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCNjISXi1eAwcLOogdKBb0pQ",
+      "title": "Balaji Chippada",
+      "subscriber_count": 37200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Balaji Chippada",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Balaji Chippada",
+        "recent_video_referenced": "You Are Building AI Agents Wrong: Use ReAct Instead",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC2_X9JyHWEPtSatHfVmglcA",
+      "title": "Tech With Mala",
+      "subscriber_count": 6010,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Tech With Mala",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Tech With Mala",
+        "recent_video_referenced": "AI Agents Explained: From Hype to Autonomy",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCIGuV6zxEfQLftBHj1ZFjFg",
+      "title": "Code With Aarohi Hindi",
+      "subscriber_count": 29900,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Aarohi Hindi",
+      "email_word_count": 75,
+      "dm_word_count": 24,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Code With Aarohi Hindi",
+        "recent_video_referenced": "Logistic Regression in Python | Practical Implementation with Scikit-Learn",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCkMJSRC-Prm9oe4dyLFDchQ",
+      "title": "Rex - Code Slayer",
+      "subscriber_count": 6610,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Rex - Code Slayer",
+      "email_word_count": 75,
+      "dm_word_count": 24,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Rex - Code Slayer",
+        "recent_video_referenced": "Faire une IA au Wordle",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCwuypSsV0QprdwFaFgvhaSA",
+      "title": "Data&ML Ing\u00e9nieur",
+      "subscriber_count": 7700,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data&ML Ing\u00e9nieur",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Data&ML Ing\u00e9nieur",
+        "recent_video_referenced": "Formation compl\u00e8te IA/ML/Data pour lancer votre carri\u00e8re en 2025",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCtvGCaEzQZX7GwUJi-E3ALQ",
+      "title": "Dr Pi",
+      "subscriber_count": 7960,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Dr Pi",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Dr Pi",
+        "recent_video_referenced": "e-commerce product recommendations | Qdrant Vector Search with Score Boost",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC3xsgKw2KZMqw_8hZ9FDIZg",
+      "title": "Saurav Prateek",
+      "subscriber_count": 5450,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Saurav Prateek",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Saurav Prateek",
+        "recent_video_referenced": "Mixture of Experts (MoE) spelled out | Implement from scratch | Pytorch | Python",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCeLAfuQgnmCy1mJHEwv9Qew",
+      "title": "Sunny Savita",
+      "subscriber_count": 45000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Sunny Savita",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Sunny Savita",
+        "recent_video_referenced": "New Playlist Introduction: Data Parsing, AI-Based Parsing & Document AI for AI Applications",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC1oXUA7qgs0GZc_yk46K2OQ",
+      "title": "Alejandro AO",
+      "subscriber_count": 83300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Alejandro AO",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Alejandro AO",
+        "recent_video_referenced": "Herdr Crash Course \u2014 Step-by-Step Setup",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCh-c-LFH9Q6VbHRRqD4oLOA",
+      "title": "\ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624",
+      "subscriber_count": 5330,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for \ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "\ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624",
+        "recent_video_referenced": "[\ud558\ub124\uc2a4 \uc5d4\uc9c0\ub2c8\uc5b4\ub9c1] Claude\uac00 \uc9c4\ud589\ud558\uace0 Gemini \u00b7 Codex \ud1a0\ub860 \ubc30\ud2c0 \u2014 AI Debate \ub370\ubaa8",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCDhbl_RkuRF7WLZp9Q88FdQ",
+      "title": "SensIO",
+      "subscriber_count": 14200,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for SensIO",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "SensIO",
+        "recent_video_referenced": "C\u00f3mo crear AGENTES de IA con PYTHON (MASTERCLASS)",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCswr5O1wBDdyULYqIfgtY4Q",
+      "title": "Karndeep Singh",
+      "subscriber_count": 7230,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Karndeep Singh",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Karndeep Singh",
+        "recent_video_referenced": "Extract data from INVOICE using Gemini Pro | Information Extraction from Image | Karndeep Singh",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCXzz7hebK1NYIKaXyaKXmQA",
+      "title": "Econoscent",
+      "subscriber_count": 7910,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Econoscent",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Econoscent",
+        "recent_video_referenced": "HuggingFace Finetuning Seq2Seq Transformer Model Coding Tutorial",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UC61Lbh7_OFvVCkfzO8sGEJA",
+      "title": "SELS",
+      "subscriber_count": 8180,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for SELS",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "SELS",
+        "recent_video_referenced": "Circuits Explained + building an Adder & Subtractor",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCLR3sD0KB_dWpvcsrLP0aUg",
+      "title": "\uc624\ub298\ucf54\ub4dctodaycode",
+      "subscriber_count": 34700,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for \uc624\ub298\ucf54\ub4dctodaycode",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "\uc624\ub298\ucf54\ub4dctodaycode",
+        "recent_video_referenced": "\ub178\ud2b8\ubd81LM\uc5d0\uc11c \uc644\uc804\ud788 \ub2ec\ub77c\uc9c4 \uc81c\ubbf8\ub098\uc774 \ub178\ud2b8\ubd81 - \uc2e0\ub8b0\ud560 \uc218 \uc788\ub294 \uc815\ubcf4 \uc5bb\uae30",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCD80RKxQODrPv-PdM3Js8IQ",
+      "title": "HandyAndy Tech Tips",
+      "subscriber_count": 24800,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for HandyAndy Tech Tips",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "HandyAndy Tech Tips",
+        "recent_video_referenced": "Best NEW HTML/CSS Features and Tricks To Use in 2027! | View Transitions, Popover API Examples",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCpWM9-WyxKp-8pcp8x4nrnw",
+      "title": "Spectral Forge Labs",
+      "subscriber_count": 7220,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Spectral Forge Labs",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Spectral Forge Labs",
+        "recent_video_referenced": "Introducing Spectral Forge RL Environment",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCjAK_0LE8_NTVk_-aWYwNQA",
+      "title": "Dirumahrafif",
+      "subscriber_count": 63000,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Dirumahrafif",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Dirumahrafif",
+        "recent_video_referenced": "JetBrains Merugi di Era AI: Apakah Sekarang IDE Sudah Tidak Diperlukan Lagi?",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCpcJNrQyW3Ge7w9-dmijW9Q",
+      "title": "AiML Mastery Club",
+      "subscriber_count": 32100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for AiML Mastery Club",
+      "email_word_count": 74,
+      "dm_word_count": 23,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "AiML Mastery Club",
+        "recent_video_referenced": "Building Agentic RAG App using MCP + HuggingFace: Gen AI Project",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCgGADKKGalfwSNbpSyM5ryg",
+      "title": "Yury Kashnitsky",
+      "subscriber_count": 20300,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Yury Kashnitsky",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Yury Kashnitsky",
+        "recent_video_referenced": "Blog \"New Yorko Times\"",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCGvNdo-r87Q12zW2MK01BFw",
+      "title": "KaviAI",
+      "subscriber_count": 5100,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for KaviAI",
+      "email_word_count": 72,
+      "dm_word_count": 21,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "KaviAI",
+        "recent_video_referenced": "React Native Course Part 5: Animations, Themes (Light/Dark), Transitions with Reanimated #animation",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCeIY8ROuFOLLDAIR8--blBA",
+      "title": "Michael Tutorial",
+      "subscriber_count": 9480,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Michael Tutorial",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Michael Tutorial",
+        "recent_video_referenced": "\ud83d\udcb8 AUTO CUAN! Bikin Konten AI Affiliate Landscape Faceless Viral di TikTok Pakai HP",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    },
+    {
+      "channel_id": "UCqBjVBtycn69Gq1iTE_l93Q",
+      "title": "Python Mentor ",
+      "subscriber_count": 7690,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Mentor",
+      "email_word_count": 73,
+      "dm_word_count": 22,
+      "is_email_valid": true,
+      "is_dm_valid": true,
+      "provider_name": "mock",
+      "model_name": "mock-personalizer-v1",
+      "is_mock": true,
+      "personalization_evidence": {
+        "creator_name_used": "Python Mentor",
+        "recent_video_referenced": "\ud83d\udea8 \u041f\u044b\u0442\u0430\u044e\u0441\u044c \u043f\u0440\u043e\u0439\u0442\u0438 \u0420\u0415\u0410\u041b\u042c\u041d\u042b\u0419 \u0441\u043e\u0431\u0435\u0441 \u043d\u0430 Lead Python Engineer / \u0412\u0435\u0431-\u0441\u043a\u0440\u0430\u043f\u043f\u0438\u043d\u0433 \u0438 \u0440\u0435\u0432\u044c\u044e \u043a\u043e\u0434\u0430 / \u041e\u043f\u044f\u0442\u044c \u0444\u0438\u0430\u0441\u043a\u043e?",
+        "content_themes_used": [
+          "Technology",
+          "Artificial Intelligence",
+          "Coding"
+        ],
+        "niche_used": "Technology & Artificial Intelligence"
+      }
+    }
+  ]
+}

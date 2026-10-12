@@ -422,13 +422,17 @@
       "metric_timestamp": "2026-10-12 10:45:39.155000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x Tutorial Central (AI & Tech Tutorials)",
+      "email_body": "Dear Tutorial Central Team,\n\nWe loved your 'How to Upload XLSX to NotebookLM' tutorial! Your clear, step-by-step approach to tech and AI tools perfectly aligns with EDXSO. We build next-generation AI-powered career training and interactive developer tools, a great fit for your audience. We're offering a paid sponsorship ($250-$800) plus free Pro access for your community. Let's chat for 10 minutes to discuss a collaboration. Reply or book a call: cal.com/edxso/partnerships.\n\nSincerely,\nThe EDXSO Partnerships Team",
+      "instagram_dm": "Hi Tutorial Central! Loved your NotebookLM tutorial. EDXSO offers AI career training & dev tools. Let's discuss a paid partnership. Check your email or DM us!",
+      "generated_at": "2026-10-12 11:18:34.711756",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 76,
+      "dm_word_count": 26
     },
     "published_at": "2019-03-28T12:42:59Z",
     "retrieved_at": "2026-10-12 10:45:39.155000",
@@ -1173,13 +1177,17 @@
       "metric_timestamp": "2026-10-12 10:45:39.765000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x ACCESS AI",
+      "email_body": "Hi ACCESS AI,\n\nWe're genuinely impressed by your insightful content on AI and technology, especially your recent video on solving Google Flow country limitations. Your dedication to sharing valuable AI updates and tools perfectly aligns with EDXSO's mission. We build next-generation AI-powered career training and interactive developer tools. We'd love to discuss a paid sponsorship ($250-$800) and offer free Pro access for your community. Interested in a 10-minute briefing call? Reply or book here: cal.com/edxso/partnerships",
+      "instagram_dm": "Hi ACCESS AI! Love your AI tech content. EDXSO (AI career training) wants to collaborate on a paid sponsorship. Check your email or DM us for details!",
+      "generated_at": "2026-10-12 11:18:34.711797",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 75,
+      "dm_word_count": 27
     },
     "published_at": "2021-05-21T14:10:57.709944Z",
     "retrieved_at": "2026-10-12 10:45:39.765000",
@@ -1242,13 +1250,17 @@
       "metric_timestamp": "2026-10-12 10:45:37.755000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x \u963f\u9f90\u7684 AI Tutorial",
+      "email_body": "Hello \u963f\u9f90\u7684 AI Tutorial,\n\nYour channel, especially your 'Sora2\u6d6e\u6c34\u5370\u53bb\u9664' video, truly impresses us. Your expertise in AI visuals and tutorials aligns perfectly with EDXSO's mission.\n\nEDXSO offers next-gen AI career training and developer tools, ideal for your audience. We propose a paid sponsorship ($250-$800) to introduce our platform, plus free Pro access for your community.\n\nInterested? Reply or book a 10-minute call: cal.com/edxso/partnerships.",
+      "instagram_dm": "Hi \u963f\u9f90\u7684 AI Tutorial! Love your AI tutorials. EDXSO offers AI career training. Interested in a paid partnership + free Pro access for your community? Let's connect!",
+      "generated_at": "2026-10-12 11:18:34.711817",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 63,
+      "dm_word_count": 27
     },
     "published_at": "2024-09-14T15:18:50.768985Z",
     "retrieved_at": "2026-10-12 10:45:37.755000",
@@ -2240,13 +2252,17 @@
       "metric_timestamp": "2026-10-12 10:41:27.061000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x Drew Tutorial - AI & Tech Training",
+      "email_body": "Hi Drew Tutorial,\n\nWe're impressed by your channel's dedication to mastering software and tools, especially your recent 'How to Set Wallpaper on Android' guide. Your focus on optimizing workflows and unlocking tech potential aligns perfectly with EDXSO. We build next-generation AI-powered career training and interactive developer tools. We'd love to discuss a paid sponsorship ($250-$800) where you introduce EDXSO to your audience, offering them free Pro access. Let's chat! Reply here or book a quick call: cal.com/edxso/partnerships",
+      "instagram_dm": "Hey Drew Tutorial! Love your tech guides, especially the Android tips. EDXSO (AI career training) wants to collaborate. Paid sponsorship + free Pro access for your community. DM us!",
+      "generated_at": "2026-10-12 11:18:34.711836",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 77,
+      "dm_word_count": 29
     },
     "published_at": "2023-06-07T08:59:50.938092Z",
     "retrieved_at": "2026-10-12 10:41:27.061000",
@@ -2619,13 +2635,17 @@
       "metric_timestamp": "2026-10-12 10:45:38.602000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: AI Mastery Tutorial x EDXSO",
+      "email_body": "Dear AI Mastery Tutorial,\n\nYour channel's focus on AI tools for storytelling and digital creativity is fantastic. EDXSO builds next-generation AI-powered career training and interactive developer tools, a perfect match for your audience.\n\nWe offer a paid sponsorship ($250-$800) and free Pro access for your community. Interested in partnering? Reply or book a quick 10-minute briefing call: cal.com/edxso/partnerships.\n\nSincerely,\nThe EDXSO Partnerships Team",
+      "instagram_dm": "Hey AI Mastery Tutorial! Your AI education is fantastic. EDXSO offers AI career training tools. Interested in a paid partnership with free Pro access? Let's chat!",
+      "generated_at": "2026-10-12 11:18:34.711850",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 63,
+      "dm_word_count": 26
     },
     "published_at": "2025-08-10T16:53:39.510855Z",
     "retrieved_at": "2026-10-12 10:45:38.602000",
@@ -3494,13 +3514,17 @@
       "metric_timestamp": "2026-10-12 10:45:42.434000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x SMART COMPUTER TUTORIAL",
+      "email_body": "Hello Team at SMART COMPUTER TUTORIAL,\n\nWe've been impressed with your insightful content, especially your recent video on 'AMD Ryzen 9 9950X3D2 Dual Edition' and your focus on AI tools and job-ready skills. \n\nEDXSO builds next-generation AI-powered career training and interactive developer tools, perfectly aligning with your audience of computer beginners and job seekers. We believe your community would greatly benefit from our resources.\n\nWe're offering a paid sponsorship ($250-$800) and free Pro access for your community. Would you be open to a brief chat? cal.com/edxso/partnerships\n\nBest regards,\nEDXSO Partnerships",
+      "instagram_dm": "Hi SMART COMPUTER TUTORIAL! Love your tech content, especially the AMD Ryzen video. EDXSO offers AI career training. Interested in a paid partnership? DM us!",
+      "generated_at": "2026-10-12 11:18:34.711863",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 90,
+      "dm_word_count": 25
     },
     "published_at": "2018-08-17T18:51:39Z",
     "retrieved_at": "2026-10-12 10:45:42.434000",
@@ -3563,13 +3587,17 @@
       "metric_timestamp": "2026-10-12 10:45:43.948000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "Collaboration Opportunity: EDXSO x High Techy - AI Training & Developer Tools",
+      "email_body": "Hi High Techy,\n\nYour channel's focus on mastering future technology, from AI tools to automation, is truly impressive. We especially appreciate your in-depth tutorials and industry insights. EDXSO builds next-generation AI-powered career training and interactive developer tools, a perfect fit for your audience looking to advance in tech. We're offering a paid sponsorship ($250-$800) and free Pro access for your community. Let's explore a partnership.\n\nReply here or book a quick 10-minute briefing call: cal.com/edxso/partnerships",
+      "instagram_dm": "Hey High Techy! Love your AI and tech content. EDXSO offers AI career training. Interested in a paid partnership? Let's chat!",
+      "generated_at": "2026-10-12 11:18:34.711875",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "gemini-2.5-flash",
+      "provider_name": "gemini",
+      "email_word_count": 75,
+      "dm_word_count": 21
     },
     "published_at": "2023-05-10T16:54:51.343405Z",
     "retrieved_at": "2026-10-12 10:45:43.948000",
@@ -3818,13 +3846,17 @@
       "metric_timestamp": "2026-10-12 10:45:45.718000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Indian Tutorial Hub AI & Tech",
+      "email_body": "Hi Indian Tutorial Hub AI & Tech! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Indian Tutorial Hub AI & Tech! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:35.868346",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 77,
+      "dm_word_count": 26
     },
     "published_at": "2026-03-24T19:33:39.047145Z",
     "retrieved_at": "2026-10-12 10:45:45.718000",
@@ -4445,13 +4477,17 @@
       "metric_timestamp": "2026-10-12 10:45:46.336000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Tutorial Horizon",
+      "email_body": "Hi Tutorial Horizon! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Tutorial Horizon! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:36.883290",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2012-10-07T06:26:02Z",
     "retrieved_at": "2026-10-12 10:45:46.336000",
@@ -4886,13 +4922,17 @@
       "metric_timestamp": "2026-10-12 10:45:47.036000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Debby's Tutorial Academy",
+      "email_body": "Hi Debby's Tutorial Academy! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Debby's Tutorial Academy! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:38.140062",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2025-07-07T18:28:09.001622Z",
     "retrieved_at": "2026-10-12 10:45:47.036000",
@@ -5017,13 +5057,17 @@
       "metric_timestamp": "2026-10-12 10:45:43.159000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Chakey Tutorial",
+      "email_body": "Hi Chakey Tutorial! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Chakey Tutorial! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:38.903572",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2024-11-24T12:11:28.8648Z",
     "retrieved_at": "2026-10-12 10:45:43.159000",
@@ -5148,13 +5192,17 @@
       "metric_timestamp": "2026-10-12 10:45:41.292000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Aadi and Python",
+      "email_body": "Hi Aadi and Python! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Aadi and Python! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:39.856457",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2025-10-20T08:32:15.717324Z",
     "retrieved_at": "2026-10-12 10:45:41.292000",
@@ -6209,13 +6257,17 @@
       "metric_timestamp": "2026-10-12 10:45:45.162000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Manipuri Tutorial",
+      "email_body": "Hi Manipuri Tutorial! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Manipuri Tutorial! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:40.849930",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2017-01-03T14:14:32Z",
     "retrieved_at": "2026-10-12 10:45:45.162000",
@@ -6402,13 +6454,17 @@
       "metric_timestamp": "2026-10-12 10:45:41.856000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Dev & AI",
+      "email_body": "Hi Python Dev & AI! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Python Dev & AI! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:41.770730",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 75,
+      "dm_word_count": 24
     },
     "published_at": "2020-11-30T18:09:55.360853Z",
     "retrieved_at": "2026-10-12 10:45:41.856000",
@@ -6471,13 +6527,17 @@
       "metric_timestamp": "2026-10-12 10:45:49.372000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Coding (CLCODING)",
+      "email_body": "Hi Python Coding (CLCODING)! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Python Coding (CLCODING)! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:42.928816",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2022-01-29T04:18:21.220206Z",
     "retrieved_at": "2026-10-12 10:45:49.372000",
@@ -7408,13 +7468,17 @@
       "metric_timestamp": "2026-10-12 10:45:44.605000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Expert",
+      "email_body": "Hi Python Expert! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Python Expert! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:44.020383",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2025-09-12T09:19:34.516669Z",
     "retrieved_at": "2026-10-12 10:45:44.605000",
@@ -7477,13 +7541,17 @@
       "metric_timestamp": "2026-10-12 10:45:49.901000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Kite",
+      "email_body": "Hi Kite! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Kite! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:44.970730",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2016-04-13T02:38:53Z",
     "retrieved_at": "2026-10-12 10:45:49.901000",
@@ -8042,13 +8110,17 @@
       "metric_timestamp": "2026-10-12 10:45:50.465000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Guruji",
+      "email_body": "Hi Python Guruji! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Python Guruji! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:45.978401",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2019-06-14T11:23:37Z",
     "retrieved_at": "2026-10-12 10:45:50.465000",
@@ -8235,13 +8307,17 @@
       "metric_timestamp": "2026-10-12 10:45:51.058000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for IBM Developer",
+      "email_body": "Hi IBM Developer! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey IBM Developer! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:46.891029",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2008-01-17T14:24:56Z",
     "retrieved_at": "2026-10-12 10:45:51.058000",
@@ -8738,13 +8814,17 @@
       "metric_timestamp": "2026-10-12 10:45:51.736000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Talk Python",
+      "email_body": "Hi Talk Python! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Talk Python! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:47.900686",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2015-04-27T16:46:12Z",
     "retrieved_at": "2026-10-12 10:45:51.736000",
@@ -9055,13 +9135,17 @@
       "metric_timestamp": "2026-10-12 10:45:48.494000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Hope Artificial Intelligence",
+      "email_body": "Hi Hope Artificial Intelligence! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Hope Artificial Intelligence! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:48.890126",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2020-06-05T15:23:20.14576Z",
     "retrieved_at": "2026-10-12 10:45:48.494000",
@@ -9310,13 +9394,17 @@
       "metric_timestamp": "2026-10-12 10:45:47.945000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for PyMike",
+      "email_body": "Hi PyMike! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey PyMike! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:49.834477",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2017-01-16T10:34:13Z",
     "retrieved_at": "2026-10-12 10:45:47.945000",
@@ -9751,13 +9839,17 @@
       "metric_timestamp": "2026-10-12 10:45:52.917000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for DataMites",
+      "email_body": "Hi DataMites! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey DataMites! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:50.785221",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2017-04-18T12:26:25Z",
     "retrieved_at": "2026-10-12 10:45:52.917000",
@@ -10502,13 +10594,17 @@
       "metric_timestamp": "2026-10-12 10:45:54.330000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for PyCon AU",
+      "email_body": "Hi PyCon AU! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey PyCon AU! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:51.698872",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2011-08-15T01:20:40Z",
     "retrieved_at": "2026-10-12 10:45:54.330000",
@@ -10571,13 +10667,17 @@
       "metric_timestamp": "2026-10-12 10:45:56.657000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for HitraN the Programmer",
+      "email_body": "Hi HitraN the Programmer! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey HitraN the Programmer! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:52.573038",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2013-03-28T12:10:55Z",
     "retrieved_at": "2026-10-12 10:45:56.657000",
@@ -11508,13 +11608,17 @@
       "metric_timestamp": "2026-10-12 10:45:53.553000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Algorand Developers",
+      "email_body": "Hi Algorand Developers! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Algorand Developers! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:53.599136",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2022-12-21T23:18:28.828395Z",
     "retrieved_at": "2026-10-12 10:45:53.553000",
@@ -11639,13 +11743,17 @@
       "metric_timestamp": "2026-10-12 10:45:56.099000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for I know python",
+      "email_body": "Hi I know python! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey I know python! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:54.459553",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2015-04-12T07:38:18Z",
     "retrieved_at": "2026-10-12 10:45:56.099000",
@@ -11956,13 +12064,17 @@
       "metric_timestamp": "2026-10-12 10:45:55.544000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Machine Learning with Phil",
+      "email_body": "Hi Machine Learning with Phil! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Machine Learning with Phil! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:55.394303",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 75,
+      "dm_word_count": 24
     },
     "published_at": "2017-05-15T02:19:57Z",
     "retrieved_at": "2026-10-12 10:45:55.544000",
@@ -14195,13 +14307,17 @@
       "metric_timestamp": "2026-10-12 10:44:36.667000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Rabbitmetrics",
+      "email_body": "Hi Rabbitmetrics! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Rabbitmetrics! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:56.577154",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2021-11-01T05:30:40.758638Z",
     "retrieved_at": "2026-10-12 10:44:36.667000",
@@ -14326,13 +14442,17 @@
       "metric_timestamp": "2026-10-12 10:44:37.347000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Aarohi",
+      "email_body": "Hi Code With Aarohi! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Code With Aarohi! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:57.544657",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2016-04-12T15:27:43Z",
     "retrieved_at": "2026-10-12 10:44:37.347000",
@@ -14457,13 +14577,17 @@
       "metric_timestamp": "2026-10-12 10:44:37.918000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Thomas Janssen",
+      "email_body": "Hi Thomas Janssen! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Thomas Janssen! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:58.561120",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2020-09-17T17:35:37.997143Z",
     "retrieved_at": "2026-10-12 10:44:37.918000",
@@ -14526,13 +14650,17 @@
       "metric_timestamp": "2026-10-12 10:44:38.512000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Pyplane",
+      "email_body": "Hi Pyplane! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Pyplane! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:18:59.623374",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2019-11-20T07:01:34.443052Z",
     "retrieved_at": "2026-10-12 10:44:38.512000",
@@ -14967,13 +15095,17 @@
       "metric_timestamp": "2026-10-12 10:44:39.155000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for theailanguage",
+      "email_body": "Hi theailanguage! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey theailanguage! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:00.701150",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2024-07-18T05:46:11.762557Z",
     "retrieved_at": "2026-10-12 10:44:39.155000",
@@ -15532,13 +15664,17 @@
       "metric_timestamp": "2026-10-12 10:44:39.778000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Samuel Chan",
+      "email_body": "Hi Samuel Chan! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Samuel Chan! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:01.868672",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2017-06-22T19:36:16Z",
     "retrieved_at": "2026-10-12 10:44:39.778000",
@@ -15787,13 +15923,17 @@
       "metric_timestamp": "2026-10-12 10:44:40.645000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Harish Neel | AI",
+      "email_body": "Hi Harish Neel | AI! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Harish Neel | AI! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:03.024260",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 75,
+      "dm_word_count": 24
     },
     "published_at": "2024-01-02T16:38:14.45281Z",
     "retrieved_at": "2026-10-12 10:44:40.645000",
@@ -15918,13 +16058,17 @@
       "metric_timestamp": "2026-10-12 10:44:41.299000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data Science Garage",
+      "email_body": "Hi Data Science Garage! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Data Science Garage! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:04.083765",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2011-09-06T19:22:43Z",
     "retrieved_at": "2026-10-12 10:44:41.299000",
@@ -16049,13 +16193,17 @@
       "metric_timestamp": "2026-10-12 10:44:41.848000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for James Briggs",
+      "email_body": "Hi James Briggs! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey James Briggs! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:05.155308",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2016-07-27T21:45:49Z",
     "retrieved_at": "2026-10-12 10:44:41.848000",
@@ -16614,13 +16762,17 @@
       "metric_timestamp": "2026-10-12 10:44:42.847000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Abu Bakr Soliman",
+      "email_body": "Hi Abu Bakr Soliman! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Abu Bakr Soliman! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:06.098773",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2013-02-08T12:20:31Z",
     "retrieved_at": "2026-10-12 10:44:42.847000",
@@ -16931,13 +17083,17 @@
       "metric_timestamp": "2026-10-12 10:44:43.755000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Jp NaN",
+      "email_body": "Hi Jp NaN! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Jp NaN! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:07.036319",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2019-09-04T13:33:02Z",
     "retrieved_at": "2026-10-12 10:44:43.755000",
@@ -17000,13 +17156,17 @@
       "metric_timestamp": "2026-10-12 10:44:44.292000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Luis Fernando Solis",
+      "email_body": "Hi Luis Fernando Solis! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Luis Fernando Solis! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:08.097244",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2016-04-01T03:32:32Z",
     "retrieved_at": "2026-10-12 10:44:44.292000",
@@ -17069,13 +17229,17 @@
       "metric_timestamp": "2026-10-12 10:44:44.931000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Mayank Aggarwal",
+      "email_body": "Hi Mayank Aggarwal! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Mayank Aggarwal! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:09.202636",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2024-02-24T11:11:58.999131Z",
     "retrieved_at": "2026-10-12 10:44:44.931000",
@@ -17262,13 +17426,17 @@
       "metric_timestamp": "2026-10-12 10:44:45.644000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for MLTut",
+      "email_body": "Hi MLTut! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey MLTut! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:10.256539",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2020-05-27T09:26:43.918018Z",
     "retrieved_at": "2026-10-12 10:44:45.644000",
@@ -17331,13 +17499,17 @@
       "metric_timestamp": "2026-10-12 10:44:46.268000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data Thinkers",
+      "email_body": "Hi Data Thinkers! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Data Thinkers! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:11.200152",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2012-02-13T10:39:39Z",
     "retrieved_at": "2026-10-12 10:44:46.268000",
@@ -18330,13 +18502,17 @@
       "metric_timestamp": "2026-10-12 10:44:46.931000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for C\u00f3digo Espinoza - IA y Machine Learning",
+      "email_body": "Hi C\u00f3digo Espinoza - IA y Machine Learning! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey C\u00f3digo Espinoza - IA y Machine Learning! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:12.255945",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 78,
+      "dm_word_count": 27
     },
     "published_at": "2022-11-11T19:22:14.227397Z",
     "retrieved_at": "2026-10-12 10:44:46.931000",
@@ -18647,13 +18823,17 @@
       "metric_timestamp": "2026-10-12 10:44:47.499000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Pythonology",
+      "email_body": "Hi Pythonology! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Pythonology! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:13.219814",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2020-11-20T11:05:13.732145Z",
     "retrieved_at": "2026-10-12 10:44:47.499000",
@@ -18716,13 +18896,17 @@
       "metric_timestamp": "2026-10-12 10:44:48.252000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for codingwithrahi",
+      "email_body": "Hi codingwithrahi! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey codingwithrahi! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:14.195590",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2018-06-20T06:44:55Z",
     "retrieved_at": "2026-10-12 10:44:48.252000",
@@ -18785,13 +18969,17 @@
       "metric_timestamp": "2026-10-12 10:44:48.978000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Balaji Chippada",
+      "email_body": "Hi Balaji Chippada! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Balaji Chippada! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:15.109588",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2012-03-23T10:37:59Z",
     "retrieved_at": "2026-10-12 10:44:48.978000",
@@ -19350,13 +19538,17 @@
       "metric_timestamp": "2026-10-12 10:44:49.659000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Tech With Mala",
+      "email_body": "Hi Tech With Mala! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Tech With Mala! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:15.961235",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2020-05-12T21:31:55.483897Z",
     "retrieved_at": "2026-10-12 10:44:49.659000",
@@ -19853,13 +20045,17 @@
       "metric_timestamp": "2026-10-12 10:44:50.324000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Code With Aarohi Hindi",
+      "email_body": "Hi Code With Aarohi Hindi! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Code With Aarohi Hindi! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:17.106040",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 75,
+      "dm_word_count": 24
     },
     "published_at": "2024-09-27T04:46:47.935085Z",
     "retrieved_at": "2026-10-12 10:44:50.324000",
@@ -20232,13 +20428,17 @@
       "metric_timestamp": "2026-10-12 10:44:51.246000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Rex - Code Slayer",
+      "email_body": "Hi Rex - Code Slayer! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Rex - Code Slayer! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:17.955712",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 75,
+      "dm_word_count": 24
     },
     "published_at": "2016-03-11T14:22:04Z",
     "retrieved_at": "2026-10-12 10:44:51.246000",
@@ -20363,13 +20563,17 @@
       "metric_timestamp": "2026-10-12 10:44:51.827000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Data&ML Ing\u00e9nieur",
+      "email_body": "Hi Data&ML Ing\u00e9nieur! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Data&ML Ing\u00e9nieur! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:18.940775",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2021-04-12T10:55:23.068179Z",
     "retrieved_at": "2026-10-12 10:44:51.827000",
@@ -20556,13 +20760,17 @@
       "metric_timestamp": "2026-10-12 10:44:52.535000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Dr Pi",
+      "email_body": "Hi Dr Pi! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Dr Pi! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:19.881463",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2019-06-25T11:56:48Z",
     "retrieved_at": "2026-10-12 10:44:52.535000",
@@ -20749,13 +20957,17 @@
       "metric_timestamp": "2026-10-12 10:44:53.138000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Saurav Prateek",
+      "email_body": "Hi Saurav Prateek! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Saurav Prateek! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:20.783620",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2024-03-02T08:22:54.34303Z",
     "retrieved_at": "2026-10-12 10:44:53.138000",
@@ -20942,13 +21154,17 @@
       "metric_timestamp": "2026-10-12 10:44:53.735000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Sunny Savita",
+      "email_body": "Hi Sunny Savita! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Sunny Savita! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:21.721447",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2024-01-05T08:16:45.110844Z",
     "retrieved_at": "2026-10-12 10:44:53.735000",
@@ -21073,13 +21289,17 @@
       "metric_timestamp": "2026-10-12 10:44:54.313000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Alejandro AO",
+      "email_body": "Hi Alejandro AO! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Alejandro AO! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:22.692626",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2022-04-10T10:45:37.661744Z",
     "retrieved_at": "2026-10-12 10:44:54.313000",
@@ -21266,13 +21486,17 @@
       "metric_timestamp": "2026-10-12 10:44:54.887000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for \ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624",
+      "email_body": "Hi \ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey \ud310\ub2e4\uc2a4 \uc2a4\ud29c\ub514\uc624! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:23.659382",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2024-01-23T03:02:28.939485Z",
     "retrieved_at": "2026-10-12 10:44:54.887000",
@@ -21769,13 +21993,17 @@
       "metric_timestamp": "2026-10-12 10:44:55.555000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for SensIO",
+      "email_body": "Hi SensIO! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey SensIO! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:24.595919",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2020-03-12T18:00:08.741181Z",
     "retrieved_at": "2026-10-12 10:44:55.555000",
@@ -21962,13 +22190,17 @@
       "metric_timestamp": "2026-10-12 10:44:56.181000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Karndeep Singh",
+      "email_body": "Hi Karndeep Singh! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Karndeep Singh! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:25.430972",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2011-08-29T04:13:46Z",
     "retrieved_at": "2026-10-12 10:44:56.181000",
@@ -22031,13 +22263,17 @@
       "metric_timestamp": "2026-10-12 10:44:56.742000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Econoscent",
+      "email_body": "Hi Econoscent! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Econoscent! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:26.377373",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2019-12-11T14:43:15.049601Z",
     "retrieved_at": "2026-10-12 10:44:56.742000",
@@ -22472,13 +22708,17 @@
       "metric_timestamp": "2026-10-12 10:44:57.343000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for SELS",
+      "email_body": "Hi SELS! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey SELS! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:27.354731",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2022-02-21T14:47:12.621448Z",
     "retrieved_at": "2026-10-12 10:44:57.343000",
@@ -22603,13 +22843,17 @@
       "metric_timestamp": "2026-10-12 10:44:58.026000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for \uc624\ub298\ucf54\ub4dctodaycode",
+      "email_body": "Hi \uc624\ub298\ucf54\ub4dctodaycode! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey \uc624\ub298\ucf54\ub4dctodaycode! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:28.209061",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2017-11-13T06:45:04Z",
     "retrieved_at": "2026-10-12 10:44:58.026000",
@@ -22672,13 +22916,17 @@
       "metric_timestamp": "2026-10-12 10:44:58.778000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for HandyAndy Tech Tips",
+      "email_body": "Hi HandyAndy Tech Tips! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey HandyAndy Tech Tips! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:29.180573",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2014-08-03T10:29:02Z",
     "retrieved_at": "2026-10-12 10:44:58.778000",
@@ -23237,13 +23485,17 @@
       "metric_timestamp": "2026-10-12 10:44:59.989000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Spectral Forge Labs",
+      "email_body": "Hi Spectral Forge Labs! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Spectral Forge Labs! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:30.145636",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2008-11-08T01:53:04Z",
     "retrieved_at": "2026-10-12 10:44:59.989000",
@@ -24112,13 +24364,17 @@
       "metric_timestamp": "2026-10-12 10:45:00.737000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Dirumahrafif",
+      "email_body": "Hi Dirumahrafif! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Dirumahrafif! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:31.099896",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2020-06-18T12:45:03.913382Z",
     "retrieved_at": "2026-10-12 10:45:00.737000",
@@ -24305,13 +24561,17 @@
       "metric_timestamp": "2026-10-12 10:45:01.406000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for AiML Mastery Club",
+      "email_body": "Hi AiML Mastery Club! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey AiML Mastery Club! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:32.080088",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 74,
+      "dm_word_count": 23
     },
     "published_at": "2014-04-22T11:25:46Z",
     "retrieved_at": "2026-10-12 10:45:01.406000",
@@ -24870,13 +25130,17 @@
       "metric_timestamp": "2026-10-12 10:45:02.032000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Yury Kashnitsky",
+      "email_body": "Hi Yury Kashnitsky! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Yury Kashnitsky! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:32.975543",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2011-08-17T20:14:08Z",
     "retrieved_at": "2026-10-12 10:45:02.032000",
@@ -25187,13 +25451,17 @@
       "metric_timestamp": "2026-10-12 10:45:02.708000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for KaviAI",
+      "email_body": "Hi KaviAI! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey KaviAI! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:33.821239",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 72,
+      "dm_word_count": 21
     },
     "published_at": "2024-05-29T06:54:42.361506Z",
     "retrieved_at": "2026-10-12 10:45:02.708000",
@@ -25690,13 +25958,17 @@
       "metric_timestamp": "2026-10-12 10:45:40.694000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Michael Tutorial",
+      "email_body": "Hi Michael Tutorial! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Michael Tutorial! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:34.775928",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2018-01-12T11:17:51Z",
     "retrieved_at": "2026-10-12 10:45:40.694000",
@@ -25945,13 +26217,17 @@
       "metric_timestamp": "2026-10-12 10:45:54.996000"
     },
     "outreach": {
-      "email_subject": null,
-      "email_body": null,
-      "instagram_dm": null,
-      "generated_at": null,
+      "email_subject": "EDXSO Partnership: Collaboration Proposal for Python Mentor",
+      "email_body": "Hi Python Mentor! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+      "instagram_dm": "Hey Python Mentor! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+      "generated_at": "2026-10-12 11:19:35.835239",
       "status": "draft",
       "is_simulation": true,
-      "error_message": null
+      "error_message": null,
+      "model_name": "mock-personalizer-v1",
+      "provider_name": "mock",
+      "email_word_count": 73,
+      "dm_word_count": 22
     },
     "published_at": "2012-06-23T22:02:54Z",
     "retrieved_at": "2026-10-12 10:45:54.996000",
