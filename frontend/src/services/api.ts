@@ -186,7 +186,22 @@ export const api = {
     });
   },
 
-  // Outreach Tracker
+  // Outreach Tracker & Gatekeeper
+  sendOutreach: (payload: OutreachSendRequest) => {
+    return request<OutreachDispatchResponse>('/outreach/send', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  getInstagramDmCopy: (channelId: string) => {
+    return request<InstagramDMCopyResponse>(`/outreach/instagram-dm/${channelId}`);
+  },
+
+  getOutreachExportUrl: (format: 'csv' | 'json' = 'csv') => {
+    return `${API_BASE}/outreach/export?format=${format}`;
+  },
+
   recordOutreach: (payload: OutreachLogCreate) => {
     return request<OutreachLogResponse>('/outreach/logs', {
       method: 'POST',
@@ -194,8 +209,13 @@ export const api = {
     });
   },
 
-  listOutreachLogs: (limit: number = 50) => {
-    return request<OutreachLogResponse[]>(`/outreach/logs?limit=${limit}`);
+  listOutreachLogs: (params?: { limit?: number; status?: string; channel_type?: string }) => {
+    const q = new URLSearchParams();
+    if (params?.limit) q.set('limit', String(params.limit));
+    if (params?.status && params.status !== 'all') q.set('status', params.status);
+    if (params?.channel_type && params.channel_type !== 'all') q.set('channel_type', params.channel_type);
+    const qs = q.toString();
+    return request<OutreachLogResponse[]>(`/outreach/logs${qs ? `?${qs}` : ''}`);
   },
 
   // Campaigns & Settings
