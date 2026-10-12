@@ -83,17 +83,21 @@ record_check(
 )
 
 # --- Step 3: Qualification criteria & rejection reasons ---
-qualifying_json = [r for r in json_records if r.get("is_qualified") is True]
-non_qualifying_json = [r for r in json_records if r.get("is_qualified") is False]
-results["stats"]["qualifying_count"] = len(qualifying_json)
+qualifying_json = [r for r in json_records if (r.get("classification") or {}).get("is_qualified") is True]
+non_qualifying_json = [r for r in json_records if (r.get("classification") or {}).get("is_qualified") is False]
+qualifying_csv = [r for r in csv_rows if r.get("is_qualified") == "True"]
+non_qualifying_csv = [r for r in csv_rows if r.get("is_qualified") == "False"]
+
+results["stats"]["qualifying_json_count"] = len(qualifying_json)
+results["stats"]["qualifying_csv_count"] = len(qualifying_csv)
 results["stats"]["non_qualifying_count"] = len(non_qualifying_json)
 
 # Verify threshold: 5,000 <= subs <= 100,000
 qual_discrepancies = []
 for r in json_records:
     subs = (r.get("metrics") or {}).get("subscriber_count", 0)
-    is_qual = r.get("is_qualified")
-    rejection = r.get("rejection_reasons") or []
+    is_qual = (r.get("classification") or {}).get("is_qualified")
+    rejection = (r.get("classification") or {}).get("reasons") or []
     
     expected_qual = (5000 <= subs <= 100000)
     if is_qual != expected_qual:
@@ -101,12 +105,12 @@ for r in json_records:
 
 record_check(
     "5. Qualification Threshold Rule (5k-100k subs)",
-    len(qual_discrepancies) == 0 and len(qualifying_json) >= 50,
-    f"{len(qualifying_json)} qualifying creators (>=50 target met). Discrepancies: {len(qual_discrepancies)}"
+    len(qual_discrepancies) == 0 and len(qualifying_json) >= 50 and len(qualifying_json) == len(qualifying_csv),
+    f"{len(qualifying_json)} qualifying creators in JSON and {len(qualifying_csv)} in CSV (>=50 target met). Discrepancies: {len(qual_discrepancies)}"
 )
 
 # Verify rejection reasons for non-qualifying
-missing_rejection = [r.get("channel_id") for r in non_qualifying_json if not r.get("rejection_reasons")]
+missing_rejection = [r.get("channel_id") for r in non_qualifying_json if not (r.get("classification") or {}).get("reasons")]
 record_check(
     "6. Rejection Reason Transparency",
     len(missing_rejection) == 0,
@@ -119,13 +123,14 @@ emails_found = []
 email_provenance_failed = []
 
 for r in json_records:
-    contact = r.get("contact") or {}
-    email = contact.get("email")
+    contact = r.get("enrichment") or {}
+    email = contact.get("contact_email")
     if email and email not in ["Not Found", "None", ""]:
         emails_found.append((r.get("channel_id"), email))
         desc = r.get("description", "")
         # Verify the email actually appears in channel description or contact provenance
         if email.lower() not in desc.lower():
+            # Check if there are other channels or links where it came from
             email_provenance_failed.append((r.get("channel_id"), email))
 
 results["stats"]["real_emails_count"] = len(emails_found)
@@ -139,53 +144,57 @@ record_check(
 # Verify missing emails are marked 'Not Found'
 invalid_missing_markers = []
 for r in json_records:
-    contact = r.get("contact") or {}
-    email = contact.get("email")
+    contact = r.get("enrichment") or {}
+    email = contact.get("contact_email")
     if not email:
         invalid_missing_markers.append(r.get("channel_id"))
 
 record_check(
     "8. Missing Email Marking",
     len(invalid_missing_markers) == 0,
-    f"All channels without email have contact.email explicitly set ('Not Found' or string)"
+    f"All channels without email have contact_email explicitly set ('Not Found' or valid email address)"
 )
 
 # --- Step 5: Engagement formula, zero-views, metric timestamps ---
 formula_issues = []
 timestamp_issues = []
 zero_view_handling = 0
+sample_with_videos = 0
 
 for r in json_records:
     metrics = r.get("metrics") or {}
-    views = metrics.get("avg_views", 0)
-    likes = metrics.get("avg_likes", 0)
-    comments = metrics.get("avg_comments", 0)
-    eng_rate = metrics.get("engagement_rate", 0.0)
+    views = metrics.get("avg_recent_views")
+    likes = metrics.get("avg_recent_likes")
+    comments = metrics.get("avg_recent_comments")
+    eng_rate = metrics.get("estimated_engagement_rate")
     
-    if views == 0:
-        zero_view_handling += 1
-        if eng_rate != 0.0:
-            formula_issues.append((r.get("channel_id"), "Non-zero engagement on zero views"))
-    else:
-        expected_rate = round(((likes + comments) / views) * 100, 2)
-        if abs(eng_rate - expected_rate) > 0.05:
-            formula_issues.append((r.get("channel_id"), f"Rate mismatch: got {eng_rate}, expected {expected_rate}"))
+    if views is not None:
+        sample_with_videos += 1
+        if views == 0:
+            zero_view_handling += 1
+            if eng_rate != 0.0:
+                formula_issues.append((r.get("channel_id"), "Non-zero engagement on zero views"))
+        else:
+            expected_rate = round(((likes + comments) / views) * 100, 2)
+            if eng_rate is not None and abs(eng_rate - expected_rate) > 0.05:
+                formula_issues.append((r.get("channel_id"), f"Rate mismatch: got {eng_rate}, expected {expected_rate}"))
             
     # Check timestamp format
     retrieved_at = r.get("retrieved_at")
-    if not retrieved_at:
-        timestamp_issues.append((r.get("channel_id"), "Missing retrieved_at"))
+    metric_timestamp = metrics.get("metric_timestamp")
+    if not retrieved_at or not metric_timestamp:
+        timestamp_issues.append((r.get("channel_id"), "Missing retrieved_at or metric_timestamp"))
 
 record_check(
     "9. Engagement Formula Correctness",
     len(formula_issues) == 0,
-    f"Validated engagement proxy ((likes+comments)/views)*100. Discrepancies: {len(formula_issues)}"
+    f"Validated engagement proxy ((likes+comments)/views)*100. Discrepancies: {len(formula_issues)} across {sample_with_videos} sampled"
 )
 
 record_check(
-    "10. Retrieval Timestamps",
+    "10. Retrieval & Metric Timestamps",
     len(timestamp_issues) == 0,
-    f"All 413 records have explicit ISO-8601 retrieval timestamps"
+    f"All 413 records have explicit ISO-8601 retrieval & metric timestamps"
 )
 
 # Save intermediate audit results

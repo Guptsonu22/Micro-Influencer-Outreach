@@ -17,36 +17,37 @@
       "detail": "0 synthetic records found in real export files (JSON: 0, CSV: 0)"
     },
     "5. Qualification Threshold Rule (5k-100k subs)": {
-      "passed": false,
-      "detail": "0 qualifying creators (>=50 target met). Discrepancies: 413"
+      "passed": true,
+      "detail": "69 qualifying creators in JSON and 69 in CSV (>=50 target met). Discrepancies: 0"
     },
     "6. Rejection Reason Transparency": {
       "passed": true,
-      "detail": "All 0 non-qualifying creators have explicit rejection reasons documented"
+      "detail": "All 344 non-qualifying creators have explicit rejection reasons documented"
     },
     "7. Contact Email Provenance Audit": {
-      "passed": false,
-      "detail": "0 real emails found; 0 unverified provenance"
+      "passed": true,
+      "detail": "50 real emails found; 0 unverified provenance"
     },
     "8. Missing Email Marking": {
-      "passed": false,
-      "detail": "All channels without email have contact.email explicitly set ('Not Found' or string)"
+      "passed": true,
+      "detail": "All channels without email have contact_email explicitly set ('Not Found' or valid email address)"
     },
     "9. Engagement Formula Correctness": {
       "passed": true,
-      "detail": "Validated engagement proxy ((likes+comments)/views)*100. Discrepancies: 0"
+      "detail": "Validated engagement proxy ((likes+comments)/views)*100. Discrepancies: 0 across 69 sampled"
     },
-    "10. Retrieval Timestamps": {
+    "10. Retrieval & Metric Timestamps": {
       "passed": true,
-      "detail": "All 413 records have explicit ISO-8601 retrieval timestamps"
+      "detail": "All 413 records have explicit ISO-8601 retrieval & metric timestamps"
     }
   },
   "stats": {
     "json_count": 413,
     "csv_count": 413,
-    "qualifying_count": 0,
-    "non_qualifying_count": 0,
-    "real_emails_count": 0
+    "qualifying_json_count": 69,
+    "qualifying_csv_count": 69,
+    "non_qualifying_count": 344,
+    "real_emails_count": 50
   },
   "errors": [],
   "warnings": []
