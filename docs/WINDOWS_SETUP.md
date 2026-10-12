@@ -1,23 +1,23 @@
-# Windows Setup Guide — EDXSO AI Influencer Outreach System
+# Windows Setup & Execution Guide — EDXSO AI Influencer Outreach System
 
-This guide provides exact, step-by-step PowerShell commands to set up and run the FastAPI backend, MongoDB, and React frontend on Windows.
+This guide provides exact, step-by-step PowerShell commands to set up, test, build, and run the FastAPI backend, MongoDB, and React frontend together on Windows.
 
 ---
 
 ## 1. Prerequisites Check
 
-Open **PowerShell** (as standard user or Administrator) and verify that Python and Node are installed:
+Open **PowerShell** and verify that Python and Node are installed:
 
 ```powershell
 python --version
 node --version
 npm --version
 ```
-> *Recommended: Python 3.10+ and Node.js 18+.*
+> *Recommended: Python 3.10+ and Node.js 18+ (tested with React 18, Vite 5, Tailwind CSS).*
 
 ---
 
-## 2. Clone / Navigate to Workspace
+## 2. Navigate to Project Workspace
 
 ```powershell
 cd "c:\Users\Sonu\OneDrive\Desktop\Micro-Influencer Outreach"
@@ -33,17 +33,18 @@ Copy the example environment file:
 Copy-Item .env.example .env
 ```
 
-Open `.env` in your text editor (e.g., VS Code or Notepad) and configure your keys:
+Open `.env` in your text editor:
 
 ```powershell
 notepad .env
 ```
 
-Key variables to review:
+Configure your credentials:
 - `MONGODB_URI`: `"mongodb://localhost:27017"` *(If MongoDB is not installed locally, the backend automatically uses its built-in in-memory fallback adapter).*
 - `YOUTUBE_API_KEY`: YouTube Data API v3 key from Google Cloud Console.
 - `GEMINI_API_KEY`: API key from Google AI Studio.
-- `SIMULATION_MODE`: `true` *(Safe default, prevents real email sending).*
+- `SIMULATION_MODE`: `true` *(Default safe dry-run mode, prevents unintended email sending).*
+- `ALLOW_LIVE_EMAIL_SENDING`: `false` *(Default safe safety gate).*
 
 ---
 
@@ -70,56 +71,80 @@ pip install -r requirements.txt
 
 ---
 
-## 5. Running Backend Automated Tests
+## 5. Running Automated Backend & Frontend Tests
 
-Run the full Pytest test suite from the virtual environment:
-
+### A. Run Backend Pytest Suite (10 test suites covering all 5 core modules)
 ```powershell
-# Ensure you are in the backend directory with venv activated
+# From backend directory with venv activated:
 pytest -v
 ```
 
-All tests for configuration, data integrity schemas, health endpoints, pagination, and duplicate prevention will execute.
-
----
-
-## 6. Starting the FastAPI Backend
-
-Run the server using Uvicorn with hot reloading:
-
+### B. Run Frontend Validation Tests
 ```powershell
-uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+# From project root:
+cd ..\frontend
+npm run test
 ```
 
-Verify the backend is live:
-- **Interactive Swagger Docs**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- **ReDoc Specification**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
-- **Root Health Check**: [http://127.0.0.1:8000/health](http://127.0.0.1:8000/health)
-- **API v1 Health Check**: [http://127.0.0.1:8000/api/v1/health](http://127.0.0.1:8000/api/v1/health)
-
 ---
 
-## 7. Starting the Frontend (In a New PowerShell Window)
+## 6. Running Frontend Build & Typecheck
 
-Open a second PowerShell window:
+Verify that the frontend builds cleanly with zero TypeScript errors:
 
 ```powershell
 cd "c:\Users\Sonu\OneDrive\Desktop\Micro-Influencer Outreach\frontend"
 npm install
-npm run dev
+npm run build
 ```
-
-The frontend dashboard will be accessible at:
-- [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 8. Summary of Useful PowerShell Commands
+## 7. Running Backend & Frontend Together on Windows
+
+To run both servers concurrently, use two PowerShell windows:
+
+### Terminal 1: FastAPI Backend
+```powershell
+cd "c:\Users\Sonu\OneDrive\Desktop\Micro-Influencer Outreach\backend"
+.\venv\Scripts\Activate.ps1
+uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+```
+- **Backend API**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- **Interactive Swagger Docs**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **System Health Check**: [http://127.0.0.1:8000/api/v1/health](http://127.0.0.1:8000/api/v1/health)
+
+### Terminal 2: React Frontend (Vite)
+```powershell
+cd "c:\Users\Sonu\OneDrive\Desktop\Micro-Influencer Outreach\frontend"
+npm run dev
+```
+- **Dashboard UI**: [http://localhost:5173](http://localhost:5173)
+
+*(Vite proxies all `/api` requests automatically to `http://127.0.0.1:8000`)*
+
+---
+
+## 8. Dashboard Pages Overview
+
+The frontend dashboard provides 6 dedicated pages:
+
+1. **Overview**: Real-time KPI counters (real vs demo records, pass/review/fail breakdown, missing contact emails, generated message counts, and latest discovery attrition report).
+2. **Influencer Explorer**: Faceted search, filtering by niche/subscribers/classification, metrics sorting, paginated cards, detail drawer with full qualification reasons, and manual business email verification editor.
+3. **Discovery**: Multi-query search configuration, target count slider (50+ creators), quota budget control, demo mode toggle, concurrent run duplicate lock, and historical discovery runs table.
+4. **AI Message Studio**: Two-pane editor for personalized email pitch (strictly 60–90 words) and Instagram DM (strictly 15–30 words), live word count indicators, personalization source evidence box, draft approval/rejection, and ineligible creator safety gate override.
+5. **Outreach Tracker**: Audit logs table, status filter (`simulated`, `sent`, `failed`), test outreach dispatch simulator, duplicate prevention lock, and CSV export.
+6. **Settings**: Non-secret credentials inspection, step-by-step setup instructions for YouTube and Gemini API keys, and campaign value-proposition preferences editor.
+
+---
+
+## 9. Summary of Useful Commands
 
 | Action | PowerShell Command |
 |---|---|
 | Activate venv | `.\backend\venv\Scripts\Activate.ps1` |
-| Run all tests | `pytest backend/tests/ -v` |
-| Start backend | `uvicorn backend.app.main:app --reload --port 8000` |
-| Start frontend | `cd frontend; npm run dev` |
-| View health status | `Invoke-RestMethod http://127.0.0.1:8000/health` |
+| Run all backend tests | `pytest backend/tests/ -v` |
+| Build frontend bundle | `cd frontend; npm run build` |
+| Start backend server | `uvicorn backend.app.main:app --reload --port 8000` |
+| Start frontend dev server | `cd frontend; npm run dev` |
+| Quick health check | `Invoke-RestMethod http://127.0.0.1:8000/health` |
