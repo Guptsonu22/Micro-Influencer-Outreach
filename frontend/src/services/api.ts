@@ -120,4 +120,44 @@ export const api = {
     if (onlyQualified !== undefined) q.set('is_qualified', String(onlyQualified));
     return `${API_BASE}/influencers/export?${q.toString()}`;
   },
+
+  // Phase 5 Messages API
+  generateMessage: (payload: {
+    channel_id: string;
+    campaign_id?: string;
+    allow_ineligible_override?: boolean;
+    force_mock?: boolean;
+  }) => {
+    return request<any>('/messages/generate', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  listMessages: (params?: { channel_id?: string; status?: string; limit?: number }) => {
+    const q = new URLSearchParams();
+    if (params?.channel_id) q.set('channel_id', params.channel_id);
+    if (params?.status) q.set('status', params.status);
+    if (params?.limit) q.set('limit', String(params.limit));
+    const qs = q.toString();
+    return request<any[]>(`/messages${qs ? `?${qs}` : ''}`);
+  },
+
+  editMessage: (messageId: string, payload: {
+    email_subject?: string;
+    email_body?: string;
+    instagram_dm?: string;
+    status?: string;
+  }) => {
+    return request<any>(`/messages/${messageId}`, {
+      method: 'PUT',
+      body: JSON.stringify(payload),
+    });
+  },
+
+  updateMessageStatus: (messageId: string, newStatus: string) => {
+    return request<any>(`/messages/${messageId}/status?new_status=${newStatus}`, {
+      method: 'PUT',
+    });
+  },
 };
