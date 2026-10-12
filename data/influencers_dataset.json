@@ -1,0 +1,3427 @@
+[
+  {
+    "_id": "6acc96cb6c5e584180dd0733",
+    "channel_id": "UC_SYNTHETIC_0001",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0001",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (24,500) in micro band.",
+        "Synthetic estimated engagement rate: 3.8%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@devbytes_ai",
+    "description": "Tutorials on Python, FastAPI, OpenAI. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "contact@devbytes.ai",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/devbytes_ai",
+        "twitter": "https://x.com/devbytes_ai"
+      },
+      "content_themes": [
+        "Python",
+        "FastAPI",
+        "OpenAI"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python",
+        "Complete 2026 Guide to OpenAI"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 24500,
+      "is_subscriber_count_hidden": false,
+      "video_count": 45,
+      "view_count": 857500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 4900.0,
+      "avg_recent_likes": 204.0,
+      "avg_recent_comments": 40.0,
+      "estimated_engagement_rate": 3.8,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0001",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "DevBytes AI",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0734",
+    "channel_id": "UC_SYNTHETIC_0002",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0002",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (46,150) in micro band.",
+        "Synthetic estimated engagement rate: 4.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@codewithsarah",
+    "description": "Tutorials on Machine Learning, PyTorch. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "sarah.collab@gmail.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/codewithsarah",
+        "twitter": "https://x.com/codewithsarah"
+      },
+      "content_themes": [
+        "Machine Learning",
+        "PyTorch"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Machine Learning",
+        "Complete 2026 Guide to PyTorch"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 46150,
+      "is_subscriber_count_hidden": false,
+      "video_count": 46,
+      "view_count": 1615250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 9230.0,
+      "avg_recent_likes": 384.0,
+      "avg_recent_comments": 76.0,
+      "estimated_engagement_rate": 4.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0002",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Code With Sarah",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0735",
+    "channel_id": "UC_SYNTHETIC_0003",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0003",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (15,100) in micro band.",
+        "Synthetic estimated engagement rate: 2.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@mlfoundations",
+    "description": "Tutorials on Data Science, Scikit-Learn. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/mlfoundations",
+        "twitter": "https://x.com/mlfoundations"
+      },
+      "content_themes": [
+        "Data Science",
+        "Scikit-Learn"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Data Science",
+        "Complete 2026 Guide to Scikit-Learn"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 15100,
+      "is_subscriber_count_hidden": false,
+      "video_count": 47,
+      "view_count": 528500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 3020.0,
+      "avg_recent_likes": 125.0,
+      "avg_recent_comments": 25.0,
+      "estimated_engagement_rate": 2.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0003",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "ML Foundations",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0736",
+    "channel_id": "UC_SYNTHETIC_0004",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0004",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (71,450) in micro band.",
+        "Synthetic estimated engagement rate: 5.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@gen_devs",
+    "description": "Tutorials on LangChain, LLMs, RAG. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "partners@gendevs.io",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/gen_devs",
+        "twitter": "https://x.com/gen_devs"
+      },
+      "content_themes": [
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with LangChain",
+        "Complete 2026 Guide to RAG"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 71450,
+      "is_subscriber_count_hidden": false,
+      "video_count": 48,
+      "view_count": 2500750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 14290.0,
+      "avg_recent_likes": 595.0,
+      "avg_recent_comments": 119.0,
+      "estimated_engagement_rate": 5.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0004",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Generative Devs",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0737",
+    "channel_id": "UC_SYNTHETIC_0005",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0005",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (22,800) in micro band.",
+        "Synthetic estimated engagement rate: 3.4%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@pythoncraft",
+    "description": "Tutorials on Python 3.12, Django. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/pythoncraft",
+        "twitter": "https://x.com/pythoncraft"
+      },
+      "content_themes": [
+        "Python 3.12",
+        "Django"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python 3.12",
+        "Complete 2026 Guide to Django"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 22800,
+      "is_subscriber_count_hidden": false,
+      "video_count": 49,
+      "view_count": 798000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 4560.0,
+      "avg_recent_likes": 190.0,
+      "avg_recent_comments": 38.0,
+      "estimated_engagement_rate": 3.4,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0005",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Python Craft",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0738",
+    "channel_id": "UC_SYNTHETIC_0006",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0006",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (94,750) in micro band.",
+        "Synthetic estimated engagement rate: 2.5%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@neuralnuggets",
+    "description": "Tutorials on Deep Learning, TensorFlow. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "collab@neuralnuggets.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/neuralnuggets",
+        "twitter": "https://x.com/neuralnuggets"
+      },
+      "content_themes": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Deep Learning",
+        "Complete 2026 Guide to TensorFlow"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 94750,
+      "is_subscriber_count_hidden": false,
+      "video_count": 50,
+      "view_count": 3316250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 18950.0,
+      "avg_recent_likes": 789.0,
+      "avg_recent_comments": 157.0,
+      "estimated_engagement_rate": 2.5,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0006",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Neural Nuggets",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0739",
+    "channel_id": "UC_SYNTHETIC_0007",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0007",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (38,900) in micro band.",
+        "Synthetic estimated engagement rate: 4.6%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@fullstackflow",
+    "description": "Tutorials on React, TypeScript, Node.js. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/fullstackflow",
+        "twitter": "https://x.com/fullstackflow"
+      },
+      "content_themes": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with React",
+        "Complete 2026 Guide to Node.js"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 38900,
+      "is_subscriber_count_hidden": false,
+      "video_count": 51,
+      "view_count": 1361500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 7780.0,
+      "avg_recent_likes": 324.0,
+      "avg_recent_comments": 64.0,
+      "estimated_engagement_rate": 4.6,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0007",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Full Stack Flow",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073a",
+    "channel_id": "UC_SYNTHETIC_0008",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0008",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (62,050) in micro band.",
+        "Synthetic estimated engagement rate: 3.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@aisystemseng",
+    "description": "Tutorials on MLOps, Docker, Kubernetes. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "info@aisystemseng.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/aisystemseng",
+        "twitter": "https://x.com/aisystemseng"
+      },
+      "content_themes": [
+        "MLOps",
+        "Docker",
+        "Kubernetes"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with MLOps",
+        "Complete 2026 Guide to Kubernetes"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 62050,
+      "is_subscriber_count_hidden": false,
+      "video_count": 52,
+      "view_count": 2171750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 12410.0,
+      "avg_recent_likes": 517.0,
+      "avg_recent_comments": 103.0,
+      "estimated_engagement_rate": 3.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0008",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "AI Systems Eng",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073b",
+    "channel_id": "UC_SYNTHETIC_0009",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0009",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (87,200) in micro band.",
+        "Synthetic estimated engagement rate: 2.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@algoacademy",
+    "description": "Tutorials on Algorithms, LeetCode. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/algoacademy",
+        "twitter": "https://x.com/algoacademy"
+      },
+      "content_themes": [
+        "Algorithms",
+        "LeetCode"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Algorithms",
+        "Complete 2026 Guide to LeetCode"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 87200,
+      "is_subscriber_count_hidden": false,
+      "video_count": 53,
+      "view_count": 3052000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 17440.0,
+      "avg_recent_likes": 726.0,
+      "avg_recent_comments": 145.0,
+      "estimated_engagement_rate": 2.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0009",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Algo Academy",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073c",
+    "channel_id": "UC_SYNTHETIC_0010",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0010",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (25,850) in micro band.",
+        "Synthetic estimated engagement rate: 6.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@prompteng101",
+    "description": "Tutorials on Gemini, Claude, ChatGPT. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "hello@prompteng.dev",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/prompteng101",
+        "twitter": "https://x.com/prompteng101"
+      },
+      "content_themes": [
+        "Gemini",
+        "Claude",
+        "ChatGPT"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Gemini",
+        "Complete 2026 Guide to ChatGPT"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 25850,
+      "is_subscriber_count_hidden": false,
+      "video_count": 54,
+      "view_count": 904750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 5170.0,
+      "avg_recent_likes": 215.0,
+      "avg_recent_comments": 43.0,
+      "estimated_engagement_rate": 6.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0010",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Prompt Engineering 101",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073d",
+    "channel_id": "UC_SYNTHETIC_0011",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0011",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (36,000) in micro band.",
+        "Synthetic estimated engagement rate: 3.8%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@devbytes_ai_2",
+    "description": "Tutorials on Python, FastAPI, OpenAI. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "contact@devbytes.ai",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/devbytes_ai",
+        "twitter": "https://x.com/devbytes_ai"
+      },
+      "content_themes": [
+        "Python",
+        "FastAPI",
+        "OpenAI"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python",
+        "Complete 2026 Guide to OpenAI"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 36000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 55,
+      "view_count": 1260000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 7200.0,
+      "avg_recent_likes": 300.0,
+      "avg_recent_comments": 60.0,
+      "estimated_engagement_rate": 3.8,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0011",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "DevBytes AI 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073e",
+    "channel_id": "UC_SYNTHETIC_0012",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0012",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (57,650) in micro band.",
+        "Synthetic estimated engagement rate: 4.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@codewithsarah_2",
+    "description": "Tutorials on Machine Learning, PyTorch. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "sarah.collab@gmail.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/codewithsarah",
+        "twitter": "https://x.com/codewithsarah"
+      },
+      "content_themes": [
+        "Machine Learning",
+        "PyTorch"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Machine Learning",
+        "Complete 2026 Guide to PyTorch"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 57650,
+      "is_subscriber_count_hidden": false,
+      "video_count": 56,
+      "view_count": 2017750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 11530.0,
+      "avg_recent_likes": 480.0,
+      "avg_recent_comments": 96.0,
+      "estimated_engagement_rate": 4.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0012",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Code With Sarah 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd073f",
+    "channel_id": "UC_SYNTHETIC_0013",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0013",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (26,600) in micro band.",
+        "Synthetic estimated engagement rate: 2.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@mlfoundations_2",
+    "description": "Tutorials on Data Science, Scikit-Learn. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/mlfoundations",
+        "twitter": "https://x.com/mlfoundations"
+      },
+      "content_themes": [
+        "Data Science",
+        "Scikit-Learn"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Data Science",
+        "Complete 2026 Guide to Scikit-Learn"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 26600,
+      "is_subscriber_count_hidden": false,
+      "video_count": 57,
+      "view_count": 931000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 5320.0,
+      "avg_recent_likes": 221.0,
+      "avg_recent_comments": 44.0,
+      "estimated_engagement_rate": 2.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0013",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "ML Foundations 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0740",
+    "channel_id": "UC_SYNTHETIC_0014",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0014",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (82,950) in micro band.",
+        "Synthetic estimated engagement rate: 5.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@gen_devs_2",
+    "description": "Tutorials on LangChain, LLMs, RAG. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "partners@gendevs.io",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/gen_devs",
+        "twitter": "https://x.com/gen_devs"
+      },
+      "content_themes": [
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with LangChain",
+        "Complete 2026 Guide to RAG"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 82950,
+      "is_subscriber_count_hidden": false,
+      "video_count": 58,
+      "view_count": 2903250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 16590.0,
+      "avg_recent_likes": 691.0,
+      "avg_recent_comments": 138.0,
+      "estimated_engagement_rate": 5.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0014",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Generative Devs 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0741",
+    "channel_id": "UC_SYNTHETIC_0015",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0015",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (34,300) in micro band.",
+        "Synthetic estimated engagement rate: 3.4%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@pythoncraft_2",
+    "description": "Tutorials on Python 3.12, Django. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/pythoncraft",
+        "twitter": "https://x.com/pythoncraft"
+      },
+      "content_themes": [
+        "Python 3.12",
+        "Django"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python 3.12",
+        "Complete 2026 Guide to Django"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 34300,
+      "is_subscriber_count_hidden": false,
+      "video_count": 59,
+      "view_count": 1200500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 6860.0,
+      "avg_recent_likes": 285.0,
+      "avg_recent_comments": 57.0,
+      "estimated_engagement_rate": 3.4,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0015",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Python Craft 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0742",
+    "channel_id": "UC_SYNTHETIC_0016",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0016",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.5%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@neuralnuggets_2",
+    "description": "Tutorials on Deep Learning, TensorFlow. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "collab@neuralnuggets.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/neuralnuggets",
+        "twitter": "https://x.com/neuralnuggets"
+      },
+      "content_themes": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Deep Learning",
+        "Complete 2026 Guide to TensorFlow"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 60,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.5,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0016",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Neural Nuggets 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0743",
+    "channel_id": "UC_SYNTHETIC_0017",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0017",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (50,400) in micro band.",
+        "Synthetic estimated engagement rate: 4.6%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@fullstackflow_2",
+    "description": "Tutorials on React, TypeScript, Node.js. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/fullstackflow",
+        "twitter": "https://x.com/fullstackflow"
+      },
+      "content_themes": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with React",
+        "Complete 2026 Guide to Node.js"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 50400,
+      "is_subscriber_count_hidden": false,
+      "video_count": 61,
+      "view_count": 1764000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 10080.0,
+      "avg_recent_likes": 420.0,
+      "avg_recent_comments": 84.0,
+      "estimated_engagement_rate": 4.6,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0017",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Full Stack Flow 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0744",
+    "channel_id": "UC_SYNTHETIC_0018",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0018",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (73,550) in micro band.",
+        "Synthetic estimated engagement rate: 3.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@aisystemseng_2",
+    "description": "Tutorials on MLOps, Docker, Kubernetes. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "info@aisystemseng.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/aisystemseng",
+        "twitter": "https://x.com/aisystemseng"
+      },
+      "content_themes": [
+        "MLOps",
+        "Docker",
+        "Kubernetes"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with MLOps",
+        "Complete 2026 Guide to Kubernetes"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 73550,
+      "is_subscriber_count_hidden": false,
+      "video_count": 62,
+      "view_count": 2574250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 14710.0,
+      "avg_recent_likes": 612.0,
+      "avg_recent_comments": 122.0,
+      "estimated_engagement_rate": 3.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0018",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "AI Systems Eng 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0745",
+    "channel_id": "UC_SYNTHETIC_0019",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0019",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@algoacademy_2",
+    "description": "Tutorials on Algorithms, LeetCode. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/algoacademy",
+        "twitter": "https://x.com/algoacademy"
+      },
+      "content_themes": [
+        "Algorithms",
+        "LeetCode"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Algorithms",
+        "Complete 2026 Guide to LeetCode"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 63,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0019",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Algo Academy 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0746",
+    "channel_id": "UC_SYNTHETIC_0020",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0020",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (37,350) in micro band.",
+        "Synthetic estimated engagement rate: 6.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@prompteng101_2",
+    "description": "Tutorials on Gemini, Claude, ChatGPT. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "hello@prompteng.dev",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/prompteng101",
+        "twitter": "https://x.com/prompteng101"
+      },
+      "content_themes": [
+        "Gemini",
+        "Claude",
+        "ChatGPT"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Gemini",
+        "Complete 2026 Guide to ChatGPT"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 37350,
+      "is_subscriber_count_hidden": false,
+      "video_count": 64,
+      "view_count": 1307250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 7470.0,
+      "avg_recent_likes": 311.0,
+      "avg_recent_comments": 62.0,
+      "estimated_engagement_rate": 6.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0020",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Prompt Engineering 101 2",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0747",
+    "channel_id": "UC_SYNTHETIC_0021",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0021",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (47,500) in micro band.",
+        "Synthetic estimated engagement rate: 3.8%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@devbytes_ai_3",
+    "description": "Tutorials on Python, FastAPI, OpenAI. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "contact@devbytes.ai",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/devbytes_ai",
+        "twitter": "https://x.com/devbytes_ai"
+      },
+      "content_themes": [
+        "Python",
+        "FastAPI",
+        "OpenAI"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python",
+        "Complete 2026 Guide to OpenAI"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 47500,
+      "is_subscriber_count_hidden": false,
+      "video_count": 65,
+      "view_count": 1662500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 9500.0,
+      "avg_recent_likes": 395.0,
+      "avg_recent_comments": 79.0,
+      "estimated_engagement_rate": 3.8,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0021",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "DevBytes AI 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0748",
+    "channel_id": "UC_SYNTHETIC_0022",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0022",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (69,150) in micro band.",
+        "Synthetic estimated engagement rate: 4.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@codewithsarah_3",
+    "description": "Tutorials on Machine Learning, PyTorch. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "sarah.collab@gmail.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/codewithsarah",
+        "twitter": "https://x.com/codewithsarah"
+      },
+      "content_themes": [
+        "Machine Learning",
+        "PyTorch"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Machine Learning",
+        "Complete 2026 Guide to PyTorch"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 69150,
+      "is_subscriber_count_hidden": false,
+      "video_count": 66,
+      "view_count": 2420250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 13830.0,
+      "avg_recent_likes": 576.0,
+      "avg_recent_comments": 115.0,
+      "estimated_engagement_rate": 4.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0022",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Code With Sarah 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0749",
+    "channel_id": "UC_SYNTHETIC_0023",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0023",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (38,100) in micro band.",
+        "Synthetic estimated engagement rate: 2.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@mlfoundations_3",
+    "description": "Tutorials on Data Science, Scikit-Learn. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/mlfoundations",
+        "twitter": "https://x.com/mlfoundations"
+      },
+      "content_themes": [
+        "Data Science",
+        "Scikit-Learn"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Data Science",
+        "Complete 2026 Guide to Scikit-Learn"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 38100,
+      "is_subscriber_count_hidden": false,
+      "video_count": 67,
+      "view_count": 1333500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 7620.0,
+      "avg_recent_likes": 317.0,
+      "avg_recent_comments": 63.0,
+      "estimated_engagement_rate": 2.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0023",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "ML Foundations 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074a",
+    "channel_id": "UC_SYNTHETIC_0024",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0024",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (94,450) in micro band.",
+        "Synthetic estimated engagement rate: 5.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@gen_devs_3",
+    "description": "Tutorials on LangChain, LLMs, RAG. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "partners@gendevs.io",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/gen_devs",
+        "twitter": "https://x.com/gen_devs"
+      },
+      "content_themes": [
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with LangChain",
+        "Complete 2026 Guide to RAG"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 94450,
+      "is_subscriber_count_hidden": false,
+      "video_count": 68,
+      "view_count": 3305750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 18890.0,
+      "avg_recent_likes": 787.0,
+      "avg_recent_comments": 157.0,
+      "estimated_engagement_rate": 5.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0024",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Generative Devs 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074b",
+    "channel_id": "UC_SYNTHETIC_0025",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0025",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (45,800) in micro band.",
+        "Synthetic estimated engagement rate: 3.4%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@pythoncraft_3",
+    "description": "Tutorials on Python 3.12, Django. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/pythoncraft",
+        "twitter": "https://x.com/pythoncraft"
+      },
+      "content_themes": [
+        "Python 3.12",
+        "Django"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python 3.12",
+        "Complete 2026 Guide to Django"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 45800,
+      "is_subscriber_count_hidden": false,
+      "video_count": 69,
+      "view_count": 1603000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 9160.0,
+      "avg_recent_likes": 381.0,
+      "avg_recent_comments": 76.0,
+      "estimated_engagement_rate": 3.4,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0025",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Python Craft 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074c",
+    "channel_id": "UC_SYNTHETIC_0026",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0026",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.5%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@neuralnuggets_3",
+    "description": "Tutorials on Deep Learning, TensorFlow. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "collab@neuralnuggets.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/neuralnuggets",
+        "twitter": "https://x.com/neuralnuggets"
+      },
+      "content_themes": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Deep Learning",
+        "Complete 2026 Guide to TensorFlow"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 70,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.5,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0026",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Neural Nuggets 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074d",
+    "channel_id": "UC_SYNTHETIC_0027",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0027",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (61,900) in micro band.",
+        "Synthetic estimated engagement rate: 4.6%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@fullstackflow_3",
+    "description": "Tutorials on React, TypeScript, Node.js. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/fullstackflow",
+        "twitter": "https://x.com/fullstackflow"
+      },
+      "content_themes": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with React",
+        "Complete 2026 Guide to Node.js"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 61900,
+      "is_subscriber_count_hidden": false,
+      "video_count": 71,
+      "view_count": 2166500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 12380.0,
+      "avg_recent_likes": 515.0,
+      "avg_recent_comments": 103.0,
+      "estimated_engagement_rate": 4.6,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0027",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Full Stack Flow 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074e",
+    "channel_id": "UC_SYNTHETIC_0028",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0028",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (85,050) in micro band.",
+        "Synthetic estimated engagement rate: 3.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@aisystemseng_3",
+    "description": "Tutorials on MLOps, Docker, Kubernetes. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "info@aisystemseng.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/aisystemseng",
+        "twitter": "https://x.com/aisystemseng"
+      },
+      "content_themes": [
+        "MLOps",
+        "Docker",
+        "Kubernetes"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with MLOps",
+        "Complete 2026 Guide to Kubernetes"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 85050,
+      "is_subscriber_count_hidden": false,
+      "video_count": 72,
+      "view_count": 2976750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 17010.0,
+      "avg_recent_likes": 708.0,
+      "avg_recent_comments": 141.0,
+      "estimated_engagement_rate": 3.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0028",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "AI Systems Eng 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd074f",
+    "channel_id": "UC_SYNTHETIC_0029",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0029",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@algoacademy_3",
+    "description": "Tutorials on Algorithms, LeetCode. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/algoacademy",
+        "twitter": "https://x.com/algoacademy"
+      },
+      "content_themes": [
+        "Algorithms",
+        "LeetCode"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Algorithms",
+        "Complete 2026 Guide to LeetCode"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 73,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0029",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Algo Academy 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0750",
+    "channel_id": "UC_SYNTHETIC_0030",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0030",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (48,850) in micro band.",
+        "Synthetic estimated engagement rate: 6.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@prompteng101_3",
+    "description": "Tutorials on Gemini, Claude, ChatGPT. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "hello@prompteng.dev",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/prompteng101",
+        "twitter": "https://x.com/prompteng101"
+      },
+      "content_themes": [
+        "Gemini",
+        "Claude",
+        "ChatGPT"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Gemini",
+        "Complete 2026 Guide to ChatGPT"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 48850,
+      "is_subscriber_count_hidden": false,
+      "video_count": 74,
+      "view_count": 1709750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 9770.0,
+      "avg_recent_likes": 407.0,
+      "avg_recent_comments": 81.0,
+      "estimated_engagement_rate": 6.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0030",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Prompt Engineering 101 3",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0751",
+    "channel_id": "UC_SYNTHETIC_0031",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0031",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (59,000) in micro band.",
+        "Synthetic estimated engagement rate: 3.8%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@devbytes_ai_4",
+    "description": "Tutorials on Python, FastAPI, OpenAI. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "contact@devbytes.ai",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/devbytes_ai",
+        "twitter": "https://x.com/devbytes_ai"
+      },
+      "content_themes": [
+        "Python",
+        "FastAPI",
+        "OpenAI"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python",
+        "Complete 2026 Guide to OpenAI"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 59000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 75,
+      "view_count": 2065000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 11800.0,
+      "avg_recent_likes": 491.0,
+      "avg_recent_comments": 98.0,
+      "estimated_engagement_rate": 3.8,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0031",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "DevBytes AI 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0752",
+    "channel_id": "UC_SYNTHETIC_0032",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0032",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (80,650) in micro band.",
+        "Synthetic estimated engagement rate: 4.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@codewithsarah_4",
+    "description": "Tutorials on Machine Learning, PyTorch. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "sarah.collab@gmail.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/codewithsarah",
+        "twitter": "https://x.com/codewithsarah"
+      },
+      "content_themes": [
+        "Machine Learning",
+        "PyTorch"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Machine Learning",
+        "Complete 2026 Guide to PyTorch"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 80650,
+      "is_subscriber_count_hidden": false,
+      "video_count": 76,
+      "view_count": 2822750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 16130.0,
+      "avg_recent_likes": 672.0,
+      "avg_recent_comments": 134.0,
+      "estimated_engagement_rate": 4.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0032",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Code With Sarah 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0753",
+    "channel_id": "UC_SYNTHETIC_0033",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0033",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (49,600) in micro band.",
+        "Synthetic estimated engagement rate: 2.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@mlfoundations_4",
+    "description": "Tutorials on Data Science, Scikit-Learn. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/mlfoundations",
+        "twitter": "https://x.com/mlfoundations"
+      },
+      "content_themes": [
+        "Data Science",
+        "Scikit-Learn"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Data Science",
+        "Complete 2026 Guide to Scikit-Learn"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 49600,
+      "is_subscriber_count_hidden": false,
+      "video_count": 77,
+      "view_count": 1736000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 9920.0,
+      "avg_recent_likes": 413.0,
+      "avg_recent_comments": 82.0,
+      "estimated_engagement_rate": 2.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0033",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "ML Foundations 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0754",
+    "channel_id": "UC_SYNTHETIC_0034",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0034",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 5.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@gen_devs_4",
+    "description": "Tutorials on LangChain, LLMs, RAG. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "partners@gendevs.io",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/gen_devs",
+        "twitter": "https://x.com/gen_devs"
+      },
+      "content_themes": [
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with LangChain",
+        "Complete 2026 Guide to RAG"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 78,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 5.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0034",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Generative Devs 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0755",
+    "channel_id": "UC_SYNTHETIC_0035",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0035",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (57,300) in micro band.",
+        "Synthetic estimated engagement rate: 3.4%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@pythoncraft_4",
+    "description": "Tutorials on Python 3.12, Django. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/pythoncraft",
+        "twitter": "https://x.com/pythoncraft"
+      },
+      "content_themes": [
+        "Python 3.12",
+        "Django"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python 3.12",
+        "Complete 2026 Guide to Django"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 57300,
+      "is_subscriber_count_hidden": false,
+      "video_count": 79,
+      "view_count": 2005500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 11460.0,
+      "avg_recent_likes": 477.0,
+      "avg_recent_comments": 95.0,
+      "estimated_engagement_rate": 3.4,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0035",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Python Craft 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0756",
+    "channel_id": "UC_SYNTHETIC_0036",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0036",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.5%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@neuralnuggets_4",
+    "description": "Tutorials on Deep Learning, TensorFlow. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "collab@neuralnuggets.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/neuralnuggets",
+        "twitter": "https://x.com/neuralnuggets"
+      },
+      "content_themes": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Deep Learning",
+        "Complete 2026 Guide to TensorFlow"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 80,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.5,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0036",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Neural Nuggets 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0757",
+    "channel_id": "UC_SYNTHETIC_0037",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0037",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (73,400) in micro band.",
+        "Synthetic estimated engagement rate: 4.6%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@fullstackflow_4",
+    "description": "Tutorials on React, TypeScript, Node.js. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/fullstackflow",
+        "twitter": "https://x.com/fullstackflow"
+      },
+      "content_themes": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with React",
+        "Complete 2026 Guide to Node.js"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 73400,
+      "is_subscriber_count_hidden": false,
+      "video_count": 81,
+      "view_count": 2569000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 14680.0,
+      "avg_recent_likes": 611.0,
+      "avg_recent_comments": 122.0,
+      "estimated_engagement_rate": 4.6,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0037",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Full Stack Flow 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0758",
+    "channel_id": "UC_SYNTHETIC_0038",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0038",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (96,550) in micro band.",
+        "Synthetic estimated engagement rate: 3.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@aisystemseng_4",
+    "description": "Tutorials on MLOps, Docker, Kubernetes. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "info@aisystemseng.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/aisystemseng",
+        "twitter": "https://x.com/aisystemseng"
+      },
+      "content_themes": [
+        "MLOps",
+        "Docker",
+        "Kubernetes"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with MLOps",
+        "Complete 2026 Guide to Kubernetes"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 96550,
+      "is_subscriber_count_hidden": false,
+      "video_count": 82,
+      "view_count": 3379250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19310.0,
+      "avg_recent_likes": 804.0,
+      "avg_recent_comments": 160.0,
+      "estimated_engagement_rate": 3.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0038",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "AI Systems Eng 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0759",
+    "channel_id": "UC_SYNTHETIC_0039",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0039",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@algoacademy_4",
+    "description": "Tutorials on Algorithms, LeetCode. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/algoacademy",
+        "twitter": "https://x.com/algoacademy"
+      },
+      "content_themes": [
+        "Algorithms",
+        "LeetCode"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Algorithms",
+        "Complete 2026 Guide to LeetCode"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 83,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0039",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Algo Academy 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075a",
+    "channel_id": "UC_SYNTHETIC_0040",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0040",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (60,350) in micro band.",
+        "Synthetic estimated engagement rate: 6.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@prompteng101_4",
+    "description": "Tutorials on Gemini, Claude, ChatGPT. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "hello@prompteng.dev",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/prompteng101",
+        "twitter": "https://x.com/prompteng101"
+      },
+      "content_themes": [
+        "Gemini",
+        "Claude",
+        "ChatGPT"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Gemini",
+        "Complete 2026 Guide to ChatGPT"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 60350,
+      "is_subscriber_count_hidden": false,
+      "video_count": 84,
+      "view_count": 2112250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 12070.0,
+      "avg_recent_likes": 502.0,
+      "avg_recent_comments": 100.0,
+      "estimated_engagement_rate": 6.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0040",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Prompt Engineering 101 4",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075b",
+    "channel_id": "UC_SYNTHETIC_0041",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0041",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (70,500) in micro band.",
+        "Synthetic estimated engagement rate: 3.8%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@devbytes_ai_5",
+    "description": "Tutorials on Python, FastAPI, OpenAI. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "contact@devbytes.ai",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/devbytes_ai",
+        "twitter": "https://x.com/devbytes_ai"
+      },
+      "content_themes": [
+        "Python",
+        "FastAPI",
+        "OpenAI"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python",
+        "Complete 2026 Guide to OpenAI"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 70500,
+      "is_subscriber_count_hidden": false,
+      "video_count": 85,
+      "view_count": 2467500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 14100.0,
+      "avg_recent_likes": 587.0,
+      "avg_recent_comments": 117.0,
+      "estimated_engagement_rate": 3.8,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0041",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "DevBytes AI 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075c",
+    "channel_id": "UC_SYNTHETIC_0042",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0042",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (92,150) in micro band.",
+        "Synthetic estimated engagement rate: 4.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@codewithsarah_5",
+    "description": "Tutorials on Machine Learning, PyTorch. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "sarah.collab@gmail.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/codewithsarah",
+        "twitter": "https://x.com/codewithsarah"
+      },
+      "content_themes": [
+        "Machine Learning",
+        "PyTorch"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Machine Learning",
+        "Complete 2026 Guide to PyTorch"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 92150,
+      "is_subscriber_count_hidden": false,
+      "video_count": 86,
+      "view_count": 3225250,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 18430.0,
+      "avg_recent_likes": 767.0,
+      "avg_recent_comments": 153.0,
+      "estimated_engagement_rate": 4.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0042",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Code With Sarah 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075d",
+    "channel_id": "UC_SYNTHETIC_0043",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0043",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (61,100) in micro band.",
+        "Synthetic estimated engagement rate: 2.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@mlfoundations_5",
+    "description": "Tutorials on Data Science, Scikit-Learn. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/mlfoundations",
+        "twitter": "https://x.com/mlfoundations"
+      },
+      "content_themes": [
+        "Data Science",
+        "Scikit-Learn"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Data Science",
+        "Complete 2026 Guide to Scikit-Learn"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 61100,
+      "is_subscriber_count_hidden": false,
+      "video_count": 87,
+      "view_count": 2138500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 12220.0,
+      "avg_recent_likes": 509.0,
+      "avg_recent_comments": 101.0,
+      "estimated_engagement_rate": 2.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0043",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "ML Foundations 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075e",
+    "channel_id": "UC_SYNTHETIC_0044",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0044",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 5.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@gen_devs_5",
+    "description": "Tutorials on LangChain, LLMs, RAG. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "partners@gendevs.io",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/gen_devs",
+        "twitter": "https://x.com/gen_devs"
+      },
+      "content_themes": [
+        "LangChain",
+        "LLMs",
+        "RAG"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with LangChain",
+        "Complete 2026 Guide to RAG"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 88,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 5.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0044",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Generative Devs 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd075f",
+    "channel_id": "UC_SYNTHETIC_0045",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0045",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (68,800) in micro band.",
+        "Synthetic estimated engagement rate: 3.4%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@pythoncraft_5",
+    "description": "Tutorials on Python 3.12, Django. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/pythoncraft",
+        "twitter": "https://x.com/pythoncraft"
+      },
+      "content_themes": [
+        "Python 3.12",
+        "Django"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Python 3.12",
+        "Complete 2026 Guide to Django"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 68800,
+      "is_subscriber_count_hidden": false,
+      "video_count": 89,
+      "view_count": 2408000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 13760.0,
+      "avg_recent_likes": 573.0,
+      "avg_recent_comments": 114.0,
+      "estimated_engagement_rate": 3.4,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0045",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Python Craft 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0760",
+    "channel_id": "UC_SYNTHETIC_0046",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0046",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.5%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@neuralnuggets_5",
+    "description": "Tutorials on Deep Learning, TensorFlow. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "collab@neuralnuggets.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/neuralnuggets",
+        "twitter": "https://x.com/neuralnuggets"
+      },
+      "content_themes": [
+        "Deep Learning",
+        "TensorFlow"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Deep Learning",
+        "Complete 2026 Guide to TensorFlow"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 90,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.5,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0046",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Neural Nuggets 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0761",
+    "channel_id": "UC_SYNTHETIC_0047",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0047",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (84,900) in micro band.",
+        "Synthetic estimated engagement rate: 4.6%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@fullstackflow_5",
+    "description": "Tutorials on React, TypeScript, Node.js. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/fullstackflow",
+        "twitter": "https://x.com/fullstackflow"
+      },
+      "content_themes": [
+        "React",
+        "TypeScript",
+        "Node.js"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with React",
+        "Complete 2026 Guide to Node.js"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 84900,
+      "is_subscriber_count_hidden": false,
+      "video_count": 91,
+      "view_count": 2971500,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 16980.0,
+      "avg_recent_likes": 707.0,
+      "avg_recent_comments": 141.0,
+      "estimated_engagement_rate": 4.6,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0047",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Full Stack Flow 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0762",
+    "channel_id": "UC_SYNTHETIC_0048",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0048",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 3.9%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@aisystemseng_5",
+    "description": "Tutorials on MLOps, Docker, Kubernetes. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "info@aisystemseng.com",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/aisystemseng",
+        "twitter": "https://x.com/aisystemseng"
+      },
+      "content_themes": [
+        "MLOps",
+        "Docker",
+        "Kubernetes"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with MLOps",
+        "Complete 2026 Guide to Kubernetes"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 92,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 3.9,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0048",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "AI Systems Eng 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0763",
+    "channel_id": "UC_SYNTHETIC_0049",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0049",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (98,000) in micro band.",
+        "Synthetic estimated engagement rate: 2.1%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@algoacademy_5",
+    "description": "Tutorials on Algorithms, LeetCode. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "Not Found",
+      "email_source": "Not Found",
+      "social_links": {
+        "instagram": "https://instagram.com/algoacademy",
+        "twitter": "https://x.com/algoacademy"
+      },
+      "content_themes": [
+        "Algorithms",
+        "LeetCode"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Algorithms",
+        "Complete 2026 Guide to LeetCode"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 98000,
+      "is_subscriber_count_hidden": false,
+      "video_count": 93,
+      "view_count": 3430000,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 19600.0,
+      "avg_recent_likes": 816.0,
+      "avg_recent_comments": 163.0,
+      "estimated_engagement_rate": 2.1,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0049",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Algo Academy 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  },
+  {
+    "_id": "6acc96cb6c5e584180dd0764",
+    "channel_id": "UC_SYNTHETIC_0050",
+    "channel_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0050",
+    "classification": {
+      "is_qualified": true,
+      "fit_score": 85,
+      "niche": "Technology & Artificial Intelligence",
+      "reasons": [
+        "Synthetic demo record: subscriber count (71,850) in micro band.",
+        "Synthetic estimated engagement rate: 6.2%."
+      ],
+      "evaluated_at": "2026-10-12 08:15:36.584000"
+    },
+    "collected_at": "2026-10-12 08:15:36.584000",
+    "country": "US",
+    "custom_url": "@prompteng101_5",
+    "description": "Tutorials on Gemini, Claude, ChatGPT. Building modern software and AI pipelines.",
+    "enrichment": {
+      "contact_email": "hello@prompteng.dev",
+      "email_source": "channel_description_or_links",
+      "social_links": {
+        "instagram": "https://instagram.com/prompteng101",
+        "twitter": "https://x.com/prompteng101"
+      },
+      "content_themes": [
+        "Gemini",
+        "Claude",
+        "ChatGPT"
+      ],
+      "recent_video_titles": [
+        "Building Full-Stack AI with Gemini",
+        "Complete 2026 Guide to ChatGPT"
+      ],
+      "audience_demographics": "Unavailable",
+      "enriched_at": "2026-10-12 08:15:36.584000"
+    },
+    "is_synthetic": true,
+    "metrics": {
+      "subscriber_count": 71850,
+      "is_subscriber_count_hidden": false,
+      "video_count": 94,
+      "view_count": 2514750,
+      "recent_video_sample_size": 10,
+      "avg_recent_views": 14370.0,
+      "avg_recent_likes": 598.0,
+      "avg_recent_comments": 119.0,
+      "estimated_engagement_rate": 6.2,
+      "engagement_formula_used": "((avg_likes + avg_comments) / avg_views) * 100",
+      "metric_timestamp": "2026-10-12 08:15:36.584000"
+    },
+    "outreach": {
+      "email_subject": null,
+      "email_body": null,
+      "instagram_dm": null,
+      "generated_at": null,
+      "status": "draft",
+      "is_simulation": true,
+      "error_message": null
+    },
+    "published_at": "2023-01-15T12:00:00Z",
+    "retrieved_at": "2026-10-12 08:15:36.584000",
+    "source_api": "Synthetic Demo Generator",
+    "source_name": "Synthetic Demo Generator",
+    "source_url": "https://www.youtube.com/channel/UC_SYNTHETIC_0050",
+    "thumbnail_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop",
+    "title": "Prompt Engineering 101 5",
+    "updated_at": "2026-10-12 08:15:36.584000"
+  }
+]

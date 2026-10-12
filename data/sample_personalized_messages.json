@@ -1,0 +1,64 @@
+[
+  {
+    "creator_id": "UC_SYNTHETIC_0001",
+    "channel_id": "UC_SYNTHETIC_0001",
+    "campaign_id": null,
+    "email_subject": "EDXSO Collaboration: Next-Gen Developer & AI Tooling",
+    "email_body": "Hi there! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+    "instagram_dm": "Hey! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+    "personalization_evidence": {
+      "creator_name_used": "Creator",
+      "recent_video_referenced": null,
+      "content_themes_used": [
+        "AI Development",
+        "Software Engineering"
+      ],
+      "niche_used": "Technology & Artificial Intelligence"
+    },
+    "warnings": [
+      "Mock generation: produced by local deterministic provider for testing/demo."
+    ],
+    "email_word_count": 72,
+    "dm_word_count": 20,
+    "model_name": "mock-personalizer-v1",
+    "provider_name": "mock",
+    "is_mock": true,
+    "prompt_version": "v1.2.0-strict-safety",
+    "status": "draft",
+    "id": "msg_3c04e7e26470",
+    "generated_at": "2026-10-12T08:15:52.884000",
+    "approved_at": null,
+    "updated_at": "2026-10-12T08:15:52.884000"
+  },
+  {
+    "creator_id": "UC_SYNTHETIC_0001",
+    "channel_id": "UC_SYNTHETIC_0001",
+    "campaign_id": null,
+    "email_subject": "EDXSO Collaboration: Next-Gen Developer & AI Tooling",
+    "email_body": "Hi there! I have been following your insightful content and tutorials on modern software engineering and AI development. At EDXSO, we are launching an interactive developer platform designed to accelerate coding workflows and AI workflows. We would love to sponsor a dedicated walkthrough on your channel, providing full premium platform access for your community alongside a competitive creator sponsorship fee. Let us know if you would be open to exploring this collaboration.",
+    "instagram_dm": "Hey! Loved your recent AI engineering content. Would you be open to collaborating with EDXSO on our upcoming developer platform?",
+    "personalization_evidence": {
+      "creator_name_used": "Creator",
+      "recent_video_referenced": null,
+      "content_themes_used": [
+        "AI Development",
+        "Software Engineering"
+      ],
+      "niche_used": "Technology & Artificial Intelligence"
+    },
+    "warnings": [
+      "Mock generation: produced by local deterministic provider for testing/demo."
+    ],
+    "email_word_count": 72,
+    "dm_word_count": 20,
+    "model_name": "mock-personalizer-v1",
+    "provider_name": "mock",
+    "is_mock": true,
+    "prompt_version": "v1.2.0-strict-safety",
+    "status": "draft",
+    "id": "msg_bb025bdc33a5",
+    "generated_at": "2026-10-12T08:15:55.035000",
+    "approved_at": null,
+    "updated_at": "2026-10-12T08:15:55.035000"
+  }
+]

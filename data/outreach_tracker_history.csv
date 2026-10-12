@@ -1,0 +1,3 @@
+Log ID,Channel ID,Creator ID,Campaign ID,Recipient Contact,Channel Type,Mode,Status,Provider Name,Provider Message ID,Dispatched At,Completed At,Error Details
+out_e0ed0b382f88,UC_SYNTHETIC_0001,UC_SYNTHETIC_0001,camp_edxso_demo_q4,contact@devbytes.ai,email,Simulated,simulated,Simulation Engine (Dry-Run),sim_4294820c3eef47f6,2026-10-12 08:57:00.279,2026-10-12 08:57:00.348,
+out_ig_5ecb05806c,UC_SYNTHETIC_0016,UC_SYNTHETIC_0016,camp_default,@neuralnuggets_2,instagram_dm,Simulated,approved,Manual Copy Workflow (Meta TOS Safe),ig_manual_aae161cd,2026-10-12 08:17:14.793,2026-10-12 08:17:14.793,
